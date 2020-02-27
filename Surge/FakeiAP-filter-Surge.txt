@@ -88,7 +88,6 @@ DOMAIN,api.revenuecat.com
 DOMAIN,api.faceapp.io
 DOMAIN,api.unfold.app
 DOMAIN,asla.joytunes.com
-#DOMAIN,graph.nhaccuatui.com
 DOMAIN,accounts.elevateapp.net
 DOMAIN,pixmagicapp.com
 DOMAIN,api.busuu.com
