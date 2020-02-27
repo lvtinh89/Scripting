@@ -1,121 +1,121 @@
 #PXX itunes
-HOST-KEYWORD,-buy.itunes.apple.com,IAP-PREMIUM
+HOST-KEYWORD,-buy.itunes.apple.com,FakeAppPremium
 #Funimate
-HOST,api.funimate.com,FakeiAP
+HOST,api.funimate.com,Fakeiap
 #Zing Mp3
-HOST,api.global.mp3.zing.vn,FakeiAP
+HOST,api.global.mp3.zing.vn,Fakeiap
 #Snap&Trans
-HOST,receipt-validator.herewetest.com,FakeiAP
+HOST,receipt-validator.herewetest.com,Fakeiap
 #Presco Overlay
-HOST,overlay-api.gotbatu.com,FakeiAP
+HOST,overlay-api.gotbatu.com,Fakeiap
 #Daggerhood
-HOST,api.playond.com,FakeiAP
+HOST,api.playond.com,Fakeiap
 #Vinkle
-HOST,dupa-api.doupaiapp.com,FakeiAP
+HOST,dupa-api.doupaiapp.com,Fakeiap
 #Faded
-HOST,api.madewithfaded.com,FakeiAP
+HOST,api.madewithfaded.com,Fakeiap
 #PlayerXtreme
-HOST,secure.istreamer.com,FakeiAP
+HOST,secure.istreamer.com,Fakeiap
 #farfaria
-HOST, api.farfaria.com, FakeiAP
+HOST, api.farfaria.com, Fakeiap
 #BabyBus
-HOST,pay.babybus.com,FakeiAP
+HOST,pay.babybus.com,Fakeiap
 #AutoCAD
-HOST,app.autocad360.com,FakeiAP
+HOST,app.autocad360.com,Fakeiap
 #VMonkey
-HOST,www.api.monkeyuni.net,FakeiAP
+HOST,www.api.monkeyuni.net,Fakeiap
 #TIKTOK
-HOST,api3-normal-c-lf.amemv.com,FakeiAP
-HOST-KEYWORD,h2.tiktokv.com,FakeiAP
+HOST,api3-normal-c-lf.amemv.com,Fakeiap
+HOST-KEYWORD,h2.tiktokv.com,Fakeiap
 #Spendee
-HOST,api.spendee.com,FakeiAP
+HOST,api.spendee.com,Fakeiap
 #Prequel
-HOST,cloudapp.aiarlabs.com,FakeiAP
+HOST,cloudapp.aiarlabs.com,Fakeiap
 #Working Copy
-HOST,education.github.com,FakeiAP
+HOST,education.github.com,Fakeiap
 #Camscanner
-HOST,api-cs.intsig.net,FakeiAP
+HOST,api-cs.intsig.net,Fakeiap
 #Planner 5D
-HOST,planner5d.com,FakeiAP
+HOST,planner5d.com,Fakeiap
 #Day One
-HOST,dayone.me,FakeiAP
+HOST,dayone.me,Fakeiap
 #Endel
-HOST,api-production.endel.io,FakeiAP
+HOST,api-production.endel.io,Fakeiap
 # Chic Cam
-HOST,chic.mtlab.meitu.com,FakeiAP
+HOST,chic.mtlab.meitu.com,Fakeiap
 # Photoshop
-HOST,lcs-mobile-cops.adobe.io,FakeiAP
+HOST,lcs-mobile-cops.adobe.io,Fakeiap
 # QIYIVideo
-HOST,intl-i.vip.iqiyi.com,FakeiAP
-HOST,intl-passport.iqiyi.com,FakeiAP
+HOST,intl-i.vip.iqiyi.com,Fakeiap
+HOST,intl-passport.iqiyi.com,Fakeiap
 # Fing
-HOST,cdn.fing.io,FakeiAP
+HOST,cdn.fing.io,Fakeiap
 # vizmato
-HOST,web.vizmato.com,FakeiAP
+HOST,web.vizmato.com,Fakeiap
 # SoloLearn
-HOST,api.sololearn.com,FakeiAP
+HOST,api.sololearn.com,Fakeiap
 # MusiXmatch
-HOST,apic.musixmatch.com,FakeiAP
+HOST,apic.musixmatch.com,Fakeiap
 #JibJab
-HOST,origin-prod-phoenix.jibjab.com,FakeiAP
+HOST,origin-prod-phoenix.jibjab.com,Fakeiap
 # Termius
-HOST,api.termius.com,FakeiAP
+HOST,api.termius.com,Fakeiap
 # PDF Expert
-HOST,license.pdfexpert.com,FakeiAP
+HOST,license.pdfexpert.com,Fakeiap
 # Gyroscope
-HOST,api.gyrosco.pe,FakeiAP
+HOST,api.gyrosco.pe,Fakeiap
 # Kine Master
-HOST,api-kinemaster-assetstore.kinemasters.com,FakeiAP
-HOST,api-kinemaster-assetstore.nexstreaming.com,FakeiAP
+HOST,api-kinemaster-assetstore.kinemasters.com,Fakeiap
+HOST,api-kinemaster-assetstore.nexstreaming.com,Fakeiap
 # Over
-HOST,api.overhq.com,FakeiAP
+HOST,api.overhq.com,Fakeiap
 # Bright
-HOST,engbright.com,FakeiAP
+HOST,engbright.com,Fakeiap
 # Ulike
-HOST,commerce-i18n-api.faceu.mobi,FakeiAP
+HOST,commerce-i18n-api.faceu.mobi,Fakeiap
 # Blinkist
-HOST,api.blinkist.com,FakeiAP
+HOST,api.blinkist.com,Fakeiap
 # lingokids
-HOST,api.lingokids.com,FakeiAP
+HOST,api.lingokids.com,Fakeiap
 # Boom Music
-HOST,apimboom2.globaldelight.net,FakeiAP
+HOST,apimboom2.globaldelight.net,Fakeiap
 # Musicalm
-HOST,www.peacefulsoundsapp.com,FakeiAP
-HOST,subscription.aresframework.com,FakeiAP
+HOST,www.peacefulsoundsapp.com,Fakeiap
+HOST,subscription.aresframework.com,Fakeiap
 # Update Nichi
-HOST,mp.bybutter.com,FakeiAP
-HOST,pay.wecut.com,FakeiAP
+HOST,mp.bybutter.com,Fakeiap
+HOST,pay.wecut.com,Fakeiap
 # 1Blocker, Loopsie, Infltr, Yoga Studio
-HOST,api.revenuecat.com,FakeiAP
-HOST,api.faceapp.io,FakeiAP
-HOST,api.unfold.app,FakeiAP
-HOST,asla.joytunes.com,FakeiAP
-HOST,accounts.elevateapp.net,FakeiAP
-HOST,pixmagicapp.com,FakeiAP
-HOST,api.busuu.com,FakeiAP
-HOST,bmall.camera360.com,FakeiAP
-HOST,entitlements.adobe.io,FakeiAP
-HOST,photos.adobe.io,FakeiAP
-HOST,api-intl.mr.meitu.com,FakeiAP
-HOST-SUFFIX,api.memrise.com,FakeiAP
-HOST-SUFFIX,api.picsart.com,FakeiAP
-HOST-SUFFIX,api.mondlylanguages.com,FakeiAP
-HOST,vsco.co,FakeiAP
-HOST-SUFFIX,pool.elsanow.io,FakeiAP
+HOST,api.revenuecat.com,Fakeiap
+HOST,api.faceapp.io,Fakeiap
+HOST,api.unfold.app,Fakeiap
+HOST,asla.joytunes.com,Fakeiap
+HOST,accounts.elevateapp.net,Fakeiap
+HOST,pixmagicapp.com,Fakeiap
+HOST,api.busuu.com,Fakeiap
+HOST,bmall.camera360.com,Fakeiap
+HOST,entitlements.adobe.io,Fakeiap
+HOST,photos.adobe.io,Fakeiap
+HOST,api-intl.mr.meitu.com,Fakeiap
+HOST-SUFFIX,api.memrise.com,Fakeiap
+HOST-SUFFIX,api.picsart.com,Fakeiap
+HOST-SUFFIX,api.mondlylanguages.com,Fakeiap
+HOST,vsco.co,Fakeiap
+HOST-SUFFIX,pool.elsanow.io,Fakeiap
 # Calm
-HOST-SUFFIX,api.calm.com,FakeiAP
-HOST-SUFFIX,api.indicative.com,FakeiAP
-HOST-SUFFIX,lambda.us-east-1.amazonaws.com,FakeiAP
+HOST-SUFFIX,api.calm.com,Fakeiap
+HOST-SUFFIX,api.indicative.com,Fakeiap
+HOST-SUFFIX,lambda.us-east-1.amazonaws.com,Fakeiap
 #Instasize
-HOST,api.instasize.com,FakeiAP
-HOST,purchases.ws.pho.to,FakeiAP
-HOST,nomo.dafork.com,FakeiAP
-HOST,cloudapp.aiarlabs.com,FakeiAP
-HOST,buy.itunes.apple.com,FakeiAP
+HOST,api.instasize.com,Fakeiap
+HOST,purchases.ws.pho.to,Fakeiap
+HOST,nomo.dafork.com,Fakeiap
+HOST,cloudapp.aiarlabs.com,Fakeiap
+HOST,buy.itunes.apple.com,Fakeiap
 #Infltr
-HOST,us-central1-infltr.cloudfunctions.net,FakeiAP
-HOST,owa.videoshowiosglobalserver.com,FakeiAP
-HOST,app.algoriddim.com,FakeiAP
-HOST,viva.v21xy.com,FakeiAP
-HOST,viva-asia1.vvbrd.com,FakeiAP
-HOST,api.getmimo.com,FakeiAP
+HOST,us-central1-infltr.cloudfunctions.net,Fakeiap
+HOST,owa.videoshowiosglobalserver.com,Fakeiap
+HOST,app.algoriddim.com,Fakeiap
+HOST,viva.v21xy.com,Fakeiap
+HOST,viva-asia1.vvbrd.com,Fakeiap
+HOST,api.getmimo.com,Fakeiap
