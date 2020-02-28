@@ -1,121 +1,87 @@
-#PXX itunes
+ #PXX itunes
 HOST-KEYWORD,-buy.itunes.apple.com,AppPurchase
-#Funimate
+ #Funimate
 HOST,api.funimate.com,FakeSever
-#Zing Mp3
+ #Zing Mp3
 HOST,api.global.mp3.zing.vn,FakeSever
-#Snap&Trans
+ #Snap&Trans
 HOST,receipt-validator.herewetest.com,FakeSever
-#Presco Overlay
+ #Presco Overlay
 HOST,overlay-api.gotbatu.com,FakeSever
-#Daggerhood
+ #Daggerhood
 HOST,api.playond.com,FakeSever
-#Vinkle
+ #Vinkle
 HOST,dupa-api.doupaiapp.com,FakeSever
-#Faded
+ #Faded
 HOST,api.madewithfaded.com,FakeSever
-#PlayerXtreme
+ #PlayerXtreme
 HOST,secure.istreamer.com,FakeSever
-#farfaria
+ #farfaria
 HOST, api.farfaria.com, FakeSever
-#BabyBus
+ #BabyBus
 HOST,pay.babybus.com,FakeSever
-#AutoCAD
+ #AutoCAD
 HOST,app.autocad360.com,FakeSever
-#VMonkey
+ #VMonkey
 HOST,www.api.monkeyuni.net,FakeSever
-#TIKTOK
+ #TIKTOK
 HOST,api3-normal-c-lf.amemv.com,FakeSever
 HOST-KEYWORD,h2.tiktokv.com,FakeSever
-#Spendee
+ #Spendee
 HOST,api.spendee.com,FakeSever
-#Prequel
+ #Prequel
 HOST,cloudapp.aiarlabs.com,FakeSever
-#Working Copy
+ #Working Copy
 HOST,education.github.com,FakeSever
-#Camscanner
+ #Camscanner
 HOST,api-cs.intsig.net,FakeSever
-#Planner 5D
+ #Planner 5D
 HOST,planner5d.com,FakeSever
-#Day One
+ #Day One
 HOST,dayone.me,FakeSever
-#Endel
+ #Endel
 HOST,api-production.endel.io,FakeSever
-# Chic Cam
+ #Chic Cam
 HOST,chic.mtlab.meitu.com,FakeSever
-# Photoshop
+ #Photoshop
 HOST,lcs-mobile-cops.adobe.io,FakeSever
-# QIYIVideo
+ #QIYIVideo
 HOST,intl-i.vip.iqiyi.com,FakeSever
 HOST,intl-passport.iqiyi.com,FakeSever
-# Fing
+ #Fing
 HOST,cdn.fing.io,FakeSever
-# vizmato
+ #vizmato
 HOST,web.vizmato.com,FakeSever
-# SoloLearn
+ #SoloLearn
 HOST,api.sololearn.com,FakeSever
-# MusiXmatch
+ #MusiXmatch
 HOST,apic.musixmatch.com,FakeSever
-#JibJab
+ #JibJab
 HOST,origin-prod-phoenix.jibjab.com,FakeSever
-# Termius
+ #Termius
 HOST,api.termius.com,FakeSever
-# PDF Expert
+ #PDF Expert
 HOST,license.pdfexpert.com,FakeSever
-# Gyroscope
+ #Gyroscope
 HOST,api.gyrosco.pe,FakeSever
-# Kine Master
+ #Kine Master
 HOST,api-kinemaster-assetstore.kinemasters.com,FakeSever
 HOST,api-kinemaster-assetstore.nexstreaming.com,FakeSever
-# Over
+ #Over
 HOST,api.overhq.com,FakeSever
-# Bright
+ #Bright
 HOST,engbright.com,FakeSever
-# Ulike
+ #Ulike
 HOST,commerce-i18n-api.faceu.mobi,FakeSever
-# Blinkist
+ #Blinkist
 HOST,api.blinkist.com,FakeSever
-# lingokids
+ #lingokids
 HOST,api.lingokids.com,FakeSever
-# Boom Music
+ #Boom Music
 HOST,apimboom2.globaldelight.net,FakeSever
-# Musicalm
+ #Musicalm
 HOST,www.peacefulsoundsapp.com,FakeSever
 HOST,subscription.aresframework.com,FakeSever
-# Update Nichi
+ #Update Nichi
 HOST,mp.bybutter.com,FakeSever
 HOST,pay.wecut.com,FakeSever
-# 1Blocker, Loopsie, Infltr, Yoga Studio
-HOST,api.revenuecat.com,FakeSever
-HOST,api.faceapp.io,FakeSever
-HOST,api.unfold.app,FakeSever
-HOST,asla.joytunes.com,FakeSever
-HOST,accounts.elevateapp.net,FakeSever
-HOST,pixmagicapp.com,FakeSever
-HOST,api.busuu.com,FakeSever
-HOST,bmall.camera360.com,FakeSever
-HOST,entitlements.adobe.io,FakeSever
-HOST,photos.adobe.io,FakeSever
-HOST,api-intl.mr.meitu.com,FakeSever
-HOST-SUFFIX,api.memrise.com,FakeSever
-HOST-SUFFIX,api.picsart.com,FakeSever
-HOST-SUFFIX,api.mondlylanguages.com,FakeSever
-HOST,vsco.co,FakeSever
-HOST-SUFFIX,pool.elsanow.io,FakeSever
-# Calm
-HOST-SUFFIX,api.calm.com,FakeSever
-HOST-SUFFIX,api.indicative.com,FakeSever
-HOST-SUFFIX,lambda.us-east-1.amazonaws.com,FakeSever
-#Instasize
-HOST,api.instasize.com,FakeSever
-HOST,purchases.ws.pho.to,FakeSever
-HOST,nomo.dafork.com,FakeSever
-HOST,cloudapp.aiarlabs.com,FakeSever
-HOST,buy.itunes.apple.com,FakeSever
-#Infltr
-HOST,us-central1-infltr.cloudfunctions.net,FakeSever
-HOST,owa.videoshowiosglobalserver.com,FakeSever
-HOST,app.algoriddim.com,FakeSever
-HOST,viva.v21xy.com,FakeSever
-HOST,viva-asia1.vvbrd.com,FakeSever
-HOST,api.getmimo.com,FakeSever
