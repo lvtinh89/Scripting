@@ -1,13 +1,40 @@
- #PXX itunes
-HOST-KEYWORD,-buy.itunes.apple.com,AppPurchase
- #Funimate
-HOST,api.funimate.com,FakeSever
  #Zing Mp3
 HOST,api.global.mp3.zing.vn,FakeSever
+ #lingokids
+HOST,api.lingokids.com,FakeSever
+ #AutoCAD
+HOST,app.autocad360.com,FakeSever
+ #PDF Expert
+HOST,license.pdfexpert.com,FakeSever
+ #MusiXmatch
+HOST,apic.musixmatch.com,FakeSever
+ #TIKTOK
+HOST,api3-normal-c-lf.amemv.com,FakeSever
+HOST-KEYWORD,h2.tiktokv.com,FakeSever
+ #Working Copy
+HOST,education.github.com,FakeSever
+ #Camscanner
+HOST,api-cs.intsig.net,FakeSever
+ #Planner 5D
+HOST,planner5d.com,FakeSever
+ #Day One
+HOST,dayone.me,FakeSever
+ #Photoshop
+HOST,lcs-mobile-cops.adobe.io,FakeSever
+ #Blinkist
+HOST,api.blinkist.com,FakeSever
+ #Bright
+HOST,engbright.com,FakeSever
+ #SoloLearn
+HOST,api.sololearn.com,FakeSever
+ #Kine Master
+HOST,api-kinemaster-assetstore.kinemasters.com,FakeSever
+HOST,api-kinemaster-assetstore.nexstreaming.com,FakeSever
+
+ #Funimate
+HOST,api.funimate.com,FakeSever
  #Snap&Trans
 HOST,receipt-validator.herewetest.com,FakeSever
- #Presco Overlay
-HOST,overlay-api.gotbatu.com,FakeSever
  #Daggerhood
 HOST,api.playond.com,FakeSever
  #Vinkle
@@ -20,31 +47,16 @@ HOST,secure.istreamer.com,FakeSever
 HOST, api.farfaria.com, FakeSever
  #BabyBus
 HOST,pay.babybus.com,FakeSever
- #AutoCAD
-HOST,app.autocad360.com,FakeSever
  #VMonkey
 HOST,www.api.monkeyuni.net,FakeSever
- #TIKTOK
-HOST,api3-normal-c-lf.amemv.com,FakeSever
-HOST-KEYWORD,h2.tiktokv.com,FakeSever
  #Spendee
 HOST,api.spendee.com,FakeSever
  #Prequel
 HOST,cloudapp.aiarlabs.com,FakeSever
- #Working Copy
-HOST,education.github.com,FakeSever
- #Camscanner
-HOST,api-cs.intsig.net,FakeSever
- #Planner 5D
-HOST,planner5d.com,FakeSever
- #Day One
-HOST,dayone.me,FakeSever
  #Endel
 HOST,api-production.endel.io,FakeSever
  #Chic Cam
 HOST,chic.mtlab.meitu.com,FakeSever
- #Photoshop
-HOST,lcs-mobile-cops.adobe.io,FakeSever
  #QIYIVideo
 HOST,intl-i.vip.iqiyi.com,FakeSever
 HOST,intl-passport.iqiyi.com,FakeSever
@@ -52,36 +64,20 @@ HOST,intl-passport.iqiyi.com,FakeSever
 HOST,cdn.fing.io,FakeSever
  #vizmato
 HOST,web.vizmato.com,FakeSever
- #SoloLearn
-HOST,api.sololearn.com,FakeSever
- #MusiXmatch
-HOST,apic.musixmatch.com,FakeSever
  #JibJab
 HOST,origin-prod-phoenix.jibjab.com,FakeSever
  #Termius
 HOST,api.termius.com,FakeSever
- #PDF Expert
-HOST,license.pdfexpert.com,FakeSever
  #Gyroscope
 HOST,api.gyrosco.pe,FakeSever
- #Kine Master
-HOST,api-kinemaster-assetstore.kinemasters.com,FakeSever
-HOST,api-kinemaster-assetstore.nexstreaming.com,FakeSever
  #Over
 HOST,api.overhq.com,FakeSever
- #Bright
-HOST,engbright.com,FakeSever
  #Ulike
 HOST,commerce-i18n-api.faceu.mobi,FakeSever
- #Blinkist
-HOST,api.blinkist.com,FakeSever
- #lingokids
-HOST,api.lingokids.com,FakeSever
  #Boom Music
 HOST,apimboom2.globaldelight.net,FakeSever
  #Musicalm
 HOST,www.peacefulsoundsapp.com,FakeSever
 HOST,subscription.aresframework.com,FakeSever
- #Update Nichi
-HOST,mp.bybutter.com,FakeSever
-HOST,pay.wecut.com,FakeSever
+ #PXX itunes
+HOST-KEYWORD,-buy.itunes.apple.com,AppPurchase
