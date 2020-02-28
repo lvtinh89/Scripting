@@ -1,119 +1,119 @@
 #Zingmp3
-DOMAIN,api.global.mp3.zing.vn
+HOST,api.global.mp3.zing.vn
 #Funimate
-DOMAIN,api.funimate.com
+HOST,api.funimate.com
 #Snap&Trans
-DOMAIN,overlay-api.gotbatu.com
+HOST,overlay-api.gotbatu.com
 #Daggerhood
-DOMAIN,api.playond.com
+HOST,api.playond.com
 #Vinkle
-DOMAIN,dupa-api.doupaiapp.com
+HOST,dupa-api.doupaiapp.com
 #Faded
-DOMAIN,api.madewithfaded.com
+HOST,api.madewithfaded.com
 #PlayerXtreme
-DOMAIN,secure.istreamer.com
+HOST,secure.istreamer.com
 #farfaria
-DOMAIN,api.farfaria.com
+HOST,api.farfaria.com
 #BabyBus
-DOMAIN,pay.babybus.com
+HOST,pay.babybus.com
 #AutoCAD
-DOMAIN,app.autocad360.com
+HOST,app.autocad360.com
 #VMonkey
-DOMAIN,www.api.monkeyuni.net
+HOST,www.api.monkeyuni.net
 #TIKTOK
-DOMAIN,api3-normal-c-lf.amemv.com
-DOMAIN-KEYWORD,h2.tiktokv.com
+HOST,api3-normal-c-lf.amemv.com
+HOST-KEYWORD,h2.tiktokv.com
 #Spendee
-DOMAIN,api.spendee.com
+HOST,api.spendee.com
 #Prequel
-DOMAIN,cloudapp.aiarlabs.com
+HOST,cloudapp.aiarlabs.com
 #Working Copy
-DOMAIN,education.github.com
+HOST,education.github.com
 #Camscanner
-DOMAIN,api-cs.intsig.net
+HOST,api-cs.intsig.net
 #Planner 5D
-DOMAIN,planner5d.com
+HOST,planner5d.com
 #Day One
-DOMAIN,dayone.me
+HOST,dayone.me
 #Endel
-DOMAIN,api-production.endel.io
+HOST,api-production.endel.io
 # Chic Cam
-DOMAIN,chic.mtlab.meitu.com
+HOST,chic.mtlab.meitu.com
 # Photoshop
-DOMAIN,lcs-mobile-cops.adobe.io
+HOST,lcs-mobile-cops.adobe.io
 # QIYIVideo
-DOMAIN,intl-i.vip.iqiyi.com
-DOMAIN,intl-passport.iqiyi.com
+HOST,intl-i.vip.iqiyi.com
+HOST,intl-passport.iqiyi.com
 # Fing
-DOMAIN,cdn.fing.io
+HOST,cdn.fing.io
 # vizmato
-DOMAIN,web.vizmato.com
+HOST,web.vizmato.com
 # SoloLearn
-DOMAIN,api.sololearn.com
+HOST,api.sololearn.com
 # Vizzywig2020
-DOMAIN,ec2-52-34-190-224.us-west-2.compute.amazonaws.com
+HOST,ec2-52-34-190-224.us-west-2.compute.amazonaws.com
 # MusiXmatch
-DOMAIN,apic.musixmatch.com
+HOST,apic.musixmatch.com
 #JibJab
-DOMAIN,origin-prod-phoenix.jibjab.com
+HOST,origin-prod-phoenix.jibjab.com
 # Termius
-DOMAIN,api.termius.com
+HOST,api.termius.com
 # PDF Expert
-DOMAIN,license.pdfexpert.com
+HOST,license.pdfexpert.com
 # Gyroscope
-DOMAIN,api.gyrosco.pe
+HOST,api.gyrosco.pe
 # Kine Master
-DOMAIN,api-kinemaster-assetstore.kinemasters.com
-DOMAIN,api-kinemaster-assetstore.nexstreaming.com
+HOST,api-kinemaster-assetstore.kinemasters.com
+HOST,api-kinemaster-assetstore.nexstreaming.com
 # Over
-DOMAIN,api.overhq.com
+HOST,api.overhq.com
 # Bright
-DOMAIN,engbright.com
+HOST,engbright.com
 # Ulike
-DOMAIN,commerce-i18n-api.faceu.mobi
+HOST,commerce-i18n-api.faceu.mobi
 # Blinkist
-DOMAIN,api.blinkist.com
+HOST,api.blinkist.com
 # lingokids
-DOMAIN,api.lingokids.com
+HOST,api.lingokids.com
 # Boom Music
-DOMAIN,apimboom2.globaldelight.net
+HOST,apimboom2.globaldelight.net
 # Musicalm
-DOMAIN,www.peacefulsoundsapp.com
-DOMAIN,subscription.aresframework.com
+HOST,www.peacefulsoundsapp.com
+HOST,subscription.aresframework.com
 # Update Nichi
-DOMAIN,mp.bybutter.com
-DOMAIN,pay.wecut.com
+HOST,mp.bybutter.com
+HOST,pay.wecut.com
 # 1Blocker, Loopsie, Infltr, Yoga Studio
-DOMAIN,api.revenuecat.com
-DOMAIN,api.faceapp.io
-DOMAIN,api.unfold.app
-DOMAIN,asla.joytunes.com
-DOMAIN,accounts.elevateapp.net
-DOMAIN,pixmagicapp.com
-DOMAIN,api.busuu.com
-DOMAIN,bmall.camera360.com
-DOMAIN,entitlements.adobe.io
-DOMAIN,photos.adobe.io
-DOMAIN,api-intl.mr.meitu.com
-DOMAIN-SUFFIX,api.memrise.com
-DOMAIN-SUFFIX,api.picsart.com
-DOMAIN-SUFFIX,api.mondlylanguages.com
-DOMAIN,vsco.co
-DOMAIN-SUFFIX,pool.elsanow.io
+HOST,api.revenuecat.com
+HOST,api.faceapp.io
+HOST,api.unfold.app
+HOST,asla.joytunes.com
+HOST,accounts.elevateapp.net
+HOST,pixmagicapp.com
+HOST,api.busuu.com
+HOST,bmall.camera360.com
+HOST,entitlements.adobe.io
+HOST,photos.adobe.io
+HOST,api-intl.mr.meitu.com
+HOST-SUFFIX,api.memrise.com
+HOST-SUFFIX,api.picsart.com
+HOST-SUFFIX,api.mondlylanguages.com
+HOST,vsco.co
+HOST-SUFFIX,pool.elsanow.io
 # Calm
-DOMAIN-SUFFIX,api.calm.com
-DOMAIN-SUFFIX,api.indicative.com
-DOMAIN-SUFFIX,lambda.us-east-1.amazonaws.com
+HOST-SUFFIX,api.calm.com
+HOST-SUFFIX,api.indicative.com
+HOST-SUFFIX,lambda.us-east-1.amazonaws.com
 #Instasize
-DOMAIN,api.instasize.com
-DOMAIN,purchases.ws.pho.to
-DOMAIN,nomo.dafork.com
-DOMAIN,cloudapp.aiarlabs.com
-DOMAIN,buy.itunes.apple.com
+HOST,api.instasize.com
+HOST,purchases.ws.pho.to
+HOST,nomo.dafork.com
+HOST,cloudapp.aiarlabs.com
+HOST,buy.itunes.apple.com
 #Infltr
-DOMAIN,us-central1-infltr.cloudfunctions.net
-DOMAIN,owa.videoshowiosglobalserver.com
-DOMAIN,app.algoriddim.com
-DOMAIN,viva.v21xy.com
-DOMAIN,viva-asia1.vvbrd.com
-DOMAIN,api.getmimo.com
+HOST,us-central1-infltr.cloudfunctions.net
+HOST,owa.videoshowiosglobalserver.com
+HOST,app.algoriddim.com
+HOST,viva.v21xy.com
+HOST,viva-asia1.vvbrd.com
+HOST,api.getmimo.com
