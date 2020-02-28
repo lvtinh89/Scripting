@@ -1,121 +1,121 @@
 #PXX itunes
 HOST-KEYWORD,-buy.itunes.apple.com,AppPurchase
 #Funimate
-HOST,api.funimate.com,FakeSever
+HOST,api.funimate.com,Fakesever
 #Zing Mp3
-HOST,api.global.mp3.zing.vn,FakeSever
+HOST,api.global.mp3.zing.vn,Fakesever
 #Snap&Trans
-HOST,receipt-validator.herewetest.com,FakeSever
+HOST,receipt-validator.herewetest.com,Fakesever
 #Presco Overlay
-HOST,overlay-api.gotbatu.com,FakeSever
+HOST,overlay-api.gotbatu.com,Fakesever
 #Daggerhood
-HOST,api.playond.com,FakeSever
+HOST,api.playond.com,Fakesever
 #Vinkle
-HOST,dupa-api.doupaiapp.com,FakeSever
+HOST,dupa-api.doupaiapp.com,Fakesever
 #Faded
-HOST,api.madewithfaded.com,FakeSever
+HOST,api.madewithfaded.com,Fakesever
 #PlayerXtreme
-HOST,secure.istreamer.com,FakeSever
+HOST,secure.istreamer.com,Fakesever
 #farfaria
-HOST, api.farfaria.com, FakeSever
+HOST, api.farfaria.com, Fakesever
 #BabyBus
-HOST,pay.babybus.com,FakeSever
+HOST,pay.babybus.com,Fakesever
 #AutoCAD
-HOST,app.autocad360.com,FakeSever
+HOST,app.autocad360.com,Fakesever
 #VMonkey
-HOST,www.api.monkeyuni.net,FakeSever
+HOST,www.api.monkeyuni.net,Fakesever
 #TIKTOK
-HOST,api3-normal-c-lf.amemv.com,FakeSever
-HOST-KEYWORD,h2.tiktokv.com,FakeSever
+HOST,api3-normal-c-lf.amemv.com,Fakesever
+HOST-KEYWORD,h2.tiktokv.com,Fakesever
 #Spendee
-HOST,api.spendee.com,FakeSever
+HOST,api.spendee.com,Fakesever
 #Prequel
-HOST,cloudapp.aiarlabs.com,FakeSever
+HOST,cloudapp.aiarlabs.com,Fakesever
 #Working Copy
-HOST,education.github.com,FakeSever
+HOST,education.github.com,Fakesever
 #Camscanner
-HOST,api-cs.intsig.net,FakeSever
+HOST,api-cs.intsig.net,Fakesever
 #Planner 5D
-HOST,planner5d.com,FakeSever
+HOST,planner5d.com,Fakesever
 #Day One
-HOST,dayone.me,FakeSever
+HOST,dayone.me,Fakesever
 #Endel
-HOST,api-production.endel.io,FakeSever
+HOST,api-production.endel.io,Fakesever
 # Chic Cam
-HOST,chic.mtlab.meitu.com,FakeSever
+HOST,chic.mtlab.meitu.com,Fakesever
 # Photoshop
-HOST,lcs-mobile-cops.adobe.io,FakeSever
+HOST,lcs-mobile-cops.adobe.io,Fakesever
 # QIYIVideo
-HOST,intl-i.vip.iqiyi.com,FakeSever
-HOST,intl-passport.iqiyi.com,FakeSever
+HOST,intl-i.vip.iqiyi.com,Fakesever
+HOST,intl-passport.iqiyi.com,Fakesever
 # Fing
-HOST,cdn.fing.io,FakeSever
+HOST,cdn.fing.io,Fakesever
 # vizmato
-HOST,web.vizmato.com,FakeSever
+HOST,web.vizmato.com,Fakesever
 # SoloLearn
-HOST,api.sololearn.com,FakeSever
+HOST,api.sololearn.com,Fakesever
 # MusiXmatch
-HOST,apic.musixmatch.com,FakeSever
+HOST,apic.musixmatch.com,Fakesever
 #JibJab
-HOST,origin-prod-phoenix.jibjab.com,FakeSever
+HOST,origin-prod-phoenix.jibjab.com,Fakesever
 # Termius
-HOST,api.termius.com,FakeSever
+HOST,api.termius.com,Fakesever
 # PDF Expert
-HOST,license.pdfexpert.com,FakeSever
+HOST,license.pdfexpert.com,Fakesever
 # Gyroscope
-HOST,api.gyrosco.pe,FakeSever
+HOST,api.gyrosco.pe,Fakesever
 # Kine Master
-HOST,api-kinemaster-assetstore.kinemasters.com,FakeSever
-HOST,api-kinemaster-assetstore.nexstreaming.com,FakeSever
+HOST,api-kinemaster-assetstore.kinemasters.com,Fakesever
+HOST,api-kinemaster-assetstore.nexstreaming.com,Fakesever
 # Over
-HOST,api.overhq.com,FakeSever
+HOST,api.overhq.com,Fakesever
 # Bright
-HOST,engbright.com,FakeSever
+HOST,engbright.com,Fakesever
 # Ulike
-HOST,commerce-i18n-api.faceu.mobi,FakeSever
+HOST,commerce-i18n-api.faceu.mobi,Fakesever
 # Blinkist
-HOST,api.blinkist.com,FakeSever
+HOST,api.blinkist.com,Fakesever
 # lingokids
-HOST,api.lingokids.com,FakeSever
+HOST,api.lingokids.com,Fakesever
 # Boom Music
-HOST,apimboom2.globaldelight.net,FakeSever
+HOST,apimboom2.globaldelight.net,Fakesever
 # Musicalm
-HOST,www.peacefulsoundsapp.com,FakeSever
-HOST,subscription.aresframework.com,FakeSever
+HOST,www.peacefulsoundsapp.com,Fakesever
+HOST,subscription.aresframework.com,Fakesever
 # Update Nichi
-HOST,mp.bybutter.com,FakeSever
-HOST,pay.wecut.com,FakeSever
+HOST,mp.bybutter.com,Fakesever
+HOST,pay.wecut.com,Fakesever
 # 1Blocker, Loopsie, Infltr, Yoga Studio
-HOST,api.revenuecat.com,FakeSever
-HOST,api.faceapp.io,FakeSever
-HOST,api.unfold.app,FakeSever
-HOST,asla.joytunes.com,FakeSever
-HOST,accounts.elevateapp.net,FakeSever
-HOST,pixmagicapp.com,FakeSever
-HOST,api.busuu.com,FakeSever
-HOST,bmall.camera360.com,FakeSever
-HOST,entitlements.adobe.io,FakeSever
-HOST,photos.adobe.io,FakeSever
-HOST,api-intl.mr.meitu.com,FakeSever
-HOST-SUFFIX,api.memrise.com,FakeSever
-HOST-SUFFIX,api.picsart.com,FakeSever
-HOST-SUFFIX,api.mondlylanguages.com,FakeSever
-HOST,vsco.co,FakeSever
-HOST-SUFFIX,pool.elsanow.io,FakeSever
+HOST,api.revenuecat.com,Fakesever
+HOST,api.faceapp.io,Fakesever
+HOST,api.unfold.app,Fakesever
+HOST,asla.joytunes.com,Fakesever
+HOST,accounts.elevateapp.net,Fakesever
+HOST,pixmagicapp.com,Fakesever
+HOST,api.busuu.com,Fakesever
+HOST,bmall.camera360.com,Fakesever
+HOST,entitlements.adobe.io,Fakesever
+HOST,photos.adobe.io,Fakesever
+HOST,api-intl.mr.meitu.com,Fakesever
+HOST-SUFFIX,api.memrise.com,Fakesever
+HOST-SUFFIX,api.picsart.com,Fakesever
+HOST-SUFFIX,api.mondlylanguages.com,Fakesever
+HOST,vsco.co,Fakesever
+HOST-SUFFIX,pool.elsanow.io,Fakesever
 # Calm
-HOST-SUFFIX,api.calm.com,FakeSever
-HOST-SUFFIX,api.indicative.com,FakeSever
-HOST-SUFFIX,lambda.us-east-1.amazonaws.com,FakeSever
+HOST-SUFFIX,api.calm.com,Fakesever
+HOST-SUFFIX,api.indicative.com,Fakesever
+HOST-SUFFIX,lambda.us-east-1.amazonaws.com,Fakesever
 #Instasize
-HOST,api.instasize.com,FakeSever
-HOST,purchases.ws.pho.to,FakeSever
-HOST,nomo.dafork.com,FakeSever
-HOST,cloudapp.aiarlabs.com,FakeSever
-HOST,buy.itunes.apple.com,FakeSever
+HOST,api.instasize.com,Fakesever
+HOST,purchases.ws.pho.to,Fakesever
+HOST,nomo.dafork.com,Fakesever
+HOST,cloudapp.aiarlabs.com,Fakesever
+HOST,buy.itunes.apple.com,Fakesever
 #Infltr
-HOST,us-central1-infltr.cloudfunctions.net,FakeSever
-HOST,owa.videoshowiosglobalserver.com,FakeSever
-HOST,app.algoriddim.com,FakeSever
-HOST,viva.v21xy.com,FakeSever
-HOST,viva-asia1.vvbrd.com,FakeSever
-HOST,api.getmimo.com,FakeSever
+HOST,us-central1-infltr.cloudfunctions.net,Fakesever
+HOST,owa.videoshowiosglobalserver.com,Fakesever
+HOST,app.algoriddim.com,Fakesever
+HOST,viva.v21xy.com,Fakesever
+HOST,viva-asia1.vvbrd.com,Fakesever
+HOST,api.getmimo.com,Fakesever
