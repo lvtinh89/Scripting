@@ -2,6 +2,8 @@
 DOMAIN,api.global.mp3.zing.vn
  #lingokids
 DOMAIN,api.lingokids.com
+ #AutoCAD
+DOMAIN,app.autocad360.com
  #PDF Expert
 DOMAIN,license.pdfexpert.com
  #MusiXmatch
