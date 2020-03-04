@@ -7,7 +7,7 @@ http-request ^https:\/\/shopee\.vn\/me\/setting max-size=0,script-path=shopee_ge
 MITM = shopee.vn
 */
   var shopeeUrl = {
-    url: 'https://shopee.vn/universal-link/shopee-coins/?__classic__=1',
+    url: 'https://shopee.vn/shopee-coins/api/v2/checkin',
     headers: {
       Cookie: $persistentStore.read("CookieSP"),
     }
