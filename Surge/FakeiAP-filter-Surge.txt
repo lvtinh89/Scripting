@@ -32,7 +32,6 @@ DOMAIN,api-kinemaster-assetstore.kinemasters.com
 DOMAIN,api-kinemaster-assetstore.nexstreaming.com
 #Wattpad
 DOMAIN,api.wattpad.com
-
 #Pollar
 DOMAIN,api.polarr.co
  #Funimate
