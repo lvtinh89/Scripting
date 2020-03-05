@@ -1,4 +1,4 @@
- #Zingmp3.com
+ #Zingmp3
 DOMAIN,api.global.mp3.zing.vn
  #lingokids
 DOMAIN,api.lingokids.com
