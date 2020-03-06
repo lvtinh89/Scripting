@@ -85,8 +85,6 @@ HOST,commerce-i18n-api.faceu.mobi,FakeSever
 HOST,api.blinkist.com,FakeSever
 # lingokids
 HOST,api.lingokids.com,FakeSever
-# adGuard
-HOST,mobile-api.adguard.com,FakeSever
 # Boom Music
 HOST,apimboom2.globaldelight.net,FakeSever
 # Musicalm
