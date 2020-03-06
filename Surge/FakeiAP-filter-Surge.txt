@@ -1,84 +1,131 @@
- #Zingmp3
-DOMAIN,api.global.mp3.zing.vn
- #lingokids
-DOMAIN,api.lingokids.com
- #AutoCAD
-DOMAIN,app.autocad360.com
- #PDF Expert
-DOMAIN,license.pdfexpert.com
- #MusiXmatch
-DOMAIN,apic.musixmatch.com
- #TIKTOK
-DOMAIN,api3-normal-c-lf.amemv.com
-DOMAIN-KEYWORD,h2.tiktokv.com
- #Working Copy
-DOMAIN,education.github.com
- #Camscanner
-DOMAIN,api-cs.intsig.net
- #Planner 5D
-DOMAIN,planner5d.com
- #Day One
-DOMAIN,dayone.me
- #Photoshop
-DOMAIN,lcs-mobile-cops.adobe.io
-#Blinkist
-DOMAIN,api.blinkist.com
- #Bright
-DOMAIN,engbright.com
- #SoloLearn
-DOMAIN,api.sololearn.com
- #Kine Master
-DOMAIN,api-kinemaster-assetstore.kinemasters.com
-DOMAIN,api-kinemaster-assetstore.nexstreaming.com
+#Rocka
+DOMAIN,api.rockalearning.com
+#Lensa
+DOMAIN,subscription-service.neuralprisma.com
 #Wattpad
 DOMAIN,api.wattpad.com
 #Pollar
 DOMAIN,api.polarr.co
- #Funimate
+#Zingmp3
+DOMAIN,api.global.mp3.zing.vn
+#Funimate
 DOMAIN,api.funimate.com
- #Snap&Trans
+#Snap&Trans
 DOMAIN,overlay-api.gotbatu.com
- #Daggerhood
+#Daggerhood
 DOMAIN,api.playond.com
- #Vinkle
+#Vinkle
 DOMAIN,dupa-api.doupaiapp.com
- #Faded
+#Faded
 DOMAIN,api.madewithfaded.com
- #PlayerXtreme
+#PlayerXtreme
 DOMAIN,secure.istreamer.com
- #farfaria
+#farfaria
 DOMAIN,api.farfaria.com
- #BabyBus
+#BabyBus
 DOMAIN,pay.babybus.com
- #VMonkey
+#AutoCAD
+DOMAIN,app.autocad360.com
+#VMonkey
 DOMAIN,www.api.monkeyuni.net
- #Spendee
+#TIKTOK
+DOMAIN,api3-normal-c-lf.amemv.com
+DOMAIN-KEYWORD,h2.tiktokv.com
+#Spendee
 DOMAIN,api.spendee.com
- #Prequel
+#Prequel
 DOMAIN,cloudapp.aiarlabs.com
- #Endel
+#Working Copy
+DOMAIN,education.github.com
+#Camscanner
+DOMAIN,api-cs.intsig.net
+#Planner 5D
+DOMAIN,planner5d.com
+#Day One
+DOMAIN,dayone.me
+#Endel
 DOMAIN,api-production.endel.io
- #Chic Cam
+# Chic Cam
 DOMAIN,chic.mtlab.meitu.com
- #QIYIVideo
+# Photoshop
+DOMAIN,lcs-mobile-cops.adobe.io
+# QIYIVideo
 DOMAIN,intl-i.vip.iqiyi.com
 DOMAIN,intl-passport.iqiyi.com
- #Fing
+# Fing
 DOMAIN,cdn.fing.io
- #vizmato
+# vizmato
 DOMAIN,web.vizmato.com
- #JibJab
+# SoloLearn
+DOMAIN,api.sololearn.com
+# Vizzywig2020
+DOMAIN,ec2-52-34-190-224.us-west-2.compute.amazonaws.com
+# MusiXmatch
+DOMAIN,apic.musixmatch.com
+#JibJab
 DOMAIN,origin-prod-phoenix.jibjab.com
- #Termius
+# Termius
 DOMAIN,api.termius.com
- #Gyroscope
+# PDF Expert
+DOMAIN,license.pdfexpert.com
+# Gyroscope
 DOMAIN,api.gyrosco.pe
- #Over
+# Kine Master
+DOMAIN,api-kinemaster-assetstore.kinemasters.com
+DOMAIN,api-kinemaster-assetstore.nexstreaming.com
+# Over
 DOMAIN,api.overhq.com
- #Ulike
+# Bright
+DOMAIN,engbright.com
+# Ulike
 DOMAIN,commerce-i18n-api.faceu.mobi
- #Boom Music
+# Blinkist
+DOMAIN,api.blinkist.com
+# lingokids
+DOMAIN,api.lingokids.com
+# adGuard
+DOMAIN,mobile-api.adguard.com
+# Boom Music
 DOMAIN,apimboom2.globaldelight.net
- #Musicalm
+# Musicalm
 DOMAIN,www.peacefulsoundsapp.com
 DOMAIN,subscription.aresframework.com
+# Update Nichi
+DOMAIN,mp.bybutter.com
+DOMAIN,pay.wecut.com
+# 1Blocker, Loopsie, Infltr, Yoga Studio
+DOMAIN,api.revenuecat.com
+DOMAIN,api.faceapp.io
+DOMAIN,api.unfold.app
+DOMAIN,asla.joytunes.com
+#NhacCuaTui
+#DOMAIN,graph.nhaccuatui.com
+DOMAIN,accounts.elevateapp.net
+DOMAIN,pixmagicapp.com
+DOMAIN,api.busuu.com
+DOMAIN,bmall.camera360.com
+DOMAIN,entitlements.adobe.io
+DOMAIN,photos.adobe.io
+DOMAIN,api-intl.mr.meitu.com
+DOMAIN-SUFFIX,api.memrise.com
+DOMAIN-SUFFIX,api.picsart.com
+DOMAIN-SUFFIX,api.mondlylanguages.com
+DOMAIN,vsco.co
+DOMAIN-SUFFIX,pool.elsanow.io
+# Calm
+DOMAIN-SUFFIX,api.calm.com
+DOMAIN-SUFFIX,api.indicative.com
+DOMAIN-SUFFIX,lambda.us-east-1.amazonaws.com
+#Instasize
+DOMAIN,api.instasize.com
+DOMAIN,purchases.ws.pho.to
+DOMAIN,nomo.dafork.com
+DOMAIN,cloudapp.aiarlabs.com
+DOMAIN,buy.itunes.apple.com
+#Infltr
+DOMAIN,us-central1-infltr.cloudfunctions.net
+DOMAIN,owa.videoshowiosglobalserver.com
+DOMAIN,app.algoriddim.com
+DOMAIN,viva.v21xy.com
+DOMAIN,viva-asia1.vvbrd.com
+DOMAIN,api.getmimo.com
