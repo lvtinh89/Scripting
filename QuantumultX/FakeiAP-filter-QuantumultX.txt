@@ -32,7 +32,6 @@ HOST,api-kinemaster-assetstore.kinemasters.com,FakeSever
 HOST,api-kinemaster-assetstore.nexstreaming.com,FakeSever
 #Wattpad
 HOST,api.wattpad.com,FakeSever
-
 #Polarr
 HOST,api.polarr.co,FakeSever
  #Funimate
