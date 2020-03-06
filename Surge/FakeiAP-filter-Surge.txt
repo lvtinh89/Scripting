@@ -83,8 +83,6 @@ DOMAIN,commerce-i18n-api.faceu.mobi
 DOMAIN,api.blinkist.com
 # lingokids
 DOMAIN,api.lingokids.com
-# adGuard
-DOMAIN,mobile-api.adguard.com
 # Boom Music
 DOMAIN,apimboom2.globaldelight.net
 # Musicalm
@@ -98,8 +96,6 @@ DOMAIN,api.revenuecat.com
 DOMAIN,api.faceapp.io
 DOMAIN,api.unfold.app
 DOMAIN,asla.joytunes.com
-#NhacCuaTui
-#DOMAIN,graph.nhaccuatui.com
 DOMAIN,accounts.elevateapp.net
 DOMAIN,pixmagicapp.com
 DOMAIN,api.busuu.com
