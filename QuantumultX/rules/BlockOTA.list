@@ -1,7 +1,10 @@
-HOST, mesu.apple.com, reject
-HOST, gdmf.apple.com, reject
-HOST, appldnld.apple.com, reject
-HOST, updates-http.cdn-apple.com, reject
-HOST, xp.apple.com, reject
-HOST, ocsp.int-x3.letsencrypt.org, reject
-HOST, world-gen.g.aaplimg.com, reject
+HOST-SUFFIX,appldnld.apple.com,REJECT
+HOST-SUFFIX,appldnld.apple.com.akadns.net,REJECT
+HOST-SUFFIX,appldnld.g.aaplimg.com,REJECT
+HOST-SUFFIX,mesu.apple.com,REJECT
+HOST-SUFFIX,mesu-cdn.apple.com.akadns.net,REJECT
+HOST-SUFFIX,mesu-cdn.origin-apple.com.akadns.net,REJECT
+HOST-SUFFIX,mesu.g.aaplimg.com,REJECT
+HOST-SUFFIX,gdmf.apple.com,REJECT
+HOST-SUFFIX,gdmf.apple.com.akadns.net,REJECT
+HOST-SUFFIX,ocsp.apple.com,REJECT
