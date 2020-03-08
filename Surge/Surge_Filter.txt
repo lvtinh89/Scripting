@@ -61,7 +61,7 @@ DOMAIN,api.sololearn.com
 # Vizzywig2020
 DOMAIN,ec2-52-34-190-224.us-west-2.compute.amazonaws.com
 # MusiXmatch
-DOMAIN,apic.musixmatch.com
+#DOMAIN,apic.musixmatch.com
 #JibJab
 DOMAIN,origin-prod-phoenix.jibjab.com
 # Termius
