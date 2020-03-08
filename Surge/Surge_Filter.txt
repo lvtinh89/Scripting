@@ -7,7 +7,7 @@ DOMAIN,api.wattpad.com
 #Pollar
 DOMAIN,api.polarr.co
 #Zingmp3
-DOMAIN,api.global.mp3.zing.vn
+#DOMAIN,api.global.mp3.zing.vn
 #Funimate
 DOMAIN,api.funimate.com
 #Snap&Trans
@@ -36,7 +36,7 @@ DOMAIN,api.spendee.com
 #Prequel
 DOMAIN,cloudapp.aiarlabs.com
 #Working Copy
-DOMAIN,education.github.com
+#DOMAIN,education.github.com
 #Camscanner
 DOMAIN,api-cs.intsig.net
 #Planner 5D
