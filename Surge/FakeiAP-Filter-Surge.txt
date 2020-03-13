@@ -86,14 +86,10 @@ DOMAIN,asla.joytunes.com
 DOMAIN,accounts.elevateapp.net
 DOMAIN,pixmagicapp.com
 DOMAIN,api.busuu.com
-DOMAIN,bmall.camera360.com
 DOMAIN,entitlements.adobe.io
-DOMAIN,photos.adobe.io
 DOMAIN,api-intl.mr.meitu.com
 DOMAIN-SUFFIX,api.memrise.com
-DOMAIN-SUFFIX,api.picsart.com
 DOMAIN-SUFFIX,api.mondlylanguages.com
-DOMAIN,vsco.co
 DOMAIN-SUFFIX,pool.elsanow.io
 # Calm
 DOMAIN-SUFFIX,api.calm.com
@@ -107,8 +103,4 @@ DOMAIN,cloudapp.aiarlabs.com
 DOMAIN,buy.itunes.apple.com
 #Infltr
 DOMAIN,us-central1-infltr.cloudfunctions.net
-DOMAIN,owa.videoshowiosglobalserver.com
 DOMAIN,app.algoriddim.com
-DOMAIN,viva.v21xy.com
-DOMAIN,viva-asia1.vvbrd.com
-DOMAIN,api.getmimo.com
