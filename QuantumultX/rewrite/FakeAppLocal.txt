@@ -7,35 +7,50 @@ hostname = avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, vsco.co, 
 #vsco
 ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body FakeAppLocal/vsco.js
 
-#Vivavideo
-^https:\/\/viva-asia1\.vvbrd\.com\/api\/rest\/u\/vip* url script-response-body FakeAppLocal/vivavideo.vip.js
-
-#Nhaccuatui
-^https:\/\/graph\.nhaccuatui\.com\/.*\/users\/info* url script-response-body FakeAppLocal/nhaccuatui.js
-
-#sync
-^https:\/\/api\.sync\.me\/api\/purchases\/(report_purchases|get_purchases)  url script-response-body FakeAppLocal/syn.me.js
-
-#Videoshow
-^https:\/\/owa\.videoshowiosglobalserver\.com\/.*\/iosPayClient url script-response-body FakeAppLocal/videoshow.vip.js
-
-#camera360
-^https:\/\/bmall\.camera360\.com\/api\/(iap\/check-receipt$|mix\/getinfo$) url script-response-body FakeAppLocal/camera360.vip.js
-
-#zingtv
-^https?:\/\/api\.tv\.zing\.vn\/.*/user* url script-response-body FakeAppLocal/zingtvvipv1.js
+#phothop&PSexpress
+^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body FakeAppLocal/photoshop.js
 
 #lightroom
 ^https:\/\/photos\.adobe\.io\/v2\/accounts* url script-response-body FakeAppLocal/Lightroom.js
 
+#camera360
+^https:\/\/bmall\.camera360\.com\/api\/(iap\/check-receipt$|mix\/getinfo$) url script-response-body FakeAppLocal/camera360.vip.js
+
+#Vivavideo
+^https:\/\/viva-asia1\.vvbrd\.com\/api\/rest\/u\/vip* url script-response-body FakeAppLocal/vivavideo.vip.js
+
+#Videoshow
+^https:\/\/owa\.videoshowiosglobalserver\.com\/.*\/iosPayClient url script-response-body FakeAppLocal/videoshow.vip.js
+
+#kinemaster
+^https:\/\/api-kinemaster-assetstore\.(nexstreaming|kinemasters)\.com\/.*\/product\/verifyReceipt$ url script-response-body FakeAppLocal/kinemaster.js
+
 #Pdfexpert
 ^https:\/\/license\.pdfexpert\.com\/api\/1\.0\/pdfexpert6\/subscription\/(refresh$|check$) url script-response-body FakeAppLocal/Pdfexpert.vip.js
+
+#document
+^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$) url script-response-body FakeAppLocal/documents.js
+
+#CamScanner
+^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body FakeAppLocal/CamScaner.js
+
+#sync
+^https:\/\/api\.sync\.me\/api\/purchases\/(report_purchases|get_purchases)  url script-response-body FakeAppLocal/syn.me.js
+
+#workingcopy
+^https:\/\/education\.github\.com\/api\/user$ url script-response-body FakeAppLocal/workingcopy.js
 
 #Musixmatch
 ^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get url script-response-body FakeAppLocal/musixmatch.miao.js
 
-#Bright
-^https:\/\/engbright\.com\/app-portal\/apple\/receipt$ url 302 FakeAppLocal/Bright.rsp
+#Nhaccuatui
+^https:\/\/graph\.nhaccuatui\.com\/.*\/users\/info* url script-response-body FakeAppLocal/nhaccuatui.js
+
+#zingmp3
+^https:\/\/api\.global\.mp3\.zing\.vn\/1\.0\/getUserInfo\?data=* url script-response-body FakeAppLocal/zingmp3.js
+
+#zingtv
+^https?:\/\/api\.tv\.zing\.vn\/.*/user* url script-response-body FakeAppLocal/zingtvvipv1.js
 
 #lingokids
 ^https:\/\/api\.lingokids\.com\/v1\/renovate_session$ url script-response-body FakeAppLocal/lingokids.vip.js
@@ -43,29 +58,14 @@ hostname = avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, vsco.co, 
 #duolingo_test
 ^https:\/\/duolingo-leaderboards-prod\.duolingo\.com\/leaderboards* url script-response-body FakeAppLocal/duolingo.js
 
-#zingmp3
-^https:\/\/api\.global\.mp3\.zing\.vn\/1\.0\/getUserInfo\?data=* url script-response-body FakeAppLocal/zingmp3.js
+#Bright
+^https:\/\/engbright\.com\/app-portal\/apple\/receipt$ url 302 FakeAppLocal/Bright.rsp
 
 #Blinkist
 ^https:\/\/api\.blinkist\.com\/v4\/(me$|me.json$|me\/access$) url script-response-body FakeAppLocal/blinkist.js
 
 #sololearn 
 ^https:\/\/api\.sololearn\.com\/(authenticateDevice|challenge\/GetContestFeed|Profile\/GetProfile)$ url script-response-body FakeAppLocal/sololearn.js
-
-#kinemaster
-^https:\/\/api-kinemaster-assetstore\.(nexstreaming|kinemasters)\.com\/.*\/product\/verifyReceipt$ url script-response-body FakeAppLocal/kinemaster.js
-
-#CamScanner
-^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body FakeAppLocal/CamScaner.js
-
-#document
-^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$) url script-response-body FakeAppLocal/documents.js
-
-#workingcopy
-^https:\/\/education\.github\.com\/api\/user$ url script-response-body FakeAppLocal/workingcopy.js
-
-#phothop&PSexpress
-^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body FakeAppLocal/photoshop.js
 
 #all apps monkey
 ^https:\/\/www\.api\.monkeyuni\.net\/api\/.+\/mobile\/account\/load-update url script-response-body FakeAppLocal/monkey.js
