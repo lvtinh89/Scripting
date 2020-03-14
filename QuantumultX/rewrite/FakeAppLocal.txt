@@ -4,6 +4,9 @@ hostname = avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, vsco.co, 
 (.*video_id=\w{32})(.*watermark=)(.*) url 302 $1
 (?<=(carrier|account|sys)_region=)VN url 307 CN
 
+#picsArt
+^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json url script-response-body FakeAppLocal/picsArt.vip.js
+
 #vsco
 ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body FakeAppLocal/vsco.js
 
@@ -21,9 +24,6 @@ hostname = avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, vsco.co, 
 
 #Videoshow
 ^https:\/\/owa\.videoshowiosglobalserver\.com\/.*\/iosPayClient url script-response-body FakeAppLocal/videoshow.vip.js
-
-#kinemaster
-^https:\/\/api-kinemaster-assetstore\.(nexstreaming|kinemasters)\.com\/.*\/product\/verifyReceipt$ url script-response-body FakeAppLocal/kinemaster.js
 
 #Pdfexpert
 ^https:\/\/license\.pdfexpert\.com\/api\/1\.0\/pdfexpert6\/subscription\/(refresh$|check$) url script-response-body FakeAppLocal/Pdfexpert.vip.js
@@ -48,6 +48,12 @@ hostname = avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, vsco.co, 
 
 #zingmp3
 ^https:\/\/api\.global\.mp3\.zing\.vn\/1\.0\/getUserInfo\?data=* url script-response-body FakeAppLocal/zingmp3.js
+
+#zingmp3.downloadsong
+^https:\/\/api\.global\.mp3\.zing\.vn\/1\.0\/getDownloadSongInfo\?data url script-response-body FakeAppLocal/zingmp3.downloadsong.js
+
+#zingmp3.getsong
+^https:\/\/api\.global\.mp3\.zing\.vn\/1\.0\/getSongInfo\?data url script-response-body FakeAppLocal/zingmp3.getsong.js
 
 #zingtv
 ^https?:\/\/api\.tv\.zing\.vn\/.*/user* url script-response-body FakeAppLocal/zingtvvipv1.js
