@@ -1,3 +1,7 @@
+#VideoStart
+DOMAIN,testapps.videostarapp.com
+#Presco
+DOMAIN,presco-api.gotbatu.com
 #Followers
 DOMAIN,api.socialguide.co
 #passwordmanager
@@ -75,32 +79,3 @@ DOMAIN,apimboom2.globaldelight.net
 # Musicalm
 DOMAIN,www.peacefulsoundsapp.com
 DOMAIN,subscription.aresframework.com
-# Update Nichi
-DOMAIN,mp.bybutter.com
-DOMAIN,pay.wecut.com
-# 1Blocker, Loopsie, Infltr, Yoga Studio
-DOMAIN,api.revenuecat.com
-DOMAIN,api.faceapp.io
-DOMAIN,api.unfold.app
-DOMAIN,asla.joytunes.com
-DOMAIN,accounts.elevateapp.net
-DOMAIN,pixmagicapp.com
-DOMAIN,api.busuu.com
-DOMAIN,entitlements.adobe.io
-DOMAIN,api-intl.mr.meitu.com
-DOMAIN-SUFFIX,api.memrise.com
-DOMAIN-SUFFIX,api.mondlylanguages.com
-DOMAIN-SUFFIX,pool.elsanow.io
-# Calm
-DOMAIN-SUFFIX,api.calm.com
-DOMAIN-SUFFIX,api.indicative.com
-DOMAIN-SUFFIX,lambda.us-east-1.amazonaws.com
-#Instasize
-DOMAIN,api.instasize.com
-DOMAIN,purchases.ws.pho.to
-DOMAIN,nomo.dafork.com
-DOMAIN,cloudapp.aiarlabs.com
-DOMAIN,buy.itunes.apple.com
-#Infltr
-DOMAIN,us-central1-infltr.cloudfunctions.net
-DOMAIN,app.algoriddim.com
