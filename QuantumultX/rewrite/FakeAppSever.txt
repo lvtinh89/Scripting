@@ -2,7 +2,7 @@ hostname = avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, vsco.co, 
 
 # TikTok
 (.*video_id=\w{32})(.*watermark=)(.*) url 302 $1
-(?<=(carrier|account|sys)_region=)VN url 307 CN
+(?<=(carrier|sys)_region=)VN url 307 US
 
 #adguardpremium
 ^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url 302 https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/Adguard.rsp
