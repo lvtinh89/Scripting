@@ -5,162 +5,162 @@ hostname = avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, vsco.co, 
 (?<=(carrier|sys)_region=)VN url 307 US
 
 #adguardpremium
-^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url 302 FakeAppLocal/Adguard.rsp
+^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url 302 QX_JS/Adguard.rsp
 
 #Bright
-^https:\/\/engbright\.com\/app-portal\/apple\/receipt$ url 302 FakeAppLocal/Bright.rsp
+^https:\/\/engbright\.com\/app-portal\/apple\/receipt$ url 302 QX_JS/Bright.rsp
 
 #CamScanner
-^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body FakeAppLocal/CamScaner.js
+^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body QX_JS/CamScaner.js
 
 #gyroscope
-^https:\/\/api\.gyrosco\.pe\/v1\/account\/$ url script-response-body FakeAppLocal/Gyroscope.vip.js
+^https:\/\/api\.gyrosco\.pe\/v1\/account\/$ url script-response-body QX_JS/Gyroscope.vip.js
 
 #lightroom
-^https:\/\/photos\.adobe\.io\/v2\/accounts* url script-response-body FakeAppLocal/Lightroom.js
+^https:\/\/photos\.adobe\.io\/v2\/accounts* url script-response-body QX_JS/Lightroom.js
 
 #Pdfexpert
-^https:\/\/license\.pdfexpert\.com\/api\/1\.0\/pdfexpert6\/subscription\/(refresh$|check$) url script-response-body FakeAppLocal/Pdfexpert.vip.js
+^https:\/\/license\.pdfexpert\.com\/api\/1\.0\/pdfexpert6\/subscription\/(refresh$|check$) url script-response-body QX_JS/Pdfexpert.vip.js
 
 #Termius 
-https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body FakeAppLocal/Terminus.js
+https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body QX_JS/Terminus.js
 
 #Undfold
-^https:\/\/api\.unfold\.app\/v1\/ios\/receipts$ url script-response-body FakeAppLocal/Unfold.vip.js
+^https:\/\/api\.unfold\.app\/v1\/ios\/receipts$ url script-response-body QX_JS/Unfold.vip.js
 
 #beautyplus
-^https:\/\/api-intl\.mr\.meitu\.com/.*/subs_offer_elg$ url script-response-body FakeAppLocal/beautyplusvip.js
+^https:\/\/api-intl\.mr\.meitu\.com/.*/subs_offer_elg$ url script-response-body QX_JS/beautyplusvip.js
 
 #Blinkist
-^https:\/\/api\.blinkist\.com\/v4\/(me$|me.json$|me\/access$) url script-response-body FakeAppLocal/blinkist.js
+^https:\/\/api\.blinkist\.com\/v4\/(me$|me.json$|me\/access$) url script-response-body QX_JS/blinkist.js
 
 #boom
-^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$ url 302 FakeAppLocal/boom.vip.rsp
+^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$ url 302 QX_JS/boom.vip.rsp
 
 #busuu
-^https:\/\/api\.busuu\.com\/users\/me* url script-response-body FakeAppLocal/busuu.vip.js
+^https:\/\/api\.busuu\.com\/users\/me* url script-response-body QX_JS/busuu.vip.js
 
 #calm
-^https:\/\/api\.calm\.com\/me$ url script-response-body FakeAppLocal/calm.vip.js
+^https:\/\/api\.calm\.com\/me$ url script-response-body QX_JS/calm.vip.js
 
 #camera360
-^https:\/\/bmall\.camera360\.com\/api\/(iap\/check-receipt$|mix\/getinfo$) url script-response-body FakeAppLocal/camera360.vip.js
+^https:\/\/bmall\.camera360\.com\/api\/(iap\/check-receipt$|mix\/getinfo$) url script-response-body QX_JS/camera360.vip.js
 
 #dayone
-^https:\/\/dayone\.me\/api\/(users|v2\/users\/account-status)$ url script-response-body FakeAppLocal/dayone.js
+^https:\/\/dayone\.me\/api\/(users|v2\/users\/account-status)$ url script-response-body QX_JS/dayone.js
 
 #pre_dayone
 ;^https:\/\/dayone\.me\/api\/users$ url request-header (\r\n)If-None-Match:.+(\r\n) request-header $1 
 
 #document
-^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$) url script-response-body FakeAppLocal/documents.js
+^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$) url script-response-body QX_JS/documents.js
 
 #draft
-^https:\/\/backend\.getdrafts\.com\/api\/.*\/verification* url script-response-body FakeAppLocal/draft.js
+^https:\/\/backend\.getdrafts\.com\/api\/.*\/verification* url script-response-body QX_JS/draft.js
 
 #drops
-^https:\/\/lambda\.us-east-1\.amazonaws\.com/.*/functions\/prod-4-syncPurchases\/invocations$ url script-response-body FakeAppLocal/drops.js
+^https:\/\/lambda\.us-east-1\.amazonaws\.com/.*/functions\/prod-4-syncPurchases\/invocations$ url script-response-body QX_JS/drops.js
 
 #duolingo_test
-^https:\/\/duolingo-leaderboards-prod\.duolingo\.com\/leaderboards* url script-response-body FakeAppLocal/duolingo.js
+^https:\/\/duolingo-leaderboards-prod\.duolingo\.com\/leaderboards* url script-response-body QX_JS/duolingo.js
 
 #elevate
-^https:\/\/accounts\.elevateapp\.net\/api\/users\?user%5Bauthentication_token* url script-response-body FakeAppLocal/elevate.vip.js
+^https:\/\/accounts\.elevateapp\.net\/api\/users\?user%5Bauthentication_token* url script-response-body QX_JS/elevate.vip.js
 
 #elsaresponse
-^https:\/\/pool\.elsanow\.io\/user\/api\/v1\/purchase$ url script-response-body FakeAppLocal/elsa-response.js
+^https:\/\/pool\.elsanow\.io\/user\/api\/v1\/purchase$ url script-response-body QX_JS/elsa-response.js
 
 #endel
-^https:\/\/api-production\.endel\.io\/.*\/user$ url script-response-body FakeAppLocal/endel.js
+^https:\/\/api-production\.endel\.io\/.*\/user$ url script-response-body QX_JS/endel.js
 
 #grammarly
-^https:\/\/subscription\.grammarly\.com\/api\/v1$ url script-response-body FakeAppLocal/grammarly.js
+^https:\/\/subscription\.grammarly\.com\/api\/v1$ url script-response-body QX_JS/grammarly.js
 
 #elsarewrite
 ^https:\/\/pool\.elsanow\.io\/content\/api\/v1\/modules\/download$  url request-header (\r\n)x-session-token:.+(\r\n) request-header $1x-session-token: F3S0w0bysBQFdbjtxpFurrFv2ItBBcBkVQxUddQW+9vjt2JXM751ksqq5GAWpkl+kk9nhig9BGh9JhYHQaokmendY6zLZDscHiRkZD2HrdJclKVCLordAARJhYIrf5C+5OSK6ax2TA45CKi8S09FEtYXN4noXO7gt42NT6WPIv6DKhdIwVxQuIAMLU5abmpMTDlyWeI4ulBWcOQbuZWWZg==
 
 #itranslate&lingo&voice&converse
-^https:\/\/ssl-api\.itranslateapp\.com\/.*\/subscriptions\/.*\/ios$ url script-response-body FakeAppLocal/itranslate.js
+^https:\/\/ssl-api\.itranslateapp\.com\/.*\/subscriptions\/.*\/ios$ url script-response-body QX_JS/itranslate.js
 
 # Jibjab
-^https:\/\/origin-prod-phoenix\.jibjab\.com\/v1\/user$ url script-response-body FakeAppLocal/jibjab.vip.js
+^https:\/\/origin-prod-phoenix\.jibjab\.com\/v1\/user$ url script-response-body QX_JS/jibjab.vip.js
 
 #kinemaster
-^https:\/\/api-kinemaster-assetstore\.(nexstreaming|kinemasters)\.com\/.*\/product\/verifyReceipt$ url script-response-body FakeAppLocal/kinemaster.js
+^https:\/\/api-kinemaster-assetstore\.(nexstreaming|kinemasters)\.com\/.*\/product\/verifyReceipt$ url script-response-body QX_JS/kinemaster.js
 
 #lingokids
-^https:\/\/api\.lingokids\.com\/v1\/renovate_session$ url script-response-body FakeAppLocal/lingokids.vip.js
+^https:\/\/api\.lingokids\.com\/v1\/renovate_session$ url script-response-body QX_JS/lingokids.vip.js
 
 #Memrise
-^https:\/\/api\.memrise\.com\/.+\/(me\/$|dashboard\/$|leaderboards\/following\/) url script-response-body FakeAppLocal/memrise.vip.js
+^https:\/\/api\.memrise\.com\/.+\/(me\/$|dashboard\/$|leaderboards\/following\/) url script-response-body QX_JS/memrise.vip.js
 
 #mimo
-^https:\/\/api\.getmimo\.com\/v1\/subscriptions$ url script-response-body FakeAppLocal/mimo.vip.js
+^https:\/\/api\.getmimo\.com\/v1\/subscriptions$ url script-response-body QX_JS/mimo.vip.js
 
 #mondly
-^https:\/\/api\.mondlylanguages\.com\/v1\/ios\/user\/sync$ url script-response-body FakeAppLocal/mondly.vip.js
+^https:\/\/api\.mondlylanguages\.com\/v1\/ios\/user\/sync$ url script-response-body QX_JS/mondly.vip.js
 
 #all apps monkey
-^https:\/\/www\.api\.monkeyuni\.net\/api\/.+\/mobile\/account\/load-update url script-response-body FakeAppLocal/monkey.js
+^https:\/\/www\.api\.monkeyuni\.net\/api\/.+\/mobile\/account\/load-update url script-response-body QX_JS/monkey.js
 
 #musicalm
-^https:\/\/www\.peacefulsoundsapp\.com\/api\/v1\/init$ url script-response-body FakeAppLocal/musicalm.js
+^https:\/\/www\.peacefulsoundsapp\.com\/api\/v1\/init$ url script-response-body QX_JS/musicalm.js
 
 #Musixmatch
-^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get url script-response-body FakeAppLocal/musixmatch.miao.js
+^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get url script-response-body QX_JS/musixmatch.miao.js
 
 #Nhaccuatui
-^https:\/\/graph\.nhaccuatui\.com\/.*\/users\/info* url script-response-body FakeAppLocal/nhaccuatui.js
+^https:\/\/graph\.nhaccuatui\.com\/.*\/users\/info* url script-response-body QX_JS/nhaccuatui.js
 
 #nichi
-^https?:\/\/mp\.bybutter\.com\/mood\/(official-templates|privileges) url script-response-body FakeAppLocal/nichi.js
+^https?:\/\/mp\.bybutter\.com\/mood\/(official-templates|privileges) url script-response-body QX_JS/nichi.js
 
 #over
-^https:\/\/api\.overhq\.com\/(user\/token\/refresh$|subscription\/verifyReceipt$) url script-response-body FakeAppLocal/over.vip.js
+^https:\/\/api\.overhq\.com\/(user\/token\/refresh$|subscription\/verifyReceipt$) url script-response-body QX_JS/over.vip.js
 
 #phothop&PSexpress
-^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body FakeAppLocal/photoshop.js
+^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body QX_JS/photoshop.js
 
 #PicsArt
-^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json url script-response-body FakeAppLocal/picsArt.vip.js
+^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json url script-response-body QX_JS/picsArt.vip.js
 
 #planner5d
-^https:\/\/planner5d\.com\/api\/sets url script-response-body FakeAppLocal/planner5d.js
+^https:\/\/planner5d\.com\/api\/sets url script-response-body QX_JS/planner5d.js
 
 #playerxtreme
 ;^https:\/\/secure\.istreamer\.com\/backend$ url request-header (\r\n)If-None-Match:.+(\r\n) request-header $1 
 
-^https:\/\/secure\.istreamer\.com\/backend$ url script-response-body FakeAppLocal/playerxtreme.js
+^https:\/\/secure\.istreamer\.com\/backend$ url script-response-body QX_JS/playerxtreme.js
 
 #productive&sleepzy
-^https:\/\/subs\.platforms\.team\/apple\/verifyTransaction$ url script-response-body FakeAppLocal/productive.js
+^https:\/\/subs\.platforms\.team\/apple\/verifyTransaction$ url script-response-body QX_JS/productive.js
 
 #pushover
-^https:\/\/api\.pushover\.net\/1\/messages\.json* url script-response-body FakeAppLocal/pushover.js
+^https:\/\/api\.pushover\.net\/1\/messages\.json* url script-response-body QX_JS/pushover.js
 
 #remove_manage
 ^https:\/\/www\.calm\.com\/mobile\/manage-subscription\?token=*  url reject-img
 
 #mojo&noto
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[a-zA-Z0-9_-]*$) url script-response-body FakeAppLocal/revenuecat.js
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[a-zA-Z0-9_-]*$) url script-response-body QX_JS/revenuecat.js
 
 #shred
 ^https:\/\/api\.shred\.app\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/lvtinh1051989/Scripting/shred.js
 
 #sololearn 
-^https:\/\/api\.sololearn\.com\/(authenticateDevice|challenge\/GetContestFeed|Profile\/GetProfile)$ url script-response-body FakeAppLocal/sololearn.js
+^https:\/\/api\.sololearn\.com\/(authenticateDevice|challenge\/GetContestFeed|Profile\/GetProfile)$ url script-response-body QX_JS/sololearn.js
 
 #speak&translate
-^https:\/\/receipt-validator\.herewetest\.com\/apple\/verifyTransaction$ url script-response-body FakeAppLocal/speak&translate.js
+^https:\/\/receipt-validator\.herewetest\.com\/apple\/verifyTransaction$ url script-response-body QX_JS/speak&translate.js
 
 #splice
-^https:\/\/splice\.oracle\.\w+\.com\/devices\/me url script-response-body FakeAppLocal/splice.js
+^https:\/\/splice\.oracle\.\w+\.com\/devices\/me url script-response-body QX_JS/splice.js
 
 #sync
-^https:\/\/api\.sync\.me\/api\/purchases\/(report_purchases|get_purchases)  url script-response-body FakeAppLocal/syn.me.js
+^https:\/\/api\.sync\.me\/api\/purchases\/(report_purchases|get_purchases)  url script-response-body QX_JS/syn.me.js
 
 #ulike
-^https:\/\/commerce-i18n-api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info$ url script-response-body FakeAppLocal/ulike.js
+^https:\/\/commerce-i18n-api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info$ url script-response-body QX_JS/ulike.js
 
 #ulysses
 ^https:\/\/sk\.ulysses\.app\/api\/v1\/user_offers$ url request-header (\r\n)If-None-Match:.+(\r\n) request-header $1 
@@ -168,22 +168,22 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body F
 ^https:\/\/sk\.ulysses\.app\/api\/v1\/itunes_receipt_verify$ url script-response-body https://raw.githubusercontent.com/lvtinh1051989/Scripting/ulysses.js
 
 #buyhack
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body FakeAppLocal/verify_receipt.js
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body QX_JS/verify_receipt.js
 
 #Videoshow
-^https:\/\/owa\.videoshowiosglobalserver\.com\/.*\/iosPayClient url script-response-body FakeAppLocal/videoshow.vip.js
+^https:\/\/owa\.videoshowiosglobalserver\.com\/.*\/iosPayClient url script-response-body QX_JS/videoshow.vip.js
 
 #Vivavideo
-^https:\/\/viva-asia1\.vvbrd\.com\/api\/rest\/u\/vip* url script-response-body FakeAppLocal/vivavideo.vip.js
+^https:\/\/viva-asia1\.vvbrd\.com\/api\/rest\/u\/vip* url script-response-body QX_JS/vivavideo.vip.js
 
 #vsco
-^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body FakeAppLocal/vsco.js
+^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body QX_JS/vsco.js
 
 #workingcopy
-^https:\/\/education\.github\.com\/api\/user$ url script-response-body FakeAppLocal/workingcopy.js
+^https:\/\/education\.github\.com\/api\/user$ url script-response-body QX_JS/workingcopy.js
 
 #zingmp3
-^https:\/\/api\.global\.mp3\.zing\.vn\/1\.0\/getUserInfo\?data=* url script-response-body FakeAppLocal/zingmp3.js
+^https:\/\/api\.global\.mp3\.zing\.vn\/1\.0\/getUserInfo\?data=* url script-response-body QX_JS/zingmp3.js
 
 #zingtv
-^https?:\/\/api\.tv\.zing\.vn\/.*/user* url script-response-body FakeAppLocal/zingtvvipv1.js
+^https?:\/\/api\.tv\.zing\.vn\/.*/user* url script-response-body QX_JS/zingtvvipv1.js
