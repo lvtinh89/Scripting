@@ -191,5 +191,11 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body Q
 #zingmp3
 ^https:\/\/api\.global\.mp3\.zing\.vn\/1\.0\/getUserInfo\?data=* url script-response-body QX-JS/zingmp3.js
 
+#zingmp3downloadsong
+^https:\/\/api\.global\.mp3\.zing\.vn\/1\.0\/getDownloadSongInfo\?data url script-response-body QX-JS/zingmp3.downloadsong.js
+
+#zingmp3getsong
+^https:\/\/api\.global\.mp3\.zing\.vn\/1\.0\/getSongInfo\?data url script-response-body QX-JS/zingmp3.getsong.js
+
 #zingtv
 ^https?:\/\/api\.tv\.zing\.vn\/.*/user* url script-response-body QX-JS/zingtvvipv1.js
