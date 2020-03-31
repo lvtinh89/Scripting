@@ -1,5 +1,5 @@
 HOST-SUFFIX,appldnld.apple.com,REJECT
-HOST-SUFFIX,appldnld.apple.com.akadns.net,REJECT
+HOST-SUFFIX,appldnld.apple.com.akadns.net,REJE
 HOST-SUFFIX,appldnld.g.aaplimg.com,REJECT
 HOST-SUFFIX,mesu.apple.com,REJECT
 HOST-SUFFIX,mesu-cdn.apple.com.akadns.net,REJECT
