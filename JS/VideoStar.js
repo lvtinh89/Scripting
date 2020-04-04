@@ -1,8 +1,10 @@
 /*
 [rewrite_local]
-^https:\/\/.*\.videostarapp\.com\/scripts\/subsNew\.php url script-response-body VideoStar.js
+^https:\/\/.*\.videostarapp\.com\/scripts\/subsNew\.php url script-response-body langkhach/VideoStar.js
+
 [mitm]
 hostname = *.videostarapp.com,
+
 */
 
 let obj = JSON.parse($response.body);
