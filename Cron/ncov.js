@@ -14,7 +14,7 @@ $notification.post("NCOV", "", "Bad connection")
     $done(); 
   } 
  else{
- if(response.statusCode == 200)
+ if(response.status == 200)
 {
 let obj= JSON.parse(data);
 if(obj["success"])
