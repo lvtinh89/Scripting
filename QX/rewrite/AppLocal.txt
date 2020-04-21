@@ -9,16 +9,12 @@ hostname = avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, vsco.co, 
 #textnow
 ^https:\/\/api\.textnow\.me\/api2.0\/users\/.* url script-response-body QX-JS/Textnow.js
 
-#FaceApp
-^https?:\/\/api\.faceapp\.io(.*)\/api\/v.*\/auth\/user\/credentials url script-response-body QX-JS/FaceApp.js
- 
 #wps
-^https?:\/\/account\.wps\.cn\/api\/users url script-response-body QX-JS/wps.js
 ^https:\/\/account\.wps\.com/\api\/users\/.+ url script-response-body QX-JS/wps.js
 
 # TikTok
 (.*video_id=\w{32})(.*watermark=)(.*) url 302 $1
-(?<=(carrier|sys)_region=)VN url 307 US
+#(?<=(carrier|sys)_region=)VN url 307 US
 
 # vsco
 ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body QX-JS/vsco.js
@@ -139,7 +135,7 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body Q
 #sololearn 
 ^https:\/\/api\.sololearn\.com\/(authenticateDevice|challenge\/GetContestFeed|Profile\/GetProfile)$ url script-response-body QX-JS/sololearn.js
 
- #kinemaster
+#kinemaster
 ^https:\/\/api-kinemaster-assetstore\.(nexstreaming|kinemasters)\.com\/.*\/product\/verifyReceipt$ url script-response-body QX-JS/kinemaster.js
 
 #pushover
