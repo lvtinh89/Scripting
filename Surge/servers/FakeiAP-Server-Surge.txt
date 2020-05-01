@@ -1,3 +1,0 @@
-Fake iAP Server 3️⃣ = ss, 172.104.33.125, 10086, encrypt-method=aes-256-gcm, password=.shdqqy2ruAzJK6EAy(T
-Fake iAP Server 2️⃣ = ss, 34.66.5.198, 10086, encrypt-method=aes-256-gcm, password=.shdqqy2ruAzJK6EAy(T
-Fake iAP Server 1️⃣ = ss, 35.193.89.16, 10086, encrypt-method=aes-256-gcm, password=.shdqqy2ruAzJK6EAy(T

@@ -1,3 +1,0 @@
-shadowsocks=35.193.89.16:10086, method=aes-256-gcm, password=.shdqqy2ruAzJK6EAy(T, fast-open=false, udp-relay=false, tag=Fake iAP Server 1️⃣
-shadowsocks=34.66.5.198:10086, method=aes-256-gcm, password=.shdqqy2ruAzJK6EAy(T, fast-open=false, udp-relay=false, tag=Fake iAP Server 2️⃣
-shadowsocks= 172.104.33.125:10086, method=aes-256-gcm, password=.shdqqy2ruAzJK6EAy(T, fast-open=false, udp-relay=false, tag=Fake iAP Server 3️⃣
