@@ -137,7 +137,6 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body Q
 #over
 ^https:\/\/api\.overhq\.com\/(user\/token\/refresh$|subscription\/verifyReceipt$) url script-response-body QX-JS/over.vip.js
 
-
 #speak&translate
 ^https:\/\/receipt-validator\.herewetest\.com\/apple\/verifyTransaction$ url script-response-body QX-JS/speak&translate.js
 
@@ -158,7 +157,6 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body Q
 
 #ulysses
 ^https:\/\/sk\.ulysses\.app\/api\/v1\/user_offers$ url request-header (\r\n)If-None-Match:.+(\r\n) request-header $1 
-
 ^https:\/\/sk\.ulysses\.app\/api\/v1\/itunes_receipt_verify$ url script-response-body QX-JS/ulysses.js
 
 #pre_dayone
@@ -184,7 +182,6 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body Q
 
 #playerxtreme
 ;^https:\/\/secure\.istreamer\.com\/backend$ url request-header (\r\n)If-None-Match:.+(\r\n) request-header $1 
-
 ^https:\/\/secure\.istreamer\.com\/backend$ url script-response-body QX-JS/playerxtreme.js
 
 #all apps monkey
