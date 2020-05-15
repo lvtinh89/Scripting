@@ -1,15 +1,7 @@
-hostname = lcs-mobile-cops.adobe.io, api.faceapp.io, api*.tiktokv.com, api*.musical.ly, api*.amemv.com, aweme*.snssdk.com, api.textnow.me, *.videostarapp.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, *.googlevideo.com, oa.zalo.me, vsco.co, api.gyrosco.pe, origin-prod-phoenix.jibjab.com, api.termius.com, api.picsart.c*, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, graph.nhaccuatui.com, api.memrise.com , buy.itunes.apple.com, api.sync.me, pool.elsanow.io, lambda.us-east-1.amazonaws.com, api.mondlylanguages.com, api.busuu.com, owa.videoshowiosglobalserver.com:0, accounts.elevateapp.net, purchases.ws.pho.to, api-intl.mr.meitu.com, bmall.camera360.com, api.tv.zing.vn, api.calm.com, www.calm.com, api.global.mp3.zing.vn, apimboom2.globaldelight.net, photos.adobe.io, license.pdfexpert.com, subs.platforms.team, apic.musixmatch.com, api.getmimo.com, api.revenuecat.com, pixmagicapp.com, engbright.com, api.lingokids.com, www.peacefulsoundsapp.com, duolingo-leaderboards-prod.duolingo.com, commerce-i18n-api.faceu.mobi, mobi, mobile-api.adguard.com, api.blinkist.com, api.sololearn.com, receipts.cerebralgardens.com, api-kinemaster-assetstore.*, api.pushover.net, api-cs.intsig.net, api.overhq.com, api.appsyscode.com, api.freeletics.com, api.shred.app, receipt-validator.herewetest.com, api.deezer.com, iap.aps-sdk.com, #education.github.com, backend.getdrafts.com, ssl-api.itranslateapp.com, sk.ulysses.app, dayone.me, license.enpass.io, mp.bybutter.com, *.grammarly.com, splice.oracle.*.com, api.keepkeep.com, planner5d.com, secure.istreamer.com, www.api.monkeyuni.net, account.wps.com, menscoach-api.asqq.io,
-
-#Muscle Booster
-^https:\/\/menscoach-api\.asqq\.io\/prod\/user$ url script-response-body QX-JS/MuscleBooster.js
-
-#FaceApp
-^https?:\/\/api\.faceapp\.io(.*)\/api\/v.*\/auth\/user\/credentials url script-response-body QX-JS/FaceApp.js
-^https:\/\/api\.faceapp\.io(.*)\/api\/v.*\/auth\/user\/credentials url script-response-body QX-JS/FaceApp.js
+hostname = lcs-mobile-cops.adobe.io, api*.tiktokv.com, api*.musical.ly, api*.amemv.com, aweme*.snssdk.com, api.textnow.me, *.videostarapp.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, *.googlevideo.com, oa.zalo.me, vsco.co, api.gyrosco.pe, origin-prod-phoenix.jibjab.com, api.termius.com, api.picsart.c*, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, graph.nhaccuatui.com, api.memrise.com , buy.itunes.apple.com, api.sync.me, pool.elsanow.io, lambda.us-east-1.amazonaws.com, api.mondlylanguages.com, api.busuu.com, owa.videoshowiosglobalserver.com:0, accounts.elevateapp.net, purchases.ws.pho.to, api-intl.mr.meitu.com, bmall.camera360.com, api.tv.zing.vn, api.calm.com, www.calm.com, api.global.mp3.zing.vn, apimboom2.globaldelight.net, photos.adobe.io, license.pdfexpert.com, subs.platforms.team, apic.musixmatch.com, api.getmimo.com, api.revenuecat.com, pixmagicapp.com, engbright.com, api.lingokids.com, www.peacefulsoundsapp.com, duolingo-leaderboards-prod.duolingo.com, commerce-i18n-api.faceu.mobi, mobi, mobile-api.adguard.com, api.blinkist.com, api.sololearn.com, receipts.cerebralgardens.com, api-kinemaster-assetstore.*, api.pushover.net, api-cs.intsig.net, api.overhq.com, api.appsyscode.com, api.freeletics.com, api.shred.app, receipt-validator.herewetest.com, api.deezer.com, iap.aps-sdk.com, backend.getdrafts.com, ssl-api.itranslateapp.com, sk.ulysses.app, dayone.me, license.enpass.io, mp.bybutter.com, *.grammarly.com, splice.oracle.*.com, api.keepkeep.com, planner5d.com, secure.istreamer.com, www.api.monkeyuni.net,
 
 # TikTok
 (.*video_id=\w{32})(.*watermark=)(.*) url 302 $1
-#(?<=(carrier|sys)_region=)VN url 307 US
 
 # vsco
 ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body QX-JS/vsco.js
@@ -38,17 +30,11 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body Q
 # Jibjab
 ^https:\/\/origin-prod-phoenix\.jibjab\.com\/v1\/user$ url script-response-body QX-JS/jibjab.vip.js
 
-#buyhack
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body QX-JS/verify_receipt.js
-
 #sync
 ^https:\/\/api\.sync\.me\/api\/purchases\/(report_purchases|get_purchases)  url script-response-body QX-JS/syn.me.js
 
 #elsaresponse
 ^https:\/\/pool\.elsanow\.io\/user\/api\/v1\/purchase$ url script-response-body QX-JS/elsa-response.js
-
-#elsarewrite
-^https:\/\/pool\.elsanow\.io\/content\/api\/v1\/modules\/download$  url request-header (\r\n)x-session-token:.+(\r\n) request-header $1x-session-token: F3S0w0bysBQFdbjtxpFurrFv2ItBBcBkVQxUddQW+9vjt2JXM751ksqq5GAWpkl+kk9nhig9BGh9JhYHQaokmendY6zLZDscHiRkZD2HrdJclKVCLordAARJhYIrf5C+5OSK6ax2TA45CKi8S09FEtYXN4noXO7gt42NT6WPIv6DKhdIwVxQuIAMLU5abmpMTDlyWeI4ulBWcOQbuZWWZg==
 
 #drops
 ^https:\/\/lambda\.us-east-1\.amazonaws\.com/.*/functions\/prod-4-syncPurchases\/invocations$ url script-response-body QX-JS/drops.js
@@ -77,9 +63,6 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body Q
 #calm
 ^https:\/\/api\.calm\.com\/me$ url script-response-body QX-JS/calm.vip.js
 
-#remove_manage
-^https:\/\/www\.calm\.com\/mobile\/manage-subscription\?token=*  url reject-img
-
 #lightroom
 ^https:\/\/photos\.adobe\.io\/v2\/accounts* url script-response-body QX-JS/Lightroom.js
 
@@ -91,10 +74,6 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body Q
 
 #Musixmatch
 ^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get url script-response-body QX-JS/musixmatch.miao.js
-
-#boom
-^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$ url 302 https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/boom.vip.rsp
-^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$ url 302 QX-JS/boom.vip.rsp
 
 #mimo
 ^https:\/\/api\.getmimo\.com\/v1\/subscriptions$ url script-response-body QX-JS/mimo.vip.js
@@ -116,10 +95,6 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body Q
 
 #ulike
 ^https:\/\/commerce-i18n-api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info$ url script-response-body QX-JS/ulike.js
-
-#adguardpremium
-#^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url 302 https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/Adguard.rsp
-#^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url 302 QX-JS/Adguard.rsp
 
 #zingmp3
 ^https:\/\/api\.global\.mp3\.zing\.vn\/1\.0\/getUserInfo\?data=* url script-response-body QX-JS/zingmp3.js
@@ -150,9 +125,6 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body Q
 #document
 ^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$) url script-response-body QX-JS/documents.js
 
-#workingcopy
-#^https:\/\/education\.github\.com\/api\/user$ url script-response-body QX-JS/workingcopy.js
-
 #draft
 ^https:\/\/backend\.getdrafts\.com\/api\/.*\/verification* url script-response-body QX-JS/draft.js
 
@@ -161,13 +133,6 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body Q
 
 #itranslate&lingo&voice&converse
 ^https:\/\/ssl-api\.itranslateapp\.com\/.*\/subscriptions\/.*\/ios$ url script-response-body QX-JS/itranslate.js
-
-#ulysses
-^https:\/\/sk\.ulysses\.app\/api\/v1\/user_offers$ url request-header (\r\n)If-None-Match:.+(\r\n) request-header $1 
-^https:\/\/sk\.ulysses\.app\/api\/v1\/itunes_receipt_verify$ url script-response-body QX-JS/ulysses.js
-
-#pre_dayone
-;^https:\/\/dayone\.me\/api\/users$ url request-header (\r\n)If-None-Match:.+(\r\n) request-header $1 
 
 #dayone
 ^https:\/\/dayone\.me\/api\/(users|v2\/users\/account-status)$ url script-response-body QX-JS/dayone.js
@@ -187,15 +152,8 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body Q
 #planner5d
 ^https:\/\/planner5d\.com\/api\/sets url script-response-body QX-JS/planner5d.js
 
-#playerxtreme
-;^https:\/\/secure\.istreamer\.com\/backend$ url request-header (\r\n)If-None-Match:.+(\r\n) request-header $1 
-^https:\/\/secure\.istreamer\.com\/backend$ url script-response-body QX-JS/playerxtreme.js
-
 #all apps monkey
 ^https:\/\/www\.api\.monkeyuni\.net\/api\/.+\/mobile\/account\/load-update url script-response-body QX-JS/monkey.js
-
-##wps makexp
-^https:\/\/account\.wps\.com/\api\/users\/.+ url script-response-body QX-JS/wps.js
 
 #VideoStar
 ^https?:\/\/.*\.videostarapp\.com\/scripts\/subsNew\.php url script-response-body QX-JS/VideoStar.js
