@@ -81,9 +81,6 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body Q
 #mojo&noto
 ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[a-zA-Z0-9_-]*$) url script-response-body QX-JS/revenuecat.js
 
-#Bright
-^https:\/\/engbright\.com\/app-portal\/apple\/receipt$ url 302 https://raw.githubusercontent.com/QX-JS270389/Scripting/master/Bright.rsp
-
 #lingokids
 ^https:\/\/api\.lingokids\.com\/v1\/renovate_session$ url script-response-body QX-JS/lingokids.vip.js
 
