@@ -1,3 +1,15 @@
+#Alight Motion
+DOMAIN,us-central1-alight-creative.cloudfunctions.net
+#Pixomatic
+DOMAIN,api.pixomatic.us
+#iTranslate
+DOMAIN,ssl-api.itranslateapp.com
+#Du recorder
+DOMAIN,donate-api.recorder.duapps.com
+#PocketWorld3D
+DOMAIN,gdcasapi.searona.com
+#Restaurant
+DOMAIN,ios-global-restaurant.twomiles.cn
 #Speak&Translate
 DOMAIN,subscription.ampme.com
 #Speak&Translate
