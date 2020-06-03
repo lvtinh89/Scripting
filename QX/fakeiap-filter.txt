@@ -1,3 +1,13 @@
+#Alight Motion
+HOST,us-central1-alight-creative.cloudfunctions.net,Fake iAP Policy
+#Pixomatic
+HOST,api.pixomatic.us,Fake iAP Policy
+#iTranslate
+HOST,ssl-api.itranslateapp.com,Fake iAP Policy
+#Du recorder
+HOST,donate-api.recorder.duapps.com,Fake iAP Policy
+#PocketWorld3D
+HOST,gdcasapi.searona.com,Fake iAP Policy
 #AmpMe
 HOST,subscription.ampme.com,Fake iAP Policy
 #Speak&Translate
