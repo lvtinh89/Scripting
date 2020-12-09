@@ -176,7 +176,7 @@ async function post_data(d) {
                         if(app_monitor.hasOwnProperty(x.trackId)){
                             if(JSON.stringify(app_monitor[x.trackId])!==JSON.stringify(infos[x.trackId])){
                                 if(x.version!==app_monitor[x.trackId].v){
-                                    notifys.push(`${flag(k)} 🔖 ${x.trackName}:version【${x.version}】`)
+                                    notifys.push(`${flag(k)} 🔖 ${x.trackName}:upgrade【${x.version}】`)
                                 }
                                 if(x.formattedPrice!==app_monitor[x.trackId].p){
                                     notifys.push(`${flag(k)}💰${x.trackName}:price【${x.formattedPrice}】`)
@@ -199,7 +199,7 @@ async function post_data(d) {
             notify(notifys)
         }
         else{
-            console.log("App💥Monitor：No change 🔕")
+            console.log("App💥Monitor：No change in version and price 🔕")
         }
     }catch (e) {
         console.log(e);
