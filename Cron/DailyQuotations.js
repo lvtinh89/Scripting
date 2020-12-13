@@ -3,25 +3,22 @@ README：https://github.com/yichahucha/surge/tree/master
 每日蚂蚁收能量提醒（corn "11 7 * * *" 每天7:11）+ 每日壹句（有道词典）+ 点击通知跳转支付宝蚂蚁森林页面
 */
 
-const $tool = new Tool()
-$tool.get('https://dict.youdao.com/infoline/style/cardList?mode=publish&client=mobile&style=daily&size=2', function (error, response, data) {
+$httpClient.get('https://dict.youdao.com/infoline/style/cardList?mode=publish&client=mobile&style=daily&size=2', function (error, response, data) {
     let obj = JSON.parse(data);
     let date = new Date();
-    let isAM = date.getHours() < 12 ? true : false;
+    let isAM = date.getHours() < 12 ? true : false
     let title = 'Daily' + (isAM ? ' Quotations' : ' Quotations') + (isAM ? ' ☀️' : ' 🌙');
     let subtitle = '';
         let content = 'dingtalk://dingtalkclient/page/link?url=https://attend.dingtalk.com/attend/index.html';
     if (!error) {
         if (obj && obj.length > 1) {
             let yi = obj[1];
-            content = yi.title + '\n' + yi.summary + '\n\n' + content;
-            option["media-url"] = yi.image[0];
+            content = yi.title + '\n' + yi.summary ;
         }
     }
-    $tool.notify(title, subtitle, content, option);
+    $notification.post(title, subtitle, content);
     $done();
 })
-
 function Tool() {
     _node = (() => {
         if (typeof require == "function") {
