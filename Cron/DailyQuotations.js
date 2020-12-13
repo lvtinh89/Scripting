@@ -10,6 +10,7 @@ $tool.get('https://dict.youdao.com/infoline/style/cardList?mode=publish&client=m
     let isAM = date.getHours() < 12 ? true : false;
     let title = 'Daily' + (isAM ? ' Quotations' : ' Quotations') + (isAM ? ' ☀️' : ' 🌙');
     let subtitle = '';
+        let content = 'dingtalk://dingtalkclient/page/link?url=https://attend.dingtalk.com/attend/index.html';
     if (!error) {
         if (obj && obj.length > 1) {
             let yi = obj[1];
