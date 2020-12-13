@@ -1,6 +1,16 @@
-let isQuantumultX = $task != undefined; 
-let isSurge = $httpClient != undefined;
-
+/*
+    本作品用于QuantumultX和Surge之间js执行方法的转换
+    您只需书写其中任一软件的js,然后在您的js最【前面】追加上此段js即可
+    无需担心影响执行问题,具体原理是将QX和Surge的方法转换为互相可调用的方法
+    尚未测试是否支持import的方式进行使用,因此暂未export
+    如有问题或您有更好的改进方案,请前往 https://github.com/sazs34/TaskConfig/issues 提交内容,或直接进行pull request
+    您也可直接在tg中联系@wechatu
+*/
+// #region 固定头部
+let isQuantumultX = $task != undefined; //判断当前运行环境是否是qx
+let isSurge = $httpClient != undefined; //判断当前运行环境是否是surge
+// 判断request还是respons
+// down方法重写
 var $done = (obj={}) => {
     var isRequest = typeof $request != "undefined";
     if (isQuantumultX) {
@@ -10,18 +20,18 @@ var $done = (obj={}) => {
         return isRequest ? $done({}) : $done()
     }
 }
-
+// http请求
 var $task = isQuantumultX ? $task : {};
 var $httpClient = isSurge ? $httpClient : {};
-
+// cookie读写
 var $prefs = isQuantumultX ? $prefs : {};
 var $persistentStore = isSurge ? $persistentStore : {};
-
+// 消息通知
 var $notify = isQuantumultX ? $notify : {};
 var $notification = isSurge ? $notification : {};
-// #endregion
+// #endregion 固定头部
 
-// #region 
+// #region 网络请求专用转换
 if (isQuantumultX) {
     var errorInfo = {
         error: ''
@@ -65,7 +75,7 @@ if (isQuantumultX) {
 if (isSurge) {
     $task = {
         fetch: url => {
-            
+            //为了兼容qx中fetch的写法,所以永不reject
             return new Promise((resolve, reject) => {
                 if (url.method == 'POST') {
                     $httpClient.post(url, (error, response, data) => {
@@ -99,9 +109,9 @@ if (isSurge) {
         }
     }
 }
-// #endregion 
+// #endregion 网络请求专用转换
 
-
+// #region cookie操作
 if (isQuantumultX) {
     $persistentStore = {
         read: key => {
@@ -139,6 +149,20 @@ if (isSurge) {
 }
 // #endregion
 
+/*
+倒数日
+
+使用:
+#每天 8点通知, 也可以自定义其他时间, 详情:https://community.nssurge.com/d/33-scripting
+
+[Script]
+cron "0 8 * * *" script-path=https://github.com/congcong0806/surge-list/raw/master/Script/daysmatter.js
+ 
+作者:聪聪
+聪聪 https://t.me/congcongx_bot
+群组 https://t.me/YinxiangBiji
+频道 https://t.me/YinxiangBiji_News
+*/
 
 Date.prototype.format = function(fmt) {
     var date = {
@@ -161,7 +185,7 @@ Date.prototype.format = function(fmt) {
     return fmt;
 };
 
-
+//倒数日计算
 function dateDiff(startDate, endDate) {
     //2002-12-18格式  
     var sdate, edate, days
@@ -186,11 +210,11 @@ day();
 
 function valcal(days) {
     if (days == 0)
-        return " Hôm nay"
+        return "Hôm nay"
     else if (days > 0)
-        return "Còn lại : " + days + " Ngày"
+        return "Còn lại : " + days + "Ngày"
     else
-        return "Đã qua : " + Math.abs(days) + " Ngày"
+        return "Đã qua : " + Math.abs(days) + "Ngày"
 }
 
 function day() {
