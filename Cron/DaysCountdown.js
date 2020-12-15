@@ -204,6 +204,8 @@ const dayarr = [
     [ "Sinh nhật Tính", "2020-05-10" ],
     [ "Sinh nhật Tâm", "2020-05-19" ],
     [ "Sinh nhật Bảo An", "2020-10-10" ],
+    [ "Năm nay     ", "2020-01-01" ],
+    [ "Năm nay     ", "2020-12-31" ],
 ]
 
 day();
