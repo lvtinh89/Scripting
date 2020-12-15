@@ -174,9 +174,9 @@ function dateDiff(startDate, endDate) {
 }
 
 const dayarr = [ 
-    [ "Happy 👩‍❤️‍👨 Wedding", "2018-01-18" ],
+    [ "Happy👩‍❤️‍👨Wedding", "2018-01-18" ],
     [ "Năm nay", "2020-12-31" ],
-    [ "Lễ tình nhân ❤️ ", "2008-02-14" ], 
+    [ "Lễ tình nhân❤️ ", "2008-02-14" ], 
     [ "Sinh nhật Hồ", "1991-02-16" ],
     [ "Sinh nhật Tính", "1989-05-10" ],
     [ "Sinh nhật Tâm", "1991-05-19" ],
@@ -190,9 +190,9 @@ function valcal(days) {
     if (days == 0)
         return "Hôm nay"
     else if (days > 0)
-        return "Còn lại : " + days + "Ngày"
+        return "Còn lại: " + days + "Ngày"
     else
-        return "Đã qua : " + Math.abs(days) + "Ngày"
+        return "Đã qua: " + Math.abs(days) + "Ngày"
 }
 
 function day() {
