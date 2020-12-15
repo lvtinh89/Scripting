@@ -1,0 +1,6 @@
+# > YouTube
+user-agent, com.google.ios.youtube*, MEDIA
+user-agent, YouTube*, MEDIA
+host-suffix, googlevideo.com, MEDIA
+host-suffix, youtube.com, MEDIA
+host, youtubei.googleapis.com, MEDIA
