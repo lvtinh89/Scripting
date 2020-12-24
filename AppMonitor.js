@@ -67,7 +67,7 @@ async function post_data(d) {
                   ) {
                     if (x.version !== app_monitor[x.trackId].v) {
                       notifys.push(
-                        `${flag(k)}🏷${x.trackName}: Upgrade🆙【${x.version}】`
+                        `${flag(k)}🏷${x.trackName}: 🆙Ver【${x.version}】`
                       );
                     }
                     if (x.formattedPrice !== app_monitor[x.trackId].p) {
@@ -78,7 +78,7 @@ async function post_data(d) {
                   }
                 } else {
                   notifys.push(
-                    `${flag(k)}🏷${x.trackName}: Version【${x.version}】`
+                    `${flag(k)}🏷${x.trackName}: Ver【${x.version}】`
                   );
                   notifys.push(
                     `${flag(k)}💰${x.trackName}: Price【${x.formattedPrice}】`
