@@ -1,16 +1,10 @@
-let obj= JSON.parse($response.body);
 
-//fake user vip
-delete obj.data.lastVipExpireTime;
-obj.data.vip= {
-  "expireTime": 1892800999,
-  "startTime": 1572527803,
-  "subscription": {
-    "status": 0,
-    "expireTime": 1892800999,
-    "platform": 2
-  },
-  "vipType": 1
+var obj = JSON.parse($response.body);
+let url = $request.url;
+var cons = "users/info";
+if(url.indexOf(cons) != -1)
+{
+obj.data.VIPExpire= "27/03/9999 00:00:00";
+obj.data.isVIP= true;
 }
-
-$done({body:JSON.stringify(obj)});
+$done({body: JSON.stringify(obj)});
