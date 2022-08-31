@@ -1,10 +1,17 @@
+let obj= JSON.parse($response.body);
 
-var obj = JSON.parse($response.body);
-let url = $request.url;
-var cons = "users/info";
-if(url.indexOf(cons) != -1)
-{
-obj.data.VIPExpire= "27/03/9999 00:00:00";
-obj.data.isVIP= true;
+if($response.body.indexOf("lastVipExpireTime") !=-1){
+delete obj.data.lastVipExpireTime;
 }
-$done({body: JSON.stringify(obj)});
+obj.data.vip= {
+  "expireTime": 4096412384000,
+  "startTime": 1572527803000,
+  "subscription": {
+    "status": 0,
+    "expireTime": 4096412384000,
+    "platform": 5
+  },
+  "vipType": 1
+}
+
+$done({body:JSON.stringify(obj)});
