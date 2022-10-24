@@ -1,5 +1,5 @@
 /*
-^https:\/\/api\.textnow\.me\/api2.0\/users\/.* url script-response-body langkhach/Textnow.js
+^https:\/\/api\.textnow\.me\/.+\/users\/.* url script-response-body langkhach/Textnow.js
 */var obj = JSON.parse($response.body); 
 obj['show_ads'] = false;
 obj['premium_calling'] = true;
