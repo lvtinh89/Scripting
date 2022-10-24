@@ -1,6 +1,28 @@
-var obj = JSON.parse($response.body);
+/*
+小影 解锁高级功能 
 
-obj= {
+***************************
+QuantumultX:
+
+[rewrite_local]
+^https:\/\/(xy-viva\.kakalili|api-chn.rthdo)\.com\/api\/rest\/u\/vipVerifyReceipt url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+
+[mitm]
+hostname = xy-viva.kakalili.com, api-chn.rthdo.com
+
+***************************
+Surge4 or Loon:
+
+[Script]
+http-response ^https:\/\/(xy-viva\.kakalili|api-chn.rthdo)\.com\/api\/rest\/u\/vipVerifyReceipt requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+
+[MITM]
+hostname = xy-viva.kakalili.com, api-chn.rthdo.com
+
+**************************/
+
+var obj = JSON.parse($response.body);
+obj = {
   "autoRenewProductId": "premium_platinum_yearly",
   "iosDeviceProductVo": {
     "premiumVipWeekly": 3,
@@ -22,5 +44,3 @@ obj= {
 };
 
 $done({body: JSON.stringify(obj)});
-
-// Descriptions
