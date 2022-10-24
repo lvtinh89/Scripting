@@ -1,5 +1,5 @@
-#!name=Unlock Youtube Premium
-#!desc= Youtube
+#!name=Unlock Youtube 
+#!desc= Youtube Premium
 
 [Rule]
 //URL-REGEX,^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player,🇺🇸US
