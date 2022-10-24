@@ -1,5 +1,5 @@
 #!name=Unlock Fantastical
-#!desc=Fantastical
+#!desc= Fantastical Membership 
 [MITM]
 hostname = %APPEND% api.flexibits.com
 [Script]
