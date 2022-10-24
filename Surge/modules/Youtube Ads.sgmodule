@@ -5,8 +5,8 @@
 //URL-REGEX,^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player,🇺🇸US
 
 [Script]
-youtube-fake = type=http-request,pattern=^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad,requires-body=0,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube-fake.js
-youtube-proto = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence),requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
+youtube-fake = type=http-request,pattern=^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad,requires-body=0,script-path=https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/youtube-fake.js
+youtube-proto = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence),requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/youtube.js
 
 [MITM]
 hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com, youtubei.googleapis.com
