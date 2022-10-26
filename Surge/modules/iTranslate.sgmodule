@@ -1,5 +1,5 @@
-#!name=Unlock iTranslate
-#!desc=iTranslate
+#!name= iTranslate
+#!desc=Unlock iTranslate
 [MITM]
 hostname = %APPEND% *api.itranslateapp.com
 [Script]
