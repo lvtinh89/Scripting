@@ -1,5 +1,5 @@
-#!name=Unlock Drops
-#!desc=Drops
+#!name= Drops
+#!desc=Unlock Drops
 
 [MITM]
 hostname = %APPEND% api-prod.languagedrops.com
