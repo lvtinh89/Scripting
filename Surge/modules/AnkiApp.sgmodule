@@ -1,5 +1,5 @@
-#!name=Unlock AnkiApp
-#!desc=AnkiApp
+#!name= AnkiApp
+#!desc=Unlock AnkiApp
 [MITM]
 hostname = %APPEND% api.ankiapp.com
 [Script]
