@@ -1,5 +1,5 @@
-#!name=Unlock Enpass
-#!desc=Enpass
+#!name= Enpass
+#!desc=Unlock Enpass
 [MITM]
 hostname = %APPEND% license.enpass.io
 [Script]
