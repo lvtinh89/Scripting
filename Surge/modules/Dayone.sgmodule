@@ -1,5 +1,5 @@
-#!name=Unlock Dayone
-#!desc=Dayone
+#!name= Dayone
+#!desc=Unlock Dayone
 
 [MITM]
 hostname = %APPEND% dayone.*
