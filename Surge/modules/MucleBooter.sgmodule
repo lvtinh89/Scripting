@@ -1,5 +1,5 @@
-#!name=Unlock Muscle Booster
-#!desc=Muscle Booster
+#!name= Muscle Booster
+#!desc=Unlock Muscle Booster
 [MITM]
 hostname = %APPEND% *-api.asqq.io
 [Script]
