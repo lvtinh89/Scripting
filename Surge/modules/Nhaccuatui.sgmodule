@@ -1,5 +1,5 @@
-#!name=Unlock Nhaccuatui
-#!desc=Nhaccuatui
+#!name= Nhaccuatui
+#!desc=Unlock Nhaccuatui
 
 [MITM]
 hostname = %APPEND% graph.nhaccuatui.com
