@@ -1,5 +1,5 @@
-#!name=Unlock Textnow
-#!desc=Textnow
+#!name= Textnow
+#!desc=Unlock Textnow
 [MITM]
 hostname = %APPEND% api.textnow.me
 [Script]
