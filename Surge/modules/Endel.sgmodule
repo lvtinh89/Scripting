@@ -1,5 +1,5 @@
-#!name=Unlock Endel
-#!desc=Endel
+#!name= Endel
+#!desc=Unlock Endel
 [MITM]
 hostname = %APPEND% api-production.endel.io
 [Script]
