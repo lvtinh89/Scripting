@@ -1,5 +1,5 @@
-#!name=Unlock Lightroom
-#!desc=Lightroom
+#!name= Lightroom
+#!desc=Unlock Lightroom
 [MITM]
 hostname=%APPEND% photos.adobe.io
 [Script]
