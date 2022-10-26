@@ -1,5 +1,5 @@
-#!name=Unlock Sololearn
-#!desc=Sololearn
+#!name= Sololearn
+#!desc=Unlock Sololearn
 [MITM]
 hostname = %APPEND% api.sololearn.com
 [Script]
