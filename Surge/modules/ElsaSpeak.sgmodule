@@ -1,5 +1,5 @@
-#!name=Unlock ElsaSpeak
-#!desc=ElsaSpeak
+#!name= ElsaSpeak
+#!desc=Unlock ElsaSpeak
 [MITM]
 hostname = %APPEND% pool.elsanow.io
 [Script]
