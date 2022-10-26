@@ -1,5 +1,5 @@
-#!name=Unlock Pushover
-#!desc=Pushover
+#!name= Pushover
+#!desc=Unlock Pushover
 [MITM]
 hostname = %APPEND% api.pushover.net
 [Script]
