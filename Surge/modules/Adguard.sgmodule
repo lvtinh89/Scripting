@@ -1,5 +1,5 @@
-#!name=Unlock Adguard
-#!desc=Altstore
+#!name= Adguard
+#!desc=Unlock Altstore
 [MITM]
 hostname = %APPEND% *api.adguard.com
 [Script]
