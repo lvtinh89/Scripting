@@ -15,8 +15,6 @@ https?:\/\/.*\.xmind\..*\/_res\/devices url script-response-body https://raw.git
 #Vivavideo
 ^https:\/\/(xy-viva\.kakalili|api-chn.rthdo)\.com\/api\/rest\/u\/vipVerifyReceipt url script-response-body https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/vivavideo.vip.js
 
-# XMind思维导图 (by @JigsaWo)
-;^https:\/\/www\.xmind\.com\/\_res\/devices url script-response-body https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/XMind.js
 
 #FaceApp
 ;^https?:\/\/api\.faceapp\.io(.*)\/api\/v.*\/auth\/user\/credentials url script-response-body https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/FaceApp.js
