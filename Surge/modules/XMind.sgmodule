@@ -1,7 +1,0 @@
-#!name= XMind
-#!desc=Unlock Xmind
-
-[MITM]
-hostname = %APPEND% *.xmind.*
-[Script]
-XMind = type=http-response,pattern=https?:\/\/.*\.xmind\..*\/_res\/devices,requires-body=1,max-size=0,script-path=Surge-JS/XMind.js,script-update-interval=0
