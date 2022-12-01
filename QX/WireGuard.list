@@ -1,3 +1,0 @@
-vmess=34.211.58.239:80, method=chacha20-poly1305, password=7ce90fa8-113c-4cee-b83d-9ccbc5071c60, obfs=ws, obfs-host=dl.kgvn.garenanow.com, obfs-uri=/kaito, fast-open=false, udp-relay=false,server_check_url=http://www.google.com/generate_204, tag=🇺🇸 US-Kaito
-
-vmess=178.128.86.212:80, method=chacha20-poly1305, password=863c2a39-a4ce-4830-91c1-ec639fbc0dea, obfs=ws, obfs-uri=/wasabi, fast-open=false, udp-relay=false, server_check_url=http://www.google.com/generate_204, tag=🇸🇬 SG-Kaito
