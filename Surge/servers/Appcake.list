@@ -1,2 +1,2 @@
-🔴 update-block = reject
-🟢 update-install pass = direct
+🔴 block = reject
+🟢 install pass = direct
