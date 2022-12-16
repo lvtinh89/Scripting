@@ -31,7 +31,7 @@ https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-r
 ^https:\/\/oauth\.reddit\.com\/api\/v\d\/me\.json url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Reddit.js
 
 #Nhaccuatui
-^https:\/\/graph\.nhaccuatui\.com\/.*\/users\/info url url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/nhaccuatui.js
+^https:\/\/graph\.nhaccuatui\.com\/.*\/users\/info url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/nhaccuatui.js
 
 #spotify-proto
 ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
