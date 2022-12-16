@@ -10,7 +10,7 @@ hostname = api.monkeyuni.net, apic.musixmatch.com, lcs-mobile-cops.adobe.io, ap*
 ^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Photoshop.js
 
 #Camscanner
-https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/new/scripts/Camscaner.js
+https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/CamScannerGold.js
 
 #Truecaller
 ^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|products\/apple) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
