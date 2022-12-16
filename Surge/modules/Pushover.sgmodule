@@ -3,4 +3,4 @@
 [MITM]
 hostname = %APPEND% api.pushover.net
 [Script]
-Pushover = type=http-response,pattern=^https://api.pushover.net/1/messages.json,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/pushover.js,script-update-interval=-1
+Pushover = type=http-response,pattern=^https://api.pushover.net/1/messages.json,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Pushover.js,script-update-interval=-1
