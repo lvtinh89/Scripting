@@ -5,11 +5,11 @@
 ^https?://(mall.|)shopee.vn header-replace-regex cookie SPC_F=[a-zA-Z0-9_.-]* SPC_F=4PSQnbNRBE8JEbb7w1a5IMomP9ToVvim
 
 [Script]
-Shopee++_Login = type=cron,cronexp=0 6 * * *,script-path=Surge-JS/shopee-login.js
+Shopee++_Login = type=cron,cronexp=0 6 * * *,script-path=Surge-JS/Shopee-login.js
 
-Shopee++Checkin=type=cron, cronexp= 0 6 * * *, timeout=15, script-path=https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/shopee_checkin.js
+Shopee++Checkin=type=cron, cronexp= 0 6 * * *, timeout=15, script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Shopee_checkin.js
 
-Shopee++Cookie = type=http-request,pattern=^https:\/\/shopee\.vn\/api\/.+\/platform\/get_ft_v2\?userid,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/shopee_cookie.js
+Shopee++Cookie = type=http-request,pattern=^https:\/\/shopee\.vn\/api\/.+\/platform\/get_ft_v2\?userid,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Shopee_cookie.js
 
 #Topup
 //Shopee++_Topup = type=cron,cronexp="55 59 7-23 * * *",wake-system=1, timeout=10, script-path=Surge-JS/shopee-topup.js
