@@ -18,7 +18,7 @@ https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-r
 #Truecaller
 ^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|products\/apple) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
 
-#Fantastical = type=http-response,pattern=
+#Fantastical
 ^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Fantastical.js
 
 #Xmind
