@@ -4,4 +4,4 @@
 [MITM]
 hostname = %APPEND% api-prod.languagedrops.com
 [Script]
-Drops = type=http-response,pattern=^https:\/\/api-prod\.languagedrops\.com\/syncPurchasesV4$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/drops.js
+Drops = type=http-response,pattern=^https:\/\/api-prod\.languagedrops\.com\/syncPurchasesV4$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Drops.js
