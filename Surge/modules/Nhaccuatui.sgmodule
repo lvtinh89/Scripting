@@ -5,4 +5,4 @@
 hostname = %APPEND% graph.nhaccuatui.com
 
 [Script]
-Nhaccuatui = type=http-response,pattern=^https:\/\/graph\.nhaccuatui\.com\/.*\/users\/info,requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/nhaccuatui.js,script-update-interval=-1 
+Nhaccuatui = type=http-response,pattern=^https:\/\/graph\.nhaccuatui\.com\/.*\/users\/info,requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Nhaccuatui.js,script-update-interval=-1 
