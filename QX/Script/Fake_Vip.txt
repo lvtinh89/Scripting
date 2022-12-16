@@ -1,28 +1,28 @@
 hostname = api.monkeyuni.net, apic.musixmatch.com, lcs-mobile-cops.adobe.io, ap*.intsig.net, premium*.truecaller.com, api.flexibits.com, www.xmind.app, api.sololearn.com, photos.adobe.io, oauth.reddit.com, graph.nhaccuatui.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
-#all apps monkey
-^https:\/\/www\.api\.monkeyuni\.net\/api\/.+\/mobile\/account\/load-update url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/monkey.js
+#All apps monkey
+^https:\/\/www\.api\.monkeyuni\.net\/api\/.+\/mobile\/account\/load-update url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Monkey.js
 
 #Musixmatch
-^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/musixmatch.miao.js
+^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Musixmatch.miao.js
 
-#phothop&PSexpress
-^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/photoshop.js
+#Phothop&PSexpress
+^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Photoshop.js
 
 #Camscanner
-https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/new/scripts/camscaner.js
+https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/new/scripts/Camscaner.js
 
 #Truecaller
-^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|products\/apple) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/truecaller.js
+^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|products\/apple) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
 
 #Fantastical = type=http-response,pattern=
 ^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Fantastical.js
 
 #Xmind
-^https?:\/\/www\.xmind\.app\/_res\/devices url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/xmind.js
+^https?:\/\/www\.xmind\.app\/_res\/devices url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Xmind.js
 
 #Sololearn
-^https:\/\/api\.sololearn\.com\/(authenticateDevice|challenge\/GetContestFeed|Profile\/GetProfile)$ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/sololearn.js
+^https:\/\/api\.sololearn\.com\/(authenticateDevice|challenge\/GetContestFeed|Profile\/GetProfile)$ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Sololearn.js
 
 #Lightroom
 ^https:\/\/photos\.adobe\.io\/v2\/accounts url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Lightroom.js
@@ -30,8 +30,8 @@ https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-r
 #Reddit
 ^https:\/\/oauth\.reddit\.com\/api\/v\d\/me\.json url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Reddit.js
 
-#nhaccuatui
-^https:\/\/graph\.nhaccuatui\.com\/.*\/users\/info url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/nhaccuatui.js
+#Nhaccuatui
+^https:\/\/graph\.nhaccuatui\.com\/.*\/users\/info url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Nhaccuatui.js
 
-#spotify-proto
+#Spotify-proto
 ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
