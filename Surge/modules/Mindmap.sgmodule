@@ -1,7 +1,0 @@
-#!name= MindMap
-#!desc=Unlock MindMap
-
-[MITM]
-hostname = %APPEND% *.xmind.*
-[Script]
-Mindmap = type=http-response,pattern=https?:\/\/.*\.xmind\..*\/_res\/devices,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/Mindmap.js,script-update-interval=0
