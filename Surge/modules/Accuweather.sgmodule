@@ -4,4 +4,4 @@
 [MITM]
 hostname = %APPEND% app-subscription-proxy.accuweather.com
 [Script]
-Accuweather = type=http-response,pattern=https://app-subscription-proxy.accuweather.com/subscriptions/v1/apple/validate,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh1051989/Scripting/master/AccuWeather.js,script-update-interval=0
+Accuweather = type=http-response,pattern=https://app-subscription-proxy.accuweather.com/subscriptions/v1/apple/validate,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/AccuWeather.js,script-update-interval=0
