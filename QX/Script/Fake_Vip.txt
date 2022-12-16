@@ -30,7 +30,7 @@ https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-r
 #Reddit
 ^https:\/\/oauth\.reddit\.com\/api\/v\d\/me\.json url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Reddit.js
 
-#Nhaccuatui
+#nhaccuatui
 ^https:\/\/graph\.nhaccuatui\.com\/.*\/users\/info url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/nhaccuatui.js
 
 #spotify-proto
