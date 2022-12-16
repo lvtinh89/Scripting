@@ -1,4 +1,7 @@
-hostname = api-account.kinemasters.com, api.monkeyuni.net, apic.musixmatch.com, lcs-mobile-cops.adobe.io, ap*.intsig.net, premium*.truecaller.com, api.flexibits.com, www.xmind.app, api.sololearn.com, photos.adobe.io, oauth.reddit.com, graph.nhaccuatui.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+hostname = bmall.camera360.com, api-account.kinemasters.com, api.monkeyuni.net, apic.musixmatch.com, lcs-mobile-cops.adobe.io, ap*.intsig.net, premium*.truecaller.com, api.flexibits.com, www.xmind.app, api.sololearn.com, photos.adobe.io, oauth.reddit.com, graph.nhaccuatui.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+
+#Camera360
+^https:\/\/bmall\.camera360\.com\/api\/iap\/check-receipt url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Camera360.js
 
 #Kinemaster
 ^https:\/\/api-account\.kinemasters\.com\/v\d\/user\/subscribe$ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Kinemaster.js
