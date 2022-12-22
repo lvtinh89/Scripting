@@ -1,0 +1,8 @@
+#!name=Unlock Wps
+#!desc=Unlock Wps Gold
+
+[Script]
+Wps = requires-body=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Wps.js,type=http-response,pattern= ^https?:\/\/[a-z-]*account\.wps\.c(n|om)(:\d+|)\/api\/users
+
+[MITM]
+hostname = %APPEND% *account.wps.cn, *account.wps.com, *account.wps.vn
