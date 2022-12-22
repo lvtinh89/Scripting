@@ -1,0 +1,9 @@
+#!name= Fake_Vip
+#!desc= Unlock All App
+
+
+[MITM]
+hostname = %APPEND% *account.wps.cn, *account.wps.com
+
+[Script]
+Wps = requires-body=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Wps.js,type=http-response,pattern= ^https?:\/\/[a-z-]*account\.wps\.c(n|om)(:\d+|)\/api\/users
