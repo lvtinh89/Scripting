@@ -176,7 +176,7 @@ function dateDiff(startDate, endDate) {
 const dayarr = [ 
     [ "Happy👩‍❤️‍👨Wedding", "2018-01-18" ],
     [ "Năm nay", "2020-12-31" ],
-    [ "Sinh nhật lvtinh89", "1989-05-10" ],
+    [ "lvtinh89", "1989-05-10" ],
 
 day();
 
