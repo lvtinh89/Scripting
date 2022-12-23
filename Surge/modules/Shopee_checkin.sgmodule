@@ -1,5 +1,5 @@
 #!name=Shopee_lvtinh89
-#!desc=每天早上自動簽到 + 開蝦幣寶箱 + 開免運寶箱。第一次使用前先到「我的」→「邀請我的朋友」取得 token。 v20220826
+#!desc=Tự động đăng nhập mỗi sáng + mở hộp kho báu xu tôm + mở hộp kho báu vận chuyển miễn phí. Trước khi sử dụng lần đầu tiên, hãy vào "Của tôi" → "Mời bạn bè của tôi" để lấy token。 v20220826
 
 [Script]
 cron "16 0 * * *" script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Shopee/shopee_checkin.js, wake-system=1, timeout=5
