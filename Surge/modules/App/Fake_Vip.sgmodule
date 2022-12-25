@@ -12,3 +12,4 @@ Monkey = type=http-response,pattern=^https:\/\/app\.monkeyuni\.net\/user\/api\/v
 ;Musixmatch = type=http-response,pattern=^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Musixmatch.miao.js
 ;Photoshop = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Photoshop.js
 ;Wps = requires-body=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Wps.js,type=http-response,pattern= ^https?:\/\/[a-z-]*account\.wps\.c(n|om)(:\d+|)\/api\/users
+;youtube-proto = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\?,requires-body=1,binary-body-mode=1,max-size=2097152,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/youtube.js
