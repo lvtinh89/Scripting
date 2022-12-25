@@ -5,8 +5,8 @@ $tool.get('https://dict.youdao.com/infoline/style/cardList?mode=publish&client=m
     let isAM = date.getHours() < 12 ? true : false;
     let title = 'Daily' + (isAM ? ' Quotations' : ' Quotations') + (isAM ? ' ☀️' : ' 🌙');
     let subtitle = '';
-    let scheme = 'The power to do the more';
-    let content = "Get energy👉"+scheme;
+    let scheme = 'Cứ yêu đi vì cuộc đời cho phép.';
+    let content = "lvtinh89 👉"+scheme;
     let option = {"open-url" : scheme};
     if (!error) {
         if (obj && obj.length > 1) {
