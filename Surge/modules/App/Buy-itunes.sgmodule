@@ -1,6 +1,8 @@
 !name=Buy Apple
 #!desc=Unlock buy.itunes.apple.com
+
 [MITM]
 hostname = %APPEND% buy.itunes.apple.com
+
 [Script]
 Buy = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Verify_receipt.js,script-update-interval=-1
