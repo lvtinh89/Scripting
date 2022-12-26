@@ -1,4 +1,4 @@
-!name=Buy Apple
+#!name=Buy Apple
 #!desc=Unlock buy.itunes.apple.com
 
 [MITM]
