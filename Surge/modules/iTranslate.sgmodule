@@ -1,6 +1,0 @@
-#!name= iTranslate
-#!desc=Unlock iTranslate
-[MITM]
-hostname = %APPEND% *api.itranslateapp.com
-[Script]
-iTranslate = type=http-response,pattern=^https:\/\/ssl-api\.itranslateapp\.com\/.*\/subscriptions\/.*\/ios$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/iTranslate.js,script-update-interval=-1
