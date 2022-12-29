@@ -6,7 +6,7 @@ $tool.get('https://dict.youdao.com/infoline/style/cardList?mode=publish&client=m
     let title = 'Daily' + (isAM ? ' Quotations' : ' Quotations') + (isAM ? ' ☀️' : ' 🌙');
     let subtitle = '';
     let scheme = 'Cứ yêu đi vì cuộc đời cho phép.';
-    let content = "lvtinh89 👉"+scheme;
+    let content = "lvtinh89 💁🏻‍♂️"+scheme;
     let option = {"open-url" : scheme};
     if (!error) {
         if (obj && obj.length > 1) {
