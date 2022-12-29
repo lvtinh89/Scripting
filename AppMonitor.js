@@ -67,12 +67,12 @@ async function post_data(d) {
                   ) {
                     if (x.version !== app_monitor[x.trackId].v) {
                       notifys.push(
-                        `${flag(k)}🏷${x.trackName}: Version🆙【${x.version}】`
+                        `${flag(k)}🏷${x.trackName}: 🆙Ver【${x.version}】`
                       );
                     }
                     if (x.formattedPrice !== app_monitor[x.trackId].p) {
                       notifys.push(
-                        `${flag(k)}💰${x.trackName}: Price〽️【${x.formattedPrice}】`
+                        `${flag(k)}💰${x.trackName}: Price💹【${x.formattedPrice}】`
                       );
                     }
                   }
