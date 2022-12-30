@@ -72,7 +72,7 @@ async function post_data(d) {
                     }
                     if (x.formattedPrice !== app_monitor[x.trackId].p) {
                       notifys.push(
-                        `${flag(k)}💰${x.trackName}: Price💹【${x.formattedPrice}】`
+                        `${flag(k)}💰${x.trackName}: 💹Price【${x.formattedPrice}】`
                       );
                     }
                   }
