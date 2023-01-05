@@ -5,7 +5,7 @@ $tool.get('https://dict.youdao.com/infoline/style/cardList?mode=publish&client=m
     let isAM = date.getHours() < 12 ? true : false;
     let title = 'Daily' + (isAM ? ' Quotations' : ' Quotations') + (isAM ? ' ☀️' : ' 🌙');
     let subtitle = '';
-    let scheme = 'Bình tĩnh-Tự tin-Chiến thắng.';
+    let scheme = 'Tự tin-Chiến thắng.';
     let content = "🐍lvtinh89 👉"+scheme;
     let option = {"open-url" : scheme};
     if (!error) {
