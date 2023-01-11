@@ -10,7 +10,7 @@ hostname = app.monkeyuni.net, apic.musixmatch.com, lcs-mobile-cops.adobe.io, *ac
 ^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Photoshop.js
 
 #Wps
-;^https?:\/\/[a-z-]*account\.wps\.c(n|om) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Wps.js
+^https?:\/\/[a-z-]*account\.wps\.c(n|om) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Wps.js
 
 #Camera360
 ^https:\/\/bmall\.camera360\.com\/api\/iap\/check-receipt url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Camera360.js
@@ -43,4 +43,4 @@ https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-r
 ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
 
 #youtube-vip (app2smile)
-;^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\? url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/youtube.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\? url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/youtube.js
