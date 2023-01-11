@@ -19,7 +19,7 @@ hostname = app.monkeyuni.net, apic.musixmatch.com, lcs-mobile-cops.adobe.io, *ac
 ^https:\/\/api-account\.kinemasters\.com\/v\d\/user\/subscribe$ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Kinemaster.js
 
 #Camscanner
-https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/CamScannerGold.js
+https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/CamScannerGold.js
 
 #Truecaller
 ^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|products\/apple) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
