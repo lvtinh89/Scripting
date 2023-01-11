@@ -1,5 +1,4 @@
 let body = JSON.parse($response.body)
-if (body.data.psnl_vip_property) {
     body.data.psnl_vip_property = {"renew_method": "appstore",
       "initial_tm": "1614867690",
       "svip": 1,
@@ -8,7 +7,7 @@ if (body.data.psnl_vip_property) {
       "pending": 0,
       "group2_paid": 0,
       "inherited_flag": 0,
-      "nxt_renew_tm": "9915126887",
+      "nxt_renew_tm": "4073275762",
       "level_info": {
         "level": 1,
         "days": 1,
@@ -17,11 +16,8 @@ if (body.data.psnl_vip_property) {
       "group1_paid": 1,
       "ys_first_pay": 0,
       "renew_type": "year",
-      "expiry": 9915130487,
+      "expiry": 4073275762,
       "grade": 2,
       "last_payment_method": "appstore",
       "product_id": "com.intsig.camscanner.premiums.oneyear.autorenewable.svip.low"}
     $done({body:JSON.stringify(body)})
-} else {
-    $done({})
-}
