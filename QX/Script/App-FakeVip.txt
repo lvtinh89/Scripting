@@ -47,7 +47,7 @@ https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script
 
 #Youtube Ads (@ Maasea)
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url script-echo-response application/vnd.yt-ump echo-response https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/blank.txt
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url echo-response application/vnd.yt-ump echo-response https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/blank.txt
 
 #Youtube Player (@ Maasea)
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube-player.js
