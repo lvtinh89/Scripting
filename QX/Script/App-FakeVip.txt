@@ -39,7 +39,7 @@ https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script
 #Nhaccuatui
 ^https:\/\/graph\.nhaccuatui\.com\/.*\/users\/info url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Nhaccuatui.js
 
-#Spotify-proto
+#Spotify-proto (app2smile)
 ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
 
 #youtube-vip (app2smile)
