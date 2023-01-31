@@ -1,4 +1,4 @@
-hostname = app.monkeyuni.net, apic.musixmatch.com, lcs-mobile-cops.adobe.io, *account.wps.cn, *account.wps.com, bmall.camera360.com, api-account.kinemasters.com, ap*.intsig.net, premium*.truecaller.com, api.flexibits.com, www.xmind.app, photos.adobe.io, oauth.reddit.com, graph.nhaccuatui.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+hostname = app.monkeyuni.net, apic.musixmatch.com, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, *account.wps.cn, *account.wps.com, bmall.camera360.com, api-account.kinemasters.com, ap*.intsig.net, premium*.truecaller.com, api.flexibits.com, www.xmind.app, photos.adobe.io, oauth.reddit.com, graph.nhaccuatui.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
 #All apps monkey
 ^https:\/\/app\.monkeyuni\.net\/user\/api\/v\d\/account\/load-update url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Monkey.js
@@ -8,6 +8,12 @@ hostname = app.monkeyuni.net, apic.musixmatch.com, lcs-mobile-cops.adobe.io, *ac
 
 #Phothop&PSexpress
 ^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Photoshop.js
+
+# Adobe Photoshop, Adobe Illustrator, Adobe Lightroom, Premiere Rush, Adobe Express, Spark Page, Spark Video, Adobe Fresco
+https://lcs-mobile-cops.adobe.io/mobile_profile/nul/v2 url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Adobe.js
+
+# Adobe Scan, Adobe Acrobat
+https://createpdf.acrobat.com/createpdf/api/users/me/subscriptions url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/AdobeScanPdf.js
 
 #Wps
 ^https?:\/\/[a-z-]*account\.wps\.c(n|om) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Wps.js
