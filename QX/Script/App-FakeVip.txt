@@ -7,7 +7,7 @@ hostname = app.monkeyuni.net, apic.musixmatch.com, lcs-mobile-cops.adobe.io, cre
 ^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Musixmatch.miao.js
 
 #Phothop&PSexpress
-^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Photoshop.js
+;^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Photoshop.js
 
 # Adobe Photoshop, Adobe Illustrator, Adobe Lightroom, Premiere Rush, Adobe Express, Spark Page, Spark Video, Adobe Fresco ( @vkm64)
 https://lcs-mobile-cops.adobe.io/mobile_profile/nul/v2 url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Adobe.js
@@ -37,7 +37,7 @@ https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script
 ^https?:\/\/www\.xmind\.app\/_res\/devices url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Xmind.js
 
 #Lightroom
-^https:\/\/photos\.adobe\.io\/v2\/accounts url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Lightroom.js
+;^https:\/\/photos\.adobe\.io\/v2\/accounts url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Lightroom.js
 
 #Reddit
 ^https:\/\/oauth\.reddit\.com\/api\/v\d\/me\.json url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Reddit.js
