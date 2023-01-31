@@ -3,7 +3,7 @@
 
 
 [MITM]
-hostname = %APPEND% sync.matetranslate.com, *api.adguard.com, app.monkeyuni.net, apic.musixmatch.com, lcs-mobile-cops.adobe.io, *account.wps.cn, *account.wps.com
+hostname = %APPEND% sync.matetranslate.com, *api.adguard.com, app.monkeyuni.net, apic.musixmatch.com, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, *account.wps.cn, *account.wps.com
 
 [Script]
 ;Mate = type=http-response,pattern=^https:\/\/sync\.matetranslate\.com\/subscription,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master//Mate.js
@@ -11,4 +11,6 @@ hostname = %APPEND% sync.matetranslate.com, *api.adguard.com, app.monkeyuni.net,
 Monkey = type=http-response,pattern=^https:\/\/app\.monkeyuni\.net\/user\/api\/v\d\/account\/load-update,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Monkey.js
 ;Musixmatch = type=http-response,pattern=^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Musixmatch.miao.js
 ;Photoshop = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Photoshop.js
+Adobe = type=http-response,pattern=https://lcs-mobile-cops.adobe.io/mobile_profile/nul/v2,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Adobe.js
+AdobeScanPdf = type=http-response,pattern=https://createpdf.acrobat.com/createpdf/api/users/me/subscriptions,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/AdobeScanPdf.js
 ;Wps = requires-body=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Wps.js,type=http-response,pattern= ^https?:\/\/[a-z-]*account\.wps\.c(n|om)(:\d+|)\/api\/users
