@@ -21,8 +21,8 @@ let token = "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";
 
 let repositories = [
     {
-        name: "NZW9314 脚本",
-        url: "https://github.com/nzw9314/QuantumultX/tree/master",
+        name: "app2smile",
+        url: "https://github.com/app2smile/rules",
     },
     {
         name: "langkhach270389",
