@@ -25,8 +25,16 @@ let repositories = [
         url: "https://github.com/nzw9314/QuantumultX/tree/master",
     },
     {
-        name: "ClashX",
-        url: "https://github.com/yichengchen/clashX/releases",
+        name: "langkhach270389",
+        url: "https://github.com/langkhach270389/Surge-LK/tree/new",
+    },
+    {
+        name: "AutoDarkMode",
+        url: "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode/releases",
+    },
+    {
+        name: "Maasea",
+        url: "https://github.com/Maasea/sgmodule",
     },
     {
         name: "Chavy 脚本",
