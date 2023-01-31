@@ -4,3 +4,4 @@
 [Script]
 App💥Monitor = type=cron,cronexp=1 0 4-22/4 * * *,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/AppMonitor.js,script-update-interval=0
 Daily Quotations = type=cron,cronexp="2 8,18 * * *",script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Cron/Daily%20Quotations.js,script-update-interval=0
+Github = type=cron,cronexp="2 8,18 * * *",script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Cron/github.js,script-update-interval=0
