@@ -1,7 +1,8 @@
 #!name= Spotify (>=iOS15)
 #!desc=Unlock Spotify Premium
-# 仓库地址 https://github.com/app2smile/rules
-# 1. 搜索界面 歌单/歌曲可以随意切换完全播放  2. 音乐库已点赞歌曲随意切换完全播放
+# Địa chỉ https://github.com/app2smile/rules
+# 1. Giao diện tìm kiếm Playlist/bài hát có thể chuyển đổi tùy ý và chơi trọn vẹn  
+# 2. Thư viện nhạc đã thích bài hát, chuyển đổi theo ý muốn và phát nó hoàn chỉnh
 
 [MITM]
 hostname = %APPEND% spclient.wg.spotify.com
