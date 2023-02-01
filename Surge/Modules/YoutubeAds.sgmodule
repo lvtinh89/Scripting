@@ -1,16 +1,16 @@
-#!name=去除 Youtube 广告 
-#!desc=去除 Youtube 广告 (IOS >= 15)
+#!name=YoutubeAds 
+#!desc=Gỡ bỏ quảng cáo Youtube,pip,phát nền (IOS >= 15)
 
 # > Feature
-# 删除 瀑布流、视频、搜索中出现的广告和Shorts
-# 删除 Shorts 内的视频广告
-# 删除 底部 上传 按钮
-# 增加 画中画(PIP), 后台播放 (Beta)
+# Xoá bỏ 瀑布流、视频、Quảng cáo trong tìm kiếm và Shorts
+# Xoá bỏ Shorts Quảng cáo bên trong
+# Xoá bỏ nút Tải lên dưới cùng
+# Đã thêm Hình trong hình(PIP), Phát nền (Beta)
 
 # > Note
-# 广告信息会有遗漏，可能偶现广告
-# 该模块已足够全面，无需其他规则混用，防止重写规则被破坏
-# 不支持 Mock 的客户端可以用 reject-200/reject-img 替代
+# Sẽ có thiếu sót trong thông tin quảng cáo và có thể có quảng cáo không thường xuyên
+# Mô-đun này đủ toàn diện để ngăn chặn việc viết lại các quy tắc bị phá vỡ mà không trộn lẫn các quy tắc khác.
+# Khách hàng không hỗ trợ Mock có thể sử dụng reject-200/reject-img để thay thế
 
 # > Credit 
 # @Choler & @DivineEngine & @app2smile
