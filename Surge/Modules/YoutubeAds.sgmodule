@@ -12,7 +12,7 @@
 # Mô-đun này đủ toàn diện để ngăn chặn việc viết lại các quy tắc bị phá vỡ mà không trộn lẫn các quy tắc khác.
 # Khách hàng không hỗ trợ Mock có thể sử dụng reject-200/reject-img để thay thế
 
-# > Credit 
+# > Credit: https://github.com/Maasea/sgmodule
 # @Choler & @DivineEngine & @app2smile
 
 [Script]
