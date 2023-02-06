@@ -1,4 +1,4 @@
-let obj = JSON.parse($response.body);
+var obj = JSON.parse($response.body);
 
 obj= {
  "response": {
@@ -10,4 +10,4 @@ obj= {
  }
 };
 
-$done({body: JSON.stringify(obj), status: 200});
+$done({body: JSON.stringify(obj), status:Ok});
