@@ -10,4 +10,4 @@ obj= {
  }
 };
 
-$done({body: JSON.stringify(obj), status:Ok});
+$done({body: JSON.stringify(obj), status: 200});
