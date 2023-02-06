@@ -1,0 +1,11 @@
+#!name=Unlock Kidsup
+#!desc=Kidsup
+
+[Script]
+Kidsup = type=http-response,pattern=^https:\/\/api.kidsup\.net\/(device\/|)(unlock|check),requires-body=1,max-size=0,script-path=scripts/langkhach/kidsup.js
+
+[MITM]
+hostname = %APPEND% api.kidsup.net
+
+[Rule]
+DOMAIN-SUFFIX,kidsup.net,DIRECT
