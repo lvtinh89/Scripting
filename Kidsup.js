@@ -1,4 +1,4 @@
-var obj = JSON.parse($response.body);
+let obj = JSON.parse($response.body);
 
 obj= {
  "response": {
