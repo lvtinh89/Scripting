@@ -1,6 +1,6 @@
 # > YouTube
-user-agent, com.google.ios.youtube*, 📀 MEDIA
-user-agent, YouTube*, 📀 MEDIA
-host-suffix, googlevideo.com, 📀 MEDIA
-host-suffix, youtube.com, 📀 MEDIA
-host, youtubei.googleapis.com, 📀 MEDIA
+user-agent, com.google.ios.youtube*, 📀 Media
+user-agent, YouTube*, 📀 Media
+host-suffix, googlevideo.com, 📀 Media
+host-suffix, youtube.com, 📀 Media
+host, youtubei.googleapis.com, 📀 Media
