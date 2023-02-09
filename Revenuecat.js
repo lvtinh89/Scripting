@@ -10,6 +10,7 @@ const list = {
 	'ipTV': { name: 'ipTV +', id: 'iptv_9.99_1y_7d_free' },
 	'APTV': { name: 'pro', id: 'com.kimen.aptvpro.lifetime' },
 	'Speechify': { name: 'pro', id: 'com.cliffweitzman.speechifyMobile2.premium.annual' },
+	'Server': { name: 'pro', id: 'digital.dumpling.server.pro' },
 	'Blink': { name: 'pro', id: 'blink_shell_plus_1y_1999' },
         'mizframa': { name: 'premium', id: 'mf_20_lifetime2' },
         'CallRecorder': { name: 'subscriptions', id: 'com.prettyboa.CallRecorder.MonthlySubscription2999' }
