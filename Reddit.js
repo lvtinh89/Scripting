@@ -9,6 +9,6 @@ obj['is_mod'] = true;
 obj['is_gold'] = true;
 obj['has_ios_subscription'] = true;
 obj['seen_premium_adblock_modal'] = true;
-obj['can_edit_name'] = true;
+obj['can_edit_name'] = false;
 obj['has_external_account'] = true;
 $done({body: JSON.stringify(obj)});
