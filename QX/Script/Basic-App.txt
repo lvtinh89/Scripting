@@ -5,4 +5,4 @@ hostname = spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtub
 
 # YoutubeAds (@ Maasea)
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url echo-response application/vnd.yt-ump echo-response https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/blank.txt
+;^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url echo-response application/vnd.yt-ump echo-response https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/blank.txt
