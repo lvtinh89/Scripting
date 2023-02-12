@@ -1,8 +1,0 @@
-hostname = spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
-
-# Spotify-proto (app2smile)
-^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
-
-# YoutubeAds (@ Maasea)
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
-;^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url echo-response application/vnd.yt-ump echo-response https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/blank.txt
