@@ -2,7 +2,7 @@
 #!desc= Bảng thông tin
 
 [Panel]
-#Surge Pro标题,可显示启动时间,点击刷新为重载配置
+#Surge Pro(Tiêu đề, có thể hiển thị thời gian khởi động, nhấp để làm mới để tải lại cấu hình)
 SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile,update-interval=1
 
 #流量统计
