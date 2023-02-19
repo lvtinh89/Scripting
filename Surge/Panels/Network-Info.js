@@ -200,8 +200,8 @@ function getNetworkInfo(retryTimes = 5, retryInterval = 1000) {
       title: getSSID() ?? getCellularInfo(),
       content:
         getIP() +
-        `IP：${info.query}\n` +
-        `ISP：${info.isp}\n` +
+        `Dải IP：${info.query}\n` +
+        `Nhà cung cấp：${info.isp}\n` +
         `Vị trí：${getFlagEmoji(info.countryCode)} | ${info.country} - ${info.city}`,
       icon: getSSID() ? 'wifi' : 'simcard',
       'icon-color': getSSID() ? '#5A9AF9' : '#8AB8DD',
