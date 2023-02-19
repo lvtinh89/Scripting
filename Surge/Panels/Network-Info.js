@@ -178,7 +178,7 @@ function getIP() {
     if (v4?.primaryAddress) info.push(`Thiết bị IP：${v4?.primaryAddress}`);
     if (v6?.primaryAddress) info.push(`Địa chỉ IPv6：Được phân bổ`);
     if (v4?.primaryRouter && getSSID()) info.push(`Bộ định tuyến IP：${v4?.primaryRouter}`);
-    if (v6?.primaryRouter && getSSID()) info.push(`IPv6 Địa chỉ：Được phân bổ`);
+    if (v6?.primaryRouter && getSSID()) info.push(`Địa chỉ IPv6：Được phân bổ`);
   }
   info = info.join("\n");
   return info + "\n";
