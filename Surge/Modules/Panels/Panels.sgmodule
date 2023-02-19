@@ -8,7 +8,7 @@ SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile,update-interval=1
 #流量统计
 TrafficStatistics = script-name=TrafficStatistics,update-interval=1
 
-#网络详情
+#Chi tiết mạng
 NET_info = script-name=NET_info,update-interval=1
 
 #查看节点IP信息
