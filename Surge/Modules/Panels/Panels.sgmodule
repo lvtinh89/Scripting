@@ -32,7 +32,7 @@ TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubuserc
 NET_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Surge/Panels/Network-Info.js,type=generic,timeout=30
 
 ##Xem thông tin địa chỉ IP
-IP-Check = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/IP-Check/Moore/IP-Check.js
+IP-Check = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Surge/Panels/IP-Check.js
 
 ##Phát hiện mở khoá phát trực tiếp
 stream-all = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Stream-All/Moore/Stream-All.js
