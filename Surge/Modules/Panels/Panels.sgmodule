@@ -14,9 +14,6 @@ NET_info = script-name=NET_info,update-interval=1
 #Xem thông tin địa chỉ IP
 IP-Check = script-name=IP-Check,update-interval=600
 
-#Phát hiện mở khoá phát trực tiếp
-stream-all = script-name=stream-all,update-interval=600
-
 #Xóa nhanh DNS Cache của Surge
 FlushDNS = script-name=FlushDNS,update-interval=600
 
@@ -34,9 +31,6 @@ NET_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com
 ##Xem thông tin địa chỉ IP
 IP-Check = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Surge/Panels/IP-Check.js
 
-##Phát hiện mở khoá phát trực tiếp
-stream-all = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Stream-All/Moore/Stream-All.js
-
 ##Xóa nhanh DNS Cache của Surge
-FlushDNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Flush-DNS/Moore/Flush-DNS.js,argument=title=DNS FLush&icon=cube&color=#afe59a&server=false
+FlushDNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Surge/Panels/Flush-DNS.js,argument=title=DNS FLush&icon=cube&color=#afe59a&server=false
 
