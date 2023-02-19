@@ -17,7 +17,7 @@ $httpClient.get(url, function(error, response, data){
     let ip = jsonData.query
   body = {
     title: "Thông tin mạng Internet",
-    content: `IP：${ip}\n Nhà cung cấp：${isp}\n Vị trí：${emoji}${country} - ${city}`,
+    content: `IP：${ip}\nNhà cung cấp：${isp}\nVị trí：${emoji}${country} - ${city}`,
     icon: "globe.asia.australia.fill"
   }
   $done(body);
