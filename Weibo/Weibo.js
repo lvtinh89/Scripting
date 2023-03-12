@@ -1,100 +1,667 @@
-const version='v1031.1';const $=new Env("微博去广告");let storeMainConfig=$.getdata('mainConfig');let storeItemMenusConfig=$.getdata('itemMenusConfig');const mainConfig=storeMainConfig?JSON.parse(storeMainConfig):{isDebug:true,removeHomeVip:true,removeHomeCreatorTask:true,removeRelate:true,removeGood:true,removeFollow:false,modifyMenus:false,removeRelateItem:true,removeRecommendItem:true,removeRewardItem:true,removeLiveMedia:true,removeNextVideo:true,removePinedTrending:true,removeInterestFriendInTopic:true,removeInterestTopic:true,removeInterestUser:true,removeLvZhou:true,profileSkin1:null,profileSkin2:null,tabIconVersion:0,tabIconPath:''}
-const itemMenusConfig=storeItemMenusConfig?JSON.parse(storeItemMenusConfig):{creator_task:true,mblog_menus_custom:false,mblog_menus_video_later:false,mblog_menus_comment_manager:false,mblog_menus_avatar_widget:false,mblog_menus_card_bg:false,mblog_menus_long_picture:false,mblog_menus_delete:false,mblog_menus_edit:false,mblog_menus_edit_history:false,mblog_menus_edit_video:false,mblog_menus_sticking:false,mblog_menus_open_reward:true,mblog_menus_novelty:false,mblog_menus_favorite:false,mblog_menus_promote:true,mblog_menus_modify_visible:false,mblog_menus_copy_url:false,mblog_menus_follow:false,mblog_menus_video_feedback:true,mblog_menus_shield:false,mblog_menus_report:false,mblog_menus_apeal:false,mblog_menus_home:false}
-const modifyCardsUrls=['/cardlist','video/community_tab','/searchall'];const modifyStatusesUrls=['statuses/friends/timeline','statuses/unread_friends_timeline','statuses/unread_hot_timeline','groups/timeline','statuses/container_timeline'];const otherUrls={'/profile/me':'removeHome','/statuses/extend':'itemExtendHandler','/video/remind_info':'removeVideoRemind','/checkin/show':'removeCheckin','/live/media_homelist':'removeMediaHomelist','/comments/build_comments':'removeComments','/container/get_item':'containerHandler','/profile/statuses':'userHandler','/profile/userinfo':'userHandler','/profile/container_timeline':'userHandler','/video/tiny_stream_video_list':'nextVideoHandler','/2/statuses/video_mixtimeline':'nextVideoHandler','/!/client/light_skin':'tabSkinHandler','/littleskin/preview':'skinPreviewHandler','/search/finder':'removeSearchMain','/search/container_timeline':'removeSearch','/search/container_discover':'removeSearch','/2/messageflow':'removeMsgAd','/2/page?':'removePage','/statuses/unread_topic_timeline':'topicHandler','/statuses/container_timeline':'removeMain',}
-function getModifyMethod(url){for(const s of modifyCardsUrls){if(url.indexOf(s)>-1){return 'removeCards';}}
-for(const s of modifyStatusesUrls){if(url.indexOf(s)>-1){return 'removeTimeLine';}}
-for(const[path,method]of Object.entries(otherUrls)){if(url.indexOf(path)>-1){return method;}}
-return null;}
-function isAd(data){if(!data){return false;}
-if(data.mblogtypename=='广告'||data.mblogtypename=='热推'){return true};if(data.promotion&&data.promotion.type=='ad'){return true};return false;}
-function removeMain(data){if(!data.items){return data;}
-let newItems=[];for(let item of data.items){if(!isAd(item.data)){newItems.push(item);}}
-data.items=newItems;log('removeMain success');return data;}
-function topicHandler(data){const cards=data.cards;if(!cards)return data;if(!mainConfig.removeUnfollowTopic&&!mainConfig.removeUnusedPart)return data;let newCards=[];for(let c of cards){let addFlag=true;if(c.mblog){let btns=c.mblog.buttons;if(mainConfig.removeUnfollowTopic&&btns){if(btns[0].type=='follow'){addFlag=false;}}}else{if(!mainConfig.removeUnusedPart){continue;}
-if(c.itemid=='bottom_mix_activity'){addFlag=false;}else if(c?.top?.title=='正在活跃'){addFlag=false;}else if(c.card_type==200&&c.group){addFlag=false;}else{let cGroup=c.card_group;if(!cGroup){continue;}
-let cGroup0=cGroup[0];if(['guess_like_title','cats_top_title','chaohua_home_readpost_samecity_title'].indexOf(cGroup0.itemid)>-1){addFlag=false;}else if(cGroup.length>1){let newCardGroup=[];for(let cg of cGroup){if(['chaohua_discovery_banner_1','bottom_mix_activity'].indexOf(cg.itemid)==-1){newCardGroup.push(cg);}}
-c.card_group=newCardGroup;}}}
-if(addFlag){newCards.push(c);}}
-data.cards=newCards;log('topicHandler success');return data;}
-function removeSearchMain(data){let channels=data.channelInfo.channels;if(!channels){return data;}
-for(let channel of channels){let payload=channel.payload;if(!payload){continue;}
-removeSearch(payload)}
-log('remove_search main success');return data;}
-function checkSearchWindow(item){if(!mainConfig.removeSearchWindow)return false;if(item.category!='card')return false;return item.data?.itemid=='finder_window'||item.data?.itemid=='more_frame';}
-function removeSearch(data){if(!data.items){return data;}
-let newItems=[];for(let item of data.items){if(item.category=='feed'){if(!isAd(item.data)){newItems.push(item);}}else{if(!checkSearchWindow(item)){newItems.push(item);}}}
-data.items=newItems;log('remove_search success');return data;}
-function removeMsgAd(data){if(!data.messages){return;}
-let newMsgs=[];for(let msg of data.messages){if(msg.msg_card?.ad_tag){continue;}
-newMsgs.push(msg)}
-data.messages=newMsgs;return data;}
-function removePage(data){removeCards(data);if(mainConfig.removePinedTrending&&data.cards&&data.cards.length>0&&data.cards[0].card_group){data.cards[0].card_group=data.cards[0].card_group.filter(c=>!c.itemid.includes("t:51"));}
-if(data)data=filter_timeline_cards(data);return data;}
-function filter_timeline_cards(data){if(data&&data.length>0){let j=data.length;while(j--){let item=data[j];let card_group=item.card_group;if(card_group&&card_group.length>0){if(item.itemid&&item.itemid=="hotword"){filter_top_search(card_group);}else{let i=card_group.length;while(i--){let card_group_item=card_group[i];let card_type=card_group_item.card_type;if(card_type){if(card_type==9){if(is_timeline_ad(card_group_item.mblog))
-card_group.splice(i,1);}else if(card_type==118||card_type==182||card_type==89||card_type==19){card_group.splice(i,1);}else if(card_type==42){if(card_group_item.desc=="\u53ef\u80fd\u611f\u5174\u8da3\u7684\u4eba"){data.splice(j,1);break;}}else if(card_type==17){if(data[0].card_group)data[0].card_group[0].col=1;filter_top_search(card_group_item.group);}}}}}else{let card_type=item.card_type;if(card_type&&card_type==9){if(is_timeline_ad(item.mblog))data.splice(j,1);}}}}
-return data;}
-function filter_top_search(group){if(group&&group.length>0){let k=group.length;while(k--){let group_item=group[k];if(group_item.hasOwnProperty("promotion")){group.splice(k,1);}}}}
-function is_timeline_ad(mblog){if(!mblog)return false;let promotiontype=mblog.promotion&&mblog.promotion.type&&mblog.promotion.type=="ad";let mblogtype=mblog.mblogtype&&mblog.mblogtype==1;return promotiontype||mblogtype?true:false;}
-function removeCards(data){if(!data.cards){return;}
-let newCards=[];for(const card of data.cards){let cardGroup=card.card_group;if(cardGroup&&cardGroup.length>0){let newGroup=[];for(const group of cardGroup){let cardType=group.card_type;if(cardType!=118&&cardType!=182&&cardType!=89&&cardType!=19){newGroup.push(group);}}
-card.card_group=newGroup;newCards.push(card);}else{let cardType=card.card_type;if([9,165].indexOf(cardType)>-1){if(!isAd(card.mblog)){newCards.push(card);}}else{newCards.push(card);}}}
-data.cards=newCards;}
-function lvZhouHandler(data){if(!mainConfig.removeLvZhou)return;if(!data)return;let struct=data.common_struct;if(!struct)return;let newStruct=[];for(const s of struct){if(s.name!='绿洲'){newStruct.push(s);}}
-data.common_struct=newStruct;}
-function isBlock(data){let blockIds=mainConfig.blockIds||[];if(blockIds.length===0){return false;}
-let uid=data.user.id;for(const blockId of blockIds){if(blockId==uid){return true;}}
-return false;}
-function removeTimeLine(data){for(const s of["ad","advertises","trends"]){if(data[s]){delete data[s];}}
-if(!data.statuses){return;}
-let newStatuses=[];for(const s of data.statuses){if(!isAd(s)){lvZhouHandler(s);if(!isBlock(s)){newStatuses.push(s);}}}
-data.statuses=newStatuses;if(data.statuses&&data.statuses.length>0){let i=data.statuses.length;while(i--){let element=data.statuses[i];element.user.user_ability_extend=1;element.user.verified_type_ext=1;element.user.verified_type=0;element.user.svip=1;element.user.verified_level=2;element.user.verified=true;element.user.has_ability_tag=1;element.user.type=1;element.user.star=1;element.user.remark="";element.user.followers_count=98760000;element.user.followers_count_str="9876万";element.user.mb_expire_time=7257139200;element.user.icons=[{"url":"https:\/\/h5.sinaimg.cn\/upload\/1004\/409\/2021\/06\/08\/feed_icon_100vip_7.png","scheme":"https:\/\/me.verified.weibo.com\/fans\/intro?topnavstyle=1"}];}}}
-function removeHomeVip(data){if(!data.header){return data;}
-data.header.avatar.badgeUrl='https://h5.sinaimg.cn/upload/100/888/2021/04/07/avatar_vip_golden.png';data.header.desc.content='微博认证：最美小仙女';let vipCenter=data.header.vipCenter;let vipIcon=data.header.vipIcon;let vipView=data.header.vipView;let items=data.items;if(items){if(items[3].title){items[3].title.content="9876万";}}
-if(!vipCenter){return data;}
-if(vipCenter){if(vipCenter.icon)vipCenter.icon.iconUrl='https://h5.sinaimg.cn/upload/1071/1468/2021/12/22/hy_dongtu.gif';if(vipCenter.dot)vipCenter.dot.iconUrl='https://h5.sinaimg.cn/upload/100/888/2021/03/22/jiantougaocheng.png';if(vipCenter.content.contents)vipCenter.content.contents[2].content='会员中心';if(vipCenter.title)vipCenter.title.content='会员中心';}
-if(vipIcon){vipIcon.iconUrl='https:\/\/h5.sinaimg.cn\/upload\/1004\/409\/2021\/06\/08\/feed_icon_100vip_7.png';vipIcon.style.width='15';vipIcon.style.height='18';}
-if(vipView){if(vipView.content1&&vipView.content1.contents&&vipView.content1.contents.length>1){vipView.content1.contents[0].iconUrl='https://h5.sinaimg.cn/upload/100/1734/2022/06/01/vip7_title.png';vipView.content1.contents[2].content='您是尊贵的终身VIP用户';vipView.content1.contents[2].style.textColor='#BB5416';vipView.content1.contents[2].style.textColorDark='#AC521C';}
-if(vipView.content2)vipView.content2.texts=[{"type":"richText","contents":[{"type":"text","style":{"textColor":"#E1834D","textColorDark":"#D0743F","textSize":12},"content":"每天都要开开心心！"},{"type":"icon","style":{"width":10,"height":10,"darkMode":"urlAppend"},"iconUrl":"https:\/\/h5.sinaimg.cn\/upload\/100\/1734\/2022\/06\/01\/vip7_subtitle.png"}]},{"type":"richText","contents":[{"type":"text","style":{"textColor":"#E1834D","textColorDark":"#D0743F","textSize":12},"content":"明天又是个好日子！"},{"type":"icon","style":{"width":10,"height":10,"darkMode":"urlAppend"},"iconUrl":"https:\/\/h5.sinaimg.cn\/upload\/100\/1734\/2022\/06\/01\/vip7_subtitle.png"}]},{"type":"richText","contents":[{"type":"text","style":{"textColor":"#E1834D","textColorDark":"#D0743F","textSize":12},"content":"努力过好每一天！"},{"type":"icon","style":{"width":10,"height":10,"darkMode":"urlAppend"},"iconUrl":"https:\/\/h5.sinaimg.cn\/upload\/100\/1734\/2022\/06\/01\/vip7_subtitle.png"}]}];if(vipView.rightImage){vipView.rightImage.iconUrl='https://h5.sinaimg.cn/upload/100/1734/2022/06/01/vip7_button.png';vipView.rightImage.itemId='button_VIP_all';}
-if(vipView.rightText){vipView.rightText.content='会员中心';vipView.rightText.itemId='button_VIP_all';vipView.rightText.style.textColor='#BB5416';vipView.rightText.style.textColorDark='#AC521C';}
-if(vipView.bgImage1)vipView.bgImage1.iconUrl='https://h5.sinaimg.cn/upload/100/1734/2022/06/08/vip7_bg1.png';vipView.itemId='background_VIP';}
-return data;}
-function removeVideoRemind(data){data.bubble_dismiss_time=0;data.exist_remind=false;data.image_dismiss_time=0;data.image='';data.tag_image_english='';data.tag_image_english_dark='';data.tag_image_normal='';data.tag_image_normal_dark='';}
-function itemExtendHandler(data){if(mainConfig.removeRelate||mainConfig.removeGood){if(data.trend&&data.trend.titles){let title=data.trend.titles.title;if(mainConfig.removeRelate&&title==='相关推荐'){delete data.trend;}else if(mainConfig.removeGood&&title==='博主好物种草'){delete data.trend;}}}
-if(mainConfig.removeFollow){if(data.follow_data){data.follow_data=null;delete data.reward_info;}}
-if(mainConfig.removeRewardItem){if(data.reward_info){data.reward_info=null;delete data.reward_info;}}
-if(data.page_alerts){data.page_alerts=null;}
-try{let picUrl=data.trend.extra_struct.extBtnInfo.btn_picurl;if(picUrl.indexOf('timeline_icon_ad_delete')>-1){delete data.trend;}}catch(error){}
-if(mainConfig.modifyMenus&&data.custom_action_list){let newActions=[];for(const item of data.custom_action_list){let _t=item.type;let add=itemMenusConfig[_t]
-if(add===undefined){newActions.push(item);}else if(_t==='mblog_menus_copy_url'){newActions.unshift(item);}else if(add){newActions.push(item);}}
-data.custom_action_list=newActions;}}
-function updateFollowOrder(item){try{for(let d of item.items){if(d.itemId==='mainnums_friends'){let s=d.click.modules[0].scheme;d.click.modules[0].scheme=s.replace('231093_-_selfrecomm','231093_-_selffollowed');log('updateFollowOrder success');return;}}}catch(error){console.log('updateFollowOrder fail');}}
-function updateProfileSkin(item,k){try{let profileSkin=mainConfig[k];if(!profileSkin){return;}
-let i=0;for(let d of item.items){if(!d.image){continue;}
-try{dm=d.image.style.darkMode
-if(dm!='alpha'){d.image.style.darkMode='alpha'}
-d.image.iconUrl=profileSkin[i++];if(d.dot){d.dot=[];}}catch(error){}}
-log('updateProfileSkin success');}catch(error){console.log('updateProfileSkin fail');}}
-function removeHome(data){if(!data.items){return data;}
-let newItems=[];for(let item of data.items){let itemId=item.itemId;if(itemId=='profileme_mine'){if(mainConfig.removeHomeVip){item=removeHomeVip(item);}
-updateFollowOrder(item);newItems.push(item);}else if(itemId=='100505_-_top8'){updateProfileSkin(item,'profileSkin1');newItems.push(item);}else if(itemId=='100505_-_newcreator'){if(item.style&&item.style.background)item.style.background.corners=[7,7,7,7];if(item.style)item.style.padding=[0,0,0,7];if(item.type=='grid'){updateProfileSkin(item,'profileSkin2');newItems.push(item);}else{if(!mainConfig.removeHomeCreatorTask){newItems.push(item);}}}else if(['mine_attent_title','100505_-_meattent_pic','100505_-_newusertask','100505_-_vipkaitong','100505_-_hongbao2022','100505_-_adphoto','100505_-_advideo','2022mqj_me_biaoti','2022mqj_me_wz7'].indexOf(itemId)>-1){continue;}else if(itemId.match(/100505_-_meattent_-_\d+/)){continue;}else{newItems.push(item);}}
-data.items=newItems;if(data.moreInfo)data.moreInfo.noMore=true;return data;}
-function removeCheckin(data){log('remove tab1签到');data.show=0;}
-function removeMediaHomelist(data){if(mainConfig.removeLiveMedia){log('remove 首页直播');data.data={};}}
-function removeComments(data){let delType=['广告'];if(mainConfig.removeRelateItem)delType.push('相关内容');if(mainConfig.removeRecommendItem)delType.push(...['推荐','热推']);let items=data.datas||[];if(items.length===0)return;let newItems=[];for(const item of items){let adType=item.adType||'';if(delType.indexOf(adType)==-1){newItems.push(item);}}
-log('remove 评论区相关和推荐内容');data.datas=newItems;}
-function containerHandler(data){if(mainConfig.removeInterestFriendInTopic){if(data.card_type_name==='超话里的好友'){log('remove 超话里的好友');data.card_group=[];}}
-if(mainConfig.removeInterestTopic&&data.itemid){if(data.itemid.indexOf('infeed_may_interest_in')>-1){log('remove 感兴趣的超话');data.card_group=[];}else if(data.itemid.indexOf('infeed_friends_recommend')>-1){log('remove 超话好友关注');data.card_group=[];}}}
-function userHandler(data){data=removeMain(data);if(!mainConfig.removeInterestUser){return data;}
-if(!data.items){return data;}
-let newItems=[];for(let item of data.items){let isAdd=true;if(item.category=='group'){try{if(item.items[0]['data']['desc']=='可能感兴趣的人'){isAdd=false;}}catch(error){}}
-if(isAdd){newItems.push(item);}}
-data.items=newItems;log('removeMain sub success');return data;}
-function nextVideoHandler(data){if(mainConfig.removeNextVideo){data.statuses=[];data.tab_list=[];console.log('nextVideoHandler');}}
-function tabSkinHandler(data){try{let iconVersion=mainConfig.tabIconVersion;data['data']['canUse']=1;if(!iconVersion||!mainConfig.tabIconPath)return;if(iconVersion<100)return;let skinList=data['data']['list']
-for(let skin of skinList){skin['version']=iconVersion;skin['downloadlink']=mainConfig.tabIconPath;}
-log('tabSkinHandler success')}catch(error){log('tabSkinHandler fail')}}
-function skinPreviewHandler(data){data['data']['skin_info']['status']=1}
-function log(data){if(mainConfig.isDebug){console.log(data);}}
-function Env(t,e){class s{constructor(t){this.env=t}send(t,e="GET"){t="string"==typeof t?{url:t}:t;let s=this.get;return "POST"===e&&(s=this.post),new Promise((e,i)=>{s.call(this,t,(t,s,r)=>{t?i(t):e(s)})})}get(t){return this.send.call(this.env,t)}post(t){return this.send.call(this.env,t,"POST")}}return new class{constructor(t,e){this.name=t,this.http=new s(this),this.data=null,this.dataFile="box.dat",this.logs=[],this.isMute=!1,this.isNeedRewrite=!1,this.logSeparator="\n",this.encoding="utf-8",this.startTime=(new Date).getTime(),Object.assign(this,e),this.log("",`🔔${this.name}, 开始!`)}isNode(){return "undefined"!=typeof module&&!!module.exports}isQuanX(){return "undefined"!=typeof $task}isSurge(){return "undefined"!=typeof $httpClient&&"undefined"==typeof $loon}isLoon(){return "undefined"!=typeof $loon}isShadowrocket(){return "undefined"!=typeof $rocket}isStash(){return "undefined"!=typeof $environment&&$environment["stash-version"]}toObj(t,e=null){try{return JSON.parse(t)}catch{return e}}toStr(t,e=null){try{return JSON.stringify(t)}catch{return e}}getjson(t,e){let s=e;const i=this.getdata(t);if(i)try{s=JSON.parse(this.getdata(t))}catch{}return s}setjson(t,e){try{return this.setdata(JSON.stringify(t),e)}catch{return!1}}getScript(t){return new Promise(e=>{this.get({url:t},(t,s,i)=>e(i))})}runScript(t,e){return new Promise(s=>{let i=this.getdata("@chavy_boxjs_userCfgs.httpapi");i=i?i.replace(/\n/g,"").trim():i;let r=this.getdata("@chavy_boxjs_userCfgs.httpapi_timeout");r=r?1*r:20,r=e&&e.timeout?e.timeout:r;const[o,n]=i.split("@"),a={url:`http://${n}/v1/scripting/evaluate`,body:{script_text:t,mock_type:"cron",timeout:r},headers:{"X-Key":o,Accept:"*/*"}};this.post(a,(t,e,i)=>s(i))}).catch(t=>this.logErr(t))}loaddata(){if(!this.isNode())return{};{this.fs=this.fs?this.fs:require("fs"),this.path=this.path?this.path:require("path");const t=this.path.resolve(this.dataFile),e=this.path.resolve(process.cwd(),this.dataFile),s=this.fs.existsSync(t),i=!s&&this.fs.existsSync(e);if(!s&&!i)return{};{const i=s?t:e;try{return JSON.parse(this.fs.readFileSync(i))}catch(t){return{}}}}}writedata(){if(this.isNode()){this.fs=this.fs?this.fs:require("fs"),this.path=this.path?this.path:require("path");const t=this.path.resolve(this.dataFile),e=this.path.resolve(process.cwd(),this.dataFile),s=this.fs.existsSync(t),i=!s&&this.fs.existsSync(e),r=JSON.stringify(this.data);s?this.fs.writeFileSync(t,r):i?this.fs.writeFileSync(e,r):this.fs.writeFileSync(t,r)}}lodash_get(t,e,s){const i=e.replace(/\[(\d+)\]/g,".$1").split(".");let r=t;for(const t of i)if(r=Object(r)[t],void 0===r)return s;return r}lodash_set(t,e,s){return Object(t)!==t?t:(Array.isArray(e)||(e=e.toString().match(/[^.[\]]+/g)||[]),e.slice(0,-1).reduce((t,s,i)=>Object(t[s])===t[s]?t[s]:t[s]=Math.abs(e[i+1])>>0==+e[i+1]?[]:{},t)[e[e.length-1]]=s,t)}getdata(t){let e=this.getval(t);if(/^@/.test(t)){const[,s,i]=/^@(.*?)\.(.*?)$/.exec(t),r=s?this.getval(s):"";if(r)try{const t=JSON.parse(r);e=t?this.lodash_get(t,i,""):e}catch(t){e=""}}return e}setdata(t,e){let s=!1;if(/^@/.test(e)){const[,i,r]=/^@(.*?)\.(.*?)$/.exec(e),o=this.getval(i),n=i?"null"===o?null:o||"{}":"{}";try{const e=JSON.parse(n);this.lodash_set(e,r,t),s=this.setval(JSON.stringify(e),i)}catch(e){const o={};this.lodash_set(o,r,t),s=this.setval(JSON.stringify(o),i)}}else s=this.setval(t,e);return s}getval(t){return this.isSurge()||this.isLoon()?$persistentStore.read(t):this.isQuanX()?$prefs.valueForKey(t):this.isNode()?(this.data=this.loaddata(),this.data[t]):this.data&&this.data[t]||null}setval(t,e){return this.isSurge()||this.isLoon()?$persistentStore.write(t,e):this.isQuanX()?$prefs.setValueForKey(t,e):this.isNode()?(this.data=this.loaddata(),this.data[e]=t,this.writedata(),!0):this.data&&this.data[e]||null}initGotEnv(t){this.got=this.got?this.got:require("got"),this.cktough=this.cktough?this.cktough:require("tough-cookie"),this.ckjar=this.ckjar?this.ckjar:new this.cktough.CookieJar,t&&(t.headers=t.headers?t.headers:{},void 0===t.headers.Cookie&&void 0===t.cookieJar&&(t.cookieJar=this.ckjar))}get(t,e=(()=>{})){if(t.headers&&(delete t.headers["Content-Type"],delete t.headers["Content-Length"]),this.isSurge()||this.isLoon())this.isSurge()&&this.isNeedRewrite&&(t.headers=t.headers||{},Object.assign(t.headers,{"X-Surge-Skip-Scripting":!1})),$httpClient.get(t,(t,s,i)=>{!t&&s&&(s.body=i,s.statusCode=s.status?s.status:s.statusCode,s.status=s.statusCode),e(t,s,i)});else if(this.isQuanX())this.isNeedRewrite&&(t.opts=t.opts||{},Object.assign(t.opts,{hints:!1})),$task.fetch(t).then(t=>{const{statusCode:s,statusCode:i,headers:r,body:o}=t;e(null,{status:s,statusCode:i,headers:r,body:o},o)},t=>e(t&&t.error||"UndefinedError"));else if(this.isNode()){let s=require("iconv-lite");this.initGotEnv(t),this.got(t).on("redirect",(t,e)=>{try{if(t.headers["set-cookie"]){const s=t.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();s&&this.ckjar.setCookieSync(s,null),e.cookieJar=this.ckjar}}catch(t){this.logErr(t)}}).then(t=>{const{statusCode:i,statusCode:r,headers:o,rawBody:n}=t,a=s.decode(n,this.encoding);e(null,{status:i,statusCode:r,headers:o,rawBody:n,body:a},a)},t=>{const{message:i,response:r}=t;e(i,r,r&&s.decode(r.rawBody,this.encoding))})}}post(t,e=(()=>{})){const s=t.method?t.method.toLocaleLowerCase():"post";if(t.body&&t.headers&&!t.headers["Content-Type"]&&(t.headers["Content-Type"]="application/x-www-form-urlencoded"),t.headers&&delete t.headers["Content-Length"],this.isSurge()||this.isLoon())this.isSurge()&&this.isNeedRewrite&&(t.headers=t.headers||{},Object.assign(t.headers,{"X-Surge-Skip-Scripting":!1})),$httpClient[s](t,(t,s,i)=>{!t&&s&&(s.body=i,s.statusCode=s.status?s.status:s.statusCode,s.status=s.statusCode),e(t,s,i)});else if(this.isQuanX())t.method=s,this.isNeedRewrite&&(t.opts=t.opts||{},Object.assign(t.opts,{hints:!1})),$task.fetch(t).then(t=>{const{statusCode:s,statusCode:i,headers:r,body:o}=t;e(null,{status:s,statusCode:i,headers:r,body:o},o)},t=>e(t&&t.error||"UndefinedError"));else if(this.isNode()){let i=require("iconv-lite");this.initGotEnv(t);const{url:r,...o}=t;this.got[s](r,o).then(t=>{const{statusCode:s,statusCode:r,headers:o,rawBody:n}=t,a=i.decode(n,this.encoding);e(null,{status:s,statusCode:r,headers:o,rawBody:n,body:a},a)},t=>{const{message:s,response:r}=t;e(s,r,r&&i.decode(r.rawBody,this.encoding))})}}time(t,e=null){const s=e?new Date(e):new Date;let i={"M+":s.getMonth()+1,"d+":s.getDate(),"H+":s.getHours(),"m+":s.getMinutes(),"s+":s.getSeconds(),"q+":Math.floor((s.getMonth()+3)/3),S:s.getMilliseconds()};/(y+)/.test(t)&&(t=t.replace(RegExp.$1,(s.getFullYear()+"").substr(4-RegExp.$1.length)));for(let e in i)new RegExp("("+e+")").test(t)&&(t=t.replace(RegExp.$1,1==RegExp.$1.length?i[e]:("00"+i[e]).substr((""+i[e]).length)));return t}queryStr(t){let e="";for(const s in t){let i=t[s];null!=i&&""!==i&&("object"==typeof i&&(i=JSON.stringify(i)),e+=`${s}=${i}&`)}return e=e.substring(0,e.length-1),e}msg(e=t,s="",i="",r){const o=t=>{if(!t)return t;if("string"==typeof t)return this.isLoon()?t:this.isQuanX()?{"open-url":t}:this.isSurge()?{url:t}:void 0;if("object"==typeof t){if(this.isLoon()){let e=t.openUrl||t.url||t["open-url"],s=t.mediaUrl||t["media-url"];return{openUrl:e,mediaUrl:s}}if(this.isQuanX()){let e=t["open-url"]||t.url||t.openUrl,s=t["media-url"]||t.mediaUrl,i=t["update-pasteboard"]||t.updatePasteboard;return{"open-url":e,"media-url":s,"update-pasteboard":i}}if(this.isSurge()){let e=t.url||t.openUrl||t["open-url"];return{url:e}}}};if(this.isMute||(this.isSurge()||this.isLoon()?$notification.post(e,s,i,o(r)):this.isQuanX()&&$notify(e,s,i,o(r))),!this.isMuteLog){let t=["","==============📣系统通知📣=============="];t.push(e),s&&t.push(s),i&&t.push(i),console.log(t.join("\n")),this.logs=this.logs.concat(t)}}log(...t){t.length>0&&(this.logs=[...this.logs,...t]),console.log(t.join(this.logSeparator))}logErr(t,e){const s=!this.isSurge()&&!this.isQuanX()&&!this.isLoon();s?this.log("",`❗️${this.name}, 错误!`,t.stack):this.log("",`❗️${this.name}, 错误!`,t)}wait(t){return new Promise(e=>setTimeout(e,t))}done(t={}){const e=(new Date).getTime(),s=(e-this.startTime)/1e3;this.log("",`🔔${this.name}, 结束! 🕛 ${s} 秒`),this.log(),this.isSurge()||this.isQuanX()||this.isLoon()?$done(t):this.isNode()&&process.exit(1)}}(t,e)}
-var body=$response.body;var url=$request.url;let method=getModifyMethod(url);if(method){log(method);var func=eval(method);let data=JSON.parse(body);new func(data);body=JSON.stringify(data);}
-$done({body});
+// 2023-03-11 08:55
+
+const url = $request.url;
+if (!$response.body) $done({});
+let body = $response.body;
+
+// 微博详情页菜单配置
+const itemMenusConfig = {
+  creatortypeask: false, // 转发任务
+  mblog_menus_apeal: true, // 申诉
+  mblog_menus_avatar_widget: false, // 用此头像挂件
+  mblog_menus_bullet_shield: true, // 屏蔽弹幕
+  mblog_menus_card_bg: false, // 用此卡片背景
+  mblog_menus_comment_manager: true, // 评论管理
+  mblog_menus_copy_url: true, // 复制链接
+  mblog_menus_custom: false, // 寄微博
+  mblog_menus_delete: true, // 删除
+  mblog_menus_edit: true, // 编辑
+  mblog_menus_edit_history: true, // 编辑记录
+  mblog_menus_edit_video: true, // 编辑视频
+  mblog_menus_favorite: true, // 收藏
+  mblog_menus_follow: true, // 关注
+  mblog_menus_home: false, // 返回首页
+  mblog_menus_long_picture: true, // 生成长图
+  mblog_menus_modify_visible: true, // 设置分享范围
+  mblog_menus_novelty: false, // 新鲜事投稿
+  mblog_menus_open_reward: false, // 赞赏
+  mblog_menus_popularize: false,
+  mblog_menus_promote: false, // 推广
+  mblog_menus_report: true, // 投诉
+  mblog_menus_shield: true, // 屏蔽
+  mblog_menus_sticking: true, // 置顶
+  mblog_menus_video_feedback: false, // 播放反馈
+  mblog_menus_video_later: false // 可能是稍后再看
+};
+
+if (url.includes("/interface/sdk/sdkad.php")) {
+  // 开屏广告
+  let obj = JSON.parse(body.substring(0, body.length - 2));
+  if (obj.needlocation) {
+    obj.needlocation = false;
+  }
+  if (obj.show_push_splash_ad) {
+    obj.show_push_splash_ad = false;
+  }
+  if (obj.background_delay_display_time) {
+    obj.background_delay_display_time = 31536000; // 60 * 60 * 24 * 365 = 31536000
+  }
+  if (obj.lastAdShow_delay_display_time) {
+    obj.lastAdShow_delay_display_time = 31536000;
+  }
+  if (obj.realtime_ad_video_stall_time) {
+    obj.realtime_ad_video_stall_time = 0;
+  }
+  if (obj.realtime_ad_timeout_duration) {
+    obj.realtime_ad_timeout_duration = 0;
+  }
+  if (obj.ads) {
+    for (let item of obj.ads) {
+      item.displaytime = 0;
+      item.displayintervel = 31536000;
+      item.allowdaydisplaynum = 0;
+      item.begintime = "2040-01-01 00:00:00";
+      item.endtime = "2040-01-01 23:59:59";
+    }
+  }
+  $done({ body: JSON.stringify(obj) + "OK" });
+} else {
+  let obj = JSON.parse(body);
+  if (url.includes("/2/cardlist") || url.includes("/2/searchall")) {
+    if (obj.cards) {
+      let newCards = [];
+      for (let card of obj.cards) {
+        let cardGroup = card.card_group;
+        if (cardGroup?.length > 0) {
+          let newGroup = [];
+          for (let group of cardGroup) {
+            if (group.mblog) {
+              // 头像挂件,关注按钮
+              removeAvatar(group.mblog);
+            }
+            let cardType = group.card_type;
+            if (cardType !== 118) {
+              if (card?.show_type === 3) {
+                if (cardType !== 17) {
+                  continue;
+                }
+              }
+              if (!isAd(group.mblog)) {
+                // 商品橱窗
+                if (group.mblog?.common_struct) {
+                  delete group.mblog.common_struct;
+                }
+                newGroup.push(group);
+              }
+            }
+          }
+          card.card_group = newGroup;
+          newCards.push(card);
+        } else {
+          let cardType = card.card_type;
+          if (card.mblog) {
+            // 头像挂件,关注按钮
+            removeAvatar(card.mblog);
+          }
+          // 9 广告
+          // 17 猜你想搜
+          // 58 猜你想搜偏好设置
+          // 165 广告
+          if ([9, 165].indexOf(cardType) !== -1) {
+            if (!isAd(card.mblog)) {
+              newCards.push(card);
+            }
+          } else {
+            if ([17, 58, 180, 1007].indexOf(cardType) !== -1) {
+              continue;
+            }
+            newCards.push(card);
+          }
+        }
+      }
+      obj.cards = newCards;
+    }
+  } else if (url.includes("/2/checkin/show")) {
+    // 首页签到
+    if (obj.show) {
+      obj.show = 0;
+    }
+  } else if (url.includes("/2/client/publisher_list")) {
+    // 首页右上角按钮
+    if (obj.elements) {
+      obj.elements = obj.elements.filter(
+        (a) =>
+          a.app_name === "写微博" ||
+          a.app_name === "图片" ||
+          a.app_name === "视频"
+      );
+    }
+  } else if (url.includes("/2/comments/build_comments")) {
+    // 评论区
+    if (obj.datas) {
+      let items = obj.datas;
+      if (items.length > 0) {
+        let newItems = [];
+        for (let item of items) {
+          if (!isAd(item.data)) {
+            // 微博伪装评论
+            if (item.data.user) {
+              // 头像挂件,关注按钮
+              removeAvatar(item.data);
+              if (
+                item.data.user.name === "超话社区" ||
+                item.data.user.name === "微博视频"
+              ) {
+                continue;
+              }
+            }
+            // 评论气泡
+            if (item.data?.comment_bubble) {
+              delete item.data.comment_bubble;
+            }
+            // 评论弹幕
+            if (item.data?.comment_bullet_screens_message) {
+              delete item.data.comment_bullet_screens_message;
+            }
+            // 热评小图标 弹幕 首评
+            if (item.data?.hot_icon) {
+              delete item.data.hot_icon;
+            }
+            // 会员气泡按钮
+            if (item.data?.vip_button) {
+              delete item.data.vip_button;
+            }
+            // 相关内容,过滤提示
+            if (
+              item?.adType === "相关内容" ||
+              item?.adType === "推荐" ||
+              item?.type === 6 ||
+              item?.type === 15
+            ) {
+              continue;
+            }
+            newItems.push(item);
+          }
+        }
+        obj.datas = newItems;
+      }
+    } else if (obj.root_comments) {
+      let items = obj.root_comments;
+      if (items.length > 0) {
+        let newItems = [];
+        for (let item of items) {
+          if (!isAd(item)) {
+            // 微博伪装评论
+            if (item.user) {
+              // 头像挂件,关注按钮
+              removeAvatar(item);
+              if (
+                item.user.name === "超话社区" ||
+                item.user.name === "微博视频"
+              ) {
+                continue;
+              }
+            }
+            // 评论气泡
+            if (item?.comment_bubble) {
+              delete item.comment_bubble;
+            }
+            // 评论弹幕
+            if (item?.comment_bullet_screens_message) {
+              delete item.comment_bullet_screens_message;
+            }
+            // 热评小图标 弹幕 首评
+            if (item?.hot_icon) {
+              delete item.hot_icon;
+            }
+            // 会员气泡按钮
+            if (item?.vip_button) {
+              delete item.vip_button;
+            }
+            newItems.push(item);
+          }
+        }
+        obj.root_comments = newItems;
+      }
+    }
+  } else if (url.includes("/2/messageflow/notice")) {
+    // 消息动态页
+    if (obj.messages) {
+      let newMsgs = [];
+      for (let msg of obj.messages) {
+        if (msg.msg_card?.ad_tag) {
+          continue;
+        } else {
+          newMsgs.push(msg);
+        }
+      }
+      obj.messages = newMsgs;
+    }
+  } else if (url.includes("/2/page")) {
+    // 搜索页列表,超话
+    if (obj.cards) {
+      if (obj.cards[0].card_group) {
+        obj.cards[0].card_group = obj.cards[0].card_group.filter(
+          (c) =>
+            !(
+              c?.actionlog?.ext?.includes("ads_word") ||
+              c?.itemid?.includes("t:51") ||
+              c?.itemid?.includes("ads_word")
+            )
+        );
+      }
+      obj.cards = obj.cards.filter(
+        (i) =>
+          !(
+            i.itemid?.includes("feed_-_invite") || // 超话里的好友
+            i.itemid?.includes("infeed_friends_recommend") || // 好友关注
+            i.itemid?.includes("infeed_may_interest_in") || // 你可能感兴趣的超话
+            i.itemid?.includes("infeed_pagemanual3") || // 手动区域3
+            i.itemid?.includes("infeed_weibo_mall") || // 微博小店
+            i?.mblog?.mblogtypename?.includes("广告")
+          )
+      );
+    } else if (obj.card_group) {
+      obj.card_group = obj.card_group.filter((i) =>
+        i?.desc?.includes("你可能感兴趣的超话")
+      );
+    }
+  } else if (url.includes("/2/profile/container_timeline")) {
+    // 个人主页信息流
+    if (obj.items) {
+      let newItems = [];
+      for (let item of obj.items) {
+        if (item.category === "card") {
+          // 筛选按钮
+          if (item.data.card_type === 216) {
+            newItems.push(item);
+          }
+        } else if (item.category === "group") {
+          // 遍历group,保留置顶微博
+          for (let ii of item.items) {
+            if (ii.category === "feed") {
+              // 头像挂件,关注按钮
+              removeAvatar(ii.data);
+              newItems.push(item);
+            }
+          }
+        } else if (item.category === "feed") {
+          if (!isAd(item.data)) {
+            // 头像挂件,关注按钮
+            removeAvatar(item.data);
+            // 商品橱窗
+            if (item.data?.common_struct) {
+              delete item.data.common_struct;
+            }
+            newItems.push(item);
+          }
+        }
+      }
+      obj.items = newItems;
+    }
+  } else if (url.includes("/2/profile/me")) {
+    // 我的页面
+    if (obj.vipHeaderBgImage) {
+      delete obj.vipHeaderBgImage;
+    }
+    if (obj.items) {
+      let newItems = [];
+      for (let item of obj.items) {
+        let itemId = item.itemId;
+        if (itemId === "profileme_mine") {
+          if (item.header) {
+            delete item.header.vipView;
+            delete item.header.vipCenter;
+            delete item.header.vipIcon;
+          }
+          for (let d of item.items) {
+            if (d.itemId === "mainnums_friends") {
+              let s = d.click.modules[0].scheme;
+              d.click.modules[0].scheme = s.replace(
+                "231093_-_selfrecomm",
+                "231093_-_selffollowed"
+              );
+            }
+          }
+          newItems.push(item);
+        } else if (itemId === "100505_-_top8") {
+          if (item.items) {
+            item.items = item.items.filter(
+              (i) =>
+                i.itemId === "100505_-_album" || // 我的相册
+                i.itemId === "100505_-_like" || // 赞/收藏
+                i.itemId === "100505_-_watchhistory" || // 浏览记录
+                i.itemId === "100505_-_draft" // 草稿箱
+              // i.itemId === "100505_-_pay" || // 我的钱包
+              // i.itemId === "100505_-_ordercenter" || // 我的订单
+              // i.itemId === "100505_-_productcenter" || // 创作中心
+              // i.itemId === "100505_-_promote" || // 广告中心
+            );
+          }
+          newItems.push(item);
+        } else if (itemId === "100505_-_manage") {
+          if (item.style) {
+            delete item.style;
+          }
+          // 移除分隔符的点点点
+          if (item.images) {
+            delete item.images;
+          }
+          newItems.push(item);
+        } else if (itemId === "100505_-_manage2") {
+          // 移除面板样式
+          if (item.footer) {
+            delete item.footer;
+          }
+          // 移除框内推广
+          if (item.body) {
+            delete item.body;
+          }
+          newItems.push(item);
+        } else if (
+          itemId === "100505_-_chaohua" ||
+          itemId === "100505_-_recentlyuser"
+        ) {
+          newItems.push(item);
+        } else {
+          // 其他项目全部移除
+          continue;
+        }
+      }
+      obj.items = newItems;
+    }
+  } else if (url.includes("/2/push/active")) {
+    // 首页右上角红包图标
+    if (obj?.feed_redpacket) {
+      obj.feed_redpacket.starttime = "2208960000";
+      obj.feed_redpacket.interval = "31536000";
+      obj.feed_redpacket.endtime = "2209046399";
+    }
+  } else if (url.includes("/2/search/")) {
+    // 搜索页信息流
+    if (url.includes("container_timeline")) {
+      if (obj.items) {
+        let newItems = [];
+        for (let item of obj.items) {
+          if (item.category === "feed") {
+            if (!isAd(item.data)) {
+              // 头像挂件,关注按钮
+              removeAvatar(item.data);
+              newItems.push(item);
+            }
+          } else {
+            if (!checkSearchWindow(item)) {
+              newItems.push(item);
+            }
+          }
+          obj.items = newItems;
+        }
+      }
+      if (obj?.loadedInfo) {
+        delete obj?.loadedInfo;
+      }
+    } else if (url.includes("finder")) {
+      let channels = obj.channelInfo.channels;
+      if (channels) {
+        for (let channel of channels) {
+          let payload = channel.payload;
+          if (payload) {
+            if (payload.loadedInfo) {
+              // 去除搜索框填充词
+              if (payload.loadedInfo.searchBarContent) {
+                delete payload.loadedInfo.searchBarContent;
+              }
+              // 去除搜索背景图片
+              if (payload.loadedInfo.headerBack?.channelStyleMap) {
+                delete payload.loadedInfo.headerBack.channelStyleMap;
+              }
+            }
+            if (payload.items) {
+              let newItems = [];
+              for (let item of payload.items) {
+                if (item.category === "feed") {
+                  if (!isAd(item.data)) {
+                    // 头像挂件,关注按钮
+                    removeAvatar(item.data);
+                    newItems.push(item);
+                  }
+                } else {
+                  if (!checkSearchWindow(item)) {
+                    newItems.push(item);
+                  }
+                }
+              }
+              payload.items = newItems;
+            }
+          }
+        }
+      }
+    }
+  } else if (
+    url.includes("/2/statuses/container_timeline?") ||
+    url.includes("/2/statuses/container_timeline_unread") ||
+    url.includes("/2/statuses/container_timeline_hot")
+  ) {
+    // 首页关注tab信息流
+    if (obj.loadedInfo?.headers) {
+      delete obj.loadedInfo.headers;
+    }
+    // 商品橱窗
+    if (obj?.common_struct) {
+      delete obj?.common_struct;
+    }
+    if (obj.items) {
+      let newItems = [];
+      for (let item of obj.items) {
+        if (!isAd(item.data)) {
+          if (item.category === "feed") {
+            // 头像挂件,关注按钮
+            removeAvatar(item.data);
+            if (item.data?.retweeted_status) {
+              removeAvatar(item.data.retweeted_status);
+            }
+            // 商品橱窗
+            if (item.data?.common_struct) {
+              delete item.data.common_struct;
+            }
+            newItems.push(item);
+          } else if (item.category === "feedBiz") {
+            // 管理特别关注按钮
+            newItems.push(item);
+          } else {
+            // 移除所有的推广
+            continue;
+          }
+        }
+      }
+      obj.items = newItems;
+    }
+  } else if (url.includes("/2/statuses/container_timeline_topic")) {
+    // 超话信息流
+    if (obj.items) {
+      let newItems = [];
+      for (let item of obj.items) {
+        if (item?.items) {
+          delete item.items;
+        }
+        if (item.category === "feed") {
+          if (item.data) {
+            // 头像挂件,关注按钮
+            removeAvatar(item.data);
+          }
+          newItems.push(item);
+        } else {
+          // 移除所有的推广
+          continue;
+        }
+      }
+      obj.items = newItems;
+    }
+  } else if (url.includes("/2/statuses/show")) {
+    // 头像挂件,关注按钮
+    removeAvatar(obj);
+    // 商品橱窗
+    if (obj?.common_struct) {
+      delete obj.common_struct;
+    }
+    // 循环引用中的商品橱窗
+    if (obj.text?.common_struct) {
+      delete obj.text.common_struct;
+    }
+  } else if (url.includes("/2/statuses/unread_hot_timeline")) {
+    // 首页推荐tab信息流
+    for (let s of ["ad", "advertises", "trends", "headers"]) {
+      if (obj[s]) {
+        delete obj[s];
+      }
+    }
+    if (obj.statuses) {
+      let newStatuses = [];
+      for (let s of obj.statuses) {
+        if (!isAd(s)) {
+          // 头像挂件,关注按钮
+          removeAvatar(s);
+          // 移除拓展信息,绿洲
+          if (s?.common_struct) {
+            delete s.common_struct;
+          }
+          newStatuses.push(s);
+        }
+      }
+      obj.statuses = newStatuses;
+    }
+  } else if (url.includes("/2/statuses/extend")) {
+    // 微博详情页
+    if (obj?.trend?.extra_struct?.extBtnInfo?.btn_picurl?.includes("ad")) {
+      delete obj.trend;
+    }
+    if (obj.trend?.titles) {
+      let title = obj.trend.titles.title;
+      if (["博主好物种草", "相关推荐"].indexOf(title) !== -1) {
+        delete obj.trend;
+      }
+    }
+    // 关注提醒
+    if (obj?.follow_data) {
+      delete obj.follow_data;
+    }
+    // 公益赞赏
+    if (obj?.reward_info) {
+      delete obj.reward_info;
+    }
+    // 移除拓展卡片
+    if (obj?.extend_info) {
+      delete obj.extend_info;
+    }
+    // 移除超话新帖和新用户通知
+    if (obj?.page_alerts) {
+      delete obj.page_alerts;
+    }
+    if (obj.custom_action_list) {
+      let newActions = [];
+      for (let item of obj.custom_action_list) {
+        let type = item.type;
+        let add = itemMenusConfig[type];
+        if (type === "mblog_menus_copy_url") {
+          newActions.unshift(item);
+        } else if (add) {
+          newActions.push(item);
+        }
+      }
+      obj.custom_action_list = newActions;
+    }
+  } else if (url.includes("/2/video/tiny_stream_video_list")) {
+    if (obj.statuses) {
+      obj.statuses = obj.statuses.filter((m) => !(m.mblogtypename === "广告"));
+    }
+  } else if (url.includes("/2/!/huati/discovery_home_bottom_channels")) {
+    // 超话左上角,右上角图标
+    if (obj.button_configs) {
+      delete obj.button_configs;
+    }
+    // 广场页
+    if (obj.channelInfo.channel_list) {
+      obj.channelInfo.channel_list = obj.channelInfo.channel_list.filter(
+        (t) => t.title !== "广场"
+      );
+    }
+  } else if (url.includes("/wbapplua/wbpullad.lua")) {
+    // 开屏广告
+    if (obj.cached_ad.ads) {
+      for (let item of obj.cached_ad.ads) {
+        item.start_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+        item.show_count = 0;
+        item.duration = 0; // 60 * 60 * 24 * 365 = 31536000
+        item.end_date = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+      }
+    }
+  }
+  $done({ body: JSON.stringify(obj) });
+}
+
+// 判断信息流
+function isAd(data) {
+  if (data) {
+    if (data.mblogtypename === "广告") {
+      return true;
+    }
+    if (data.mblogtypename === "热推") {
+      return true;
+    }
+    if (data.promotion?.type === "ad") {
+      return true;
+    }
+  }
+  return false;
+}
+
+// 移除头像挂件,关注按钮
+function removeAvatar(data) {
+  if (data?.cardid) {
+    delete data.cardid;
+  }
+  if (data?.buttons) {
+    delete data.buttons;
+  }
+  if (data?.pic_bg_new) {
+    delete data.pic_bg_new;
+  }
+  if (data?.user?.cardid) {
+    delete data.user.cardid;
+  }
+  if (data?.user?.avatar_extend_info) {
+    delete data.user.avatar_extend_info;
+  }
+  if (data?.user?.icons) {
+    delete data.user.icons;
+  }
+  if (data?.user?.avatargj_id) {
+    delete data.user.avatargj_id;
+  }
+  return data;
+}
+
+function checkSearchWindow(item) {
+  if (item.category) {
+    // 搜索页中间的热议话题、热门人物
+    if (item.category === "group") {
+      return true;
+    } else {
+      if (item.category !== "card") {
+        return false;
+      }
+    }
+  }
+  if (
+    item.data?.card_type === 19 || // 找人 热议 本地
+    item.data?.card_type === 118 || // finder_window 横版大图
+    item.data?.card_type === 208 || // 实况热聊
+    item.data?.card_type === 217 ||
+    item.data?.card_type === 1005 ||
+    item.data?.itemid === "more_frame" ||
+    item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
+  ) {
+    return true;
+  }
+  return false;
+}
