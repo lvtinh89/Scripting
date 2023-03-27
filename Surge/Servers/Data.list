@@ -1,2 +1,2 @@
-Wifi  = direct, interface=en0, allow-other-interface=true
-Cellular  = direct, interface=pdp_ip0, allow-other-interface=true
+🛜 Wifi  = direct, interface=en0, allow-other-interface=true
+📶 Cellular  = direct, interface=pdp_ip0, allow-other-interface=true
