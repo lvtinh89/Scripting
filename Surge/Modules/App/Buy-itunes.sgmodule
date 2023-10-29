@@ -8,4 +8,4 @@ hostname = %APPEND% buy.itunes.apple.com
 ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ data="https://raw.githubusercontent.com/lvtinh89/Scripting/master/Surge/Modules/App/iTunes2023.js"
 
 [Script]
-Buy = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Verify_receipt.js,script-update-interval=-1
+Buy = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Surge/Modules/App/verify_receipt.js,script-update-interval=-1
