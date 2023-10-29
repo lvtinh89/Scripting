@@ -1,7 +1,7 @@
 /*************************************
 
 项目名称：扫描全能王 解锁黄金会员
-下载地址：https://t.cn/A6ouHe4B
+下载地址：https://apps.apple.com/us/app/camscanner-pdf-scanner-app/id388627783
 脚本作者：lvtinh89
 使用说明：解锁部分功能，使用前先开脚本。
 使用声明：⚠️仅供参考，🈲转载与售卖！
