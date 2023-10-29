@@ -1,6 +1,6 @@
-#!name=Unlock CamScanner Pro
-#!desc=CamScanner Pro
+#!name=Unlock CamScanner Premium
+#!desc=CamScanner Premium
 [MITM]
 hostname = %APPEND% *.camscanner.com, *.intsig.net
 [Script]
-CamScanner Pro = type=http-response,pattern=^https:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/CamScanner.js,script-update-interval=0
+CamScanner Premium = type=http-response,pattern=^https:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/CamScanner.js,script-update-interval=0
