@@ -35,7 +35,7 @@ https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script
 ^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Fantastical.js
 
 # Xmind
-^https?:\/\/www\.xmind\.app\/_res\/devices url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Xmind.js
+^https?:\/\/www\.xmind\.(vn|net|app)\/.+\/devices url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Xmind.js
 
 # Reddit
 ^https:\/\/oauth\.reddit\.com\/api\/v\d\/me\.json url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Reddit.js
