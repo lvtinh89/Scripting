@@ -1,15 +1,8 @@
-hostname = *api.snow.me, api.revenuecat.com, carrotweather.herokuapp.com, app.monkeyuni.net, apic.musixmatch.com, *account.wps.cn, *account.wps.com, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, ap*.intsig.net, premium*.truecaller.com, api.flexibits.com, www.xmind.app, oauth.reddit.com, graph.nhaccuatui.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+hostname = *api.snow.me, api.revenuecat.com, app.monkeyuni.net, apic.musixmatch.com, *account.wps.cn, *account.wps.com, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, ap*.intsig.net, premium*.truecaller.com, api.flexibits.com, www.xmind.app, oauth.reddit.com, graph.nhaccuatui.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
-#Currency
+# Currency
 ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js
 ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js
-
-#WeatherFit
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/WeatherFit.js
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/lvtinh89/Scripting/master/WeatherFit.js
-
-#CarrotWeather
-^https?:\/\/carrotweather\.herokuapp\.com\/parse\/functions\/findSubscriptionsForUserId url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/CarrotWeather.js
 
 # All apps monkey
 ^https:\/\/app\.monkeyuni\.net\/user\/api\/v\d\/account\/load-update url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Monkey.js
