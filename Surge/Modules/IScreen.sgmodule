@@ -5,3 +5,4 @@
 hostname = %APPEND% buy.itunes.apple.com
 [Script]
 IScreen = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/IScreen.js,script-update-interval=0
+https?:\/\/pay\.kuso\.xyz\/pay\/pay-check url reject-200
