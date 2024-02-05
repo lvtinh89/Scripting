@@ -1,3 +1,5 @@
 # Facebook
+DOMAIN-SUFFIX,connect.facebook.com
 DOMAIN-SUFFIX,connect.facebook.net
+DOMAIN-SUFFIX,socialplugin.facebook.net
 USER-AGENT,FBiOSSDK*
