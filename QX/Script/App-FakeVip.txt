@@ -1,4 +1,7 @@
-hostname = *api.snow.me, api.revenuecat.com, app.monkeyuni.net, apic.musixmatch.com, *account.wps.cn, *account.wps.com, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, ap*.intsig.net, premium*.truecaller.com, api.flexibits.com, www.xmind.app, oauth.reddit.com, graph.nhaccuatui.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+hostname = cs.kuso.xyz, *api.snow.me, api.revenuecat.com, app.monkeyuni.net, apic.musixmatch.com, *account.wps.cn, *account.wps.com, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, ap*.intsig.net, premium*.truecaller.com, api.flexibits.com, www.xmind.app, oauth.reddit.com, graph.nhaccuatui.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+
+#iScreen
+^http[s]?:\/\/cs.kuso.xyz\/configs url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/iScreen.js
 
 # B612
 ^https:\/\/user-b612-api\.snow\.me\/v\d\/purchase\/subscription\/subscriber\/status$ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/B612.js
