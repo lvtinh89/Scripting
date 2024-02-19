@@ -1,25 +1,23 @@
-#!name=YoutubeAds 
-#!desc=Gỡ bỏ quảng cáo Youtube,PIP,phát nền (IOS >= 15)
+#!name=Youtube (Music) Enhance
+#!desc=Dành cho Youtube & Youtube Music (IOS >= 15)
+#!arguments=Chặn nút tải lên: true, Nút chọn khối: true, Ngôn ngữ dịch phụ đề: zh-Hans, Ngôn ngữ dịch lời bài hát: zh-Hans
+#!arguments-desc=- Tham số che chắn: [true, false] \n- Tham số dịch: [mã ngôn ngữ, tắt]\n\n# Mã ngôn ngữ tuân theo Mã ngôn ngữ Google Dịch, khi tắt, điền vào, bản dịch sẽ được dịch tắt
 
-# > Feature
-# Xoá bỏ 瀑布流、视频、Quảng cáo trong tìm kiếm và Shorts
-# Xoá bỏ Shorts Quảng cáo bên trong
-# Xoá bỏ nút Tải lên dưới cùng
-# Đã thêm Hình trong hình(PIP), Phát nền (Beta)
+# > Ghi chú
+# Tính năng phát lại hình ảnh trong ảnh và nền của Youtube lần lượt bị tắt trong ứng dụng khách
+# - Cài đặt -> Chung -> Hình trong hình
+# - Cài đặt -> Phát lại và tải xuống trong nền -> Phát lại trong nền
 
-# > Note
-# Sẽ có thiếu sót trong thông tin quảng cáo và có thể có quảng cáo không thường xuyên
-# Mô-đun này đủ toàn diện để ngăn chặn việc viết lại các quy tắc bị phá vỡ mà không trộn lẫn các quy tắc khác.
-# Khách hàng không hỗ trợ Mock có thể sử dụng reject-200/reject-img để thay thế
-
-# > Credit: https://github.com/Maasea/sgmodule
-# @Choler & @DivineEngine & @app2smile
+[Rule]
+AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
+AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
 
 [Script]
-youtube = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\?,requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Youtube/youtube.js
+youtube.request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence),requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js
+youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting),requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js,argument="{"lyricLang":"{{{歌词翻译语言}}}","captionLang":"{{{字幕翻译语言}}}","blockUpload":{{{屏蔽上传按钮}}},"immersive":{{{屏蔽选段按钮}}}}"
 
 [Map Local]
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/lvtinh89/Scripting/master/Youtube/blank.txt" header="Content-Type: application/vnd.yt-ump"
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/blank.txt"
 
 [MITM]
 hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com
