@@ -2,7 +2,7 @@
 #!desc= 📱 Unlock All App
 
 [MITM]
- hostname = %APPEND% *api.snow.me, api.revenuecat.com, *sync.matetranslate.com, *api.adguard.*, app.monkeyuni.net, apic.musixmatch.com, *account.wps.cn, *account.wps.com, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, ap*.intsig.net, premium*.truecaller.com, api.flexibits.com, www.xmind.app, www.xmind.*, oauth.reddit.com, graph.nhaccuatui.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+ hostname = %APPEND% *api.snow.me, api.revenuecat.com, *sync.matetranslate.com, *api.adguard.*, app.monkeyuni.net, apic.musixmatch.com, *account.wps.cn, *account.wps.com, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, $ap*.intsig.net, premium*.truecaller.com, api.flexibits.com, www.xmind.app, www.xmind.*, oauth.reddit.com, graph.nhaccuatui.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
 [Script]
 B612 = type=http-response,pattern=^https:\/\/user-b612-api\.snow\.me\/v\d\/purchase\/subscription\/subscriber\/status$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/B612.js
