@@ -2,26 +2,18 @@
 #!desc= 📱 Unlock All App
 
 [MITM]
- hostname = %APPEND% *api.snow.me, api.revenuecat.com, *sync.matetranslate.com, *api.adguard.*, app.monkeyuni.net, apic.musixmatch.com, *account.wps.cn, *account.wps.com, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, $ap*.intsig.net, premium*.truecaller.com, api.flexibits.com, www.xmind.app, www.xmind.*, oauth.reddit.com, graph.nhaccuatui.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+ hostname = %APPEND% *api.snow.me, api.revenuecat.com, app.monkeyuni.net,*account.wps.cn, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, premium*.truecaller.com, api.flexibits.com, oauth.reddit.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
 [Script]
 B612 = type=http-response,pattern=^https:\/\/user-b612-api\.snow\.me\/v\d\/purchase\/subscription\/subscriber\/status$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/B612.js
 Currency = type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js,script-update-interval=0
 Currency = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js,script-update-interval=0
-;Mate = type=http-response,pattern=^https:\/\/sync\.matetranslate\.com\/subscription,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Mate.js
-;Adguard = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.com\/api\/.+\/ios_validate_receipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Adguard.js,script-update-interval=-1
 Monkey = type=http-response,pattern=^https:\/\/app\.monkeyuni\.net\/user\/api\/v\d\/account\/load-update,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Monkey.js
-;Musixmatch = type=http-response,pattern=^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Musixmatch.miao.js
-;Wps = requires-body=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Wps.js,type=http-response,pattern= ^https?:\/\/[a-z-]*account\.wps\.c(n|om)(:\d+|)\/api\/users
 Photoshop = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Photoshop.js
 AdobeScanPdf = type=http-response,pattern=https://createpdf.acrobat.com/createpdf/api/users/me/subscriptions,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/AdobeScanPdf.js
 Lightroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Lightroom.js,script-update-interval=0
 Camera360 = type=http-response,pattern=^https:\/\/bmall\.camera360\.com\/api\/iap\/check-receipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Camera360.js,script-update-interval=0
 Kinemaster = type=http-response,pattern=^https:\/\/api-account\.kinemasters\.com\/v\d\/user\/subscribe$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Kinemaster.js
-;Camscanner = type=http-response,pattern=https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/CamScanner.js
 Truecaller = type=http-response,pattern=^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|products\/apple),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
 Fantastical = type=http-response,pattern=^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Fantastical.js
-Xmind = type=http-response,pattern=^https?:\/\/www\.xmind\.(vn|net|app)\/.+\/devices,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Xmind.js
 Reddit = type=http-response,pattern=^https:\/\/oauth\.reddit\.com\/api\/v\d\/me\.json,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Reddit.js
-Nhaccuatui = type=http-response,pattern=^https:\/\/graph\.nhaccuatui\.com\/.*\/users\/info,requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Nhaccuatui.js,script-update-interval=0
-;Spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
