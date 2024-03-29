@@ -1,7 +1,0 @@
-#!name= PicsQueen
-#!desc=Unlock PicsQueen
-
-[MITM]
-hostname = %APPEND% buy.itunes.apple.com
-[Script]
-PicsQueen = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/PicsQueen.js,script-update-interval=0
