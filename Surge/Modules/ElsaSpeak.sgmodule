@@ -1,7 +1,0 @@
-#!name= ElsaSpeak
-#!desc=Unlock ElsaSpeak
-[MITM]
-hostname = %APPEND% pool.elsanow.io
-[Script]
-ElsaSpeak = type=http-response,pattern=^https:\/\/pool\.elsanow\.io\/user\/api\/.+\/purchase$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Elsa-response.js,script-update-interval=-1
-Elsa-header = type=http-request,pattern=^https:\/\/pool\.elsanow\.io\/content\/api\/.+\/modules\/download$,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Elsa-header.js,script-update-interval=-1
