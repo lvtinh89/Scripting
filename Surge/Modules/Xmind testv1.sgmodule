@@ -1,6 +1,0 @@
-#!name=Unlock Xmind Vip
-#!desc=Xmind Vip
-[MITM]
-hostname = %APPEND% www.xmind.app
-[Script]
-Xmind Vip = type=http-response,pattern=^http[s]?:\/\/www.xmind.app\/_res\/devices,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Xmind%20testv1.js,script-update-interval=0
