@@ -12,8 +12,8 @@ const v4IP = v4.primaryAddress;
     // No network connection
     if (!v4IP) {
         $.done({
-            title: "未连接网络",
-            content: "请检查网络连接",
+            title: "No network",
+            content: "Check network connection",
             icon: "airplane"
         });
         return;
@@ -25,10 +25,10 @@ const v4IP = v4.primaryAddress;
     const externalIP = resp.body;
 
     const body = {
-        title: wifi.ssid || "蜂窝数据",
+        title: wifi.ssid || "Cellular Data",
         content: `IP：${ip} \n`
-            + (wifi.ssid ? `路由器地址：${router}\n` : "")
-            + `外部 IP：${externalIP}`,
+            + (wifi.ssid ? `Router address：${router}\n` : "")
+            + `External IP：${externalIP}`,
         icon: wifi.ssid ? "wifi" : "antenna.radiowaves.left.and.right"
     };
     $.done(body);
