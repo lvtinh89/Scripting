@@ -25,7 +25,7 @@ const v4IP = v4.primaryAddress;
     const externalIP = resp.body;
 
     const body = {
-        title: wifi.ssid || "Cellular Data",
+        title: wifi.ssid || "Cellular",
         content: `IP：${ip} \n`
             + (wifi.ssid ? `Router address：${router}\n` : "")
             + `External IP：${externalIP}`,
