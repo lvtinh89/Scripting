@@ -9,7 +9,7 @@ SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile,update-interval=1
 TrafficStatistics = script-name=TrafficStatistics,update-interval=1
 
 #Chi tiết mạng
-;NET_info = script-name=NET_info,update-interval=1
+NET_info = script-name=NET_info,update-interval=1
 ;Chi tiết mạng
 ;NET_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Surge/Panels/Network-Info.js,type=generic,timeout=30
 
@@ -26,3 +26,6 @@ TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubuserc
 
 ##Xóa nhanh DNS Cache của Surge
 FlushDNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Surge/Panels/Flush-DNS.js,argument=title=DNS FLush&icon=cube&color=#afe59a&server=false
+
+#Chi tiết mạng
+NET_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Surge/Panels/Info%20Network.js,argument=icon=externaldrive.connected.to.line.below&color=#9a7ff7&group=Master
