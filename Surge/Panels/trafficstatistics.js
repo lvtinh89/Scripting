@@ -56,9 +56,9 @@ if(net=="en0") {
 
   $done({
       title:"Thống kê lưu lượng | "+netType,
-      content:`Tải lên ➟ ${upload} | ${download}\n`+
-      `Tốc độ hiện tại ➟ ${outCurrentSpeed} | ${inCurrentSpeed}\n` +
-		`Tốc độ tối đa ➟ ${outMaxSpeed} | ${inMaxSpeed}`,
+      content:`Tải lên: ${upload} | ${download}\n`+
+      `Tốc độ hiện tại: ${outCurrentSpeed} | ${inCurrentSpeed}\n` +
+		`Tốc độ tối đa: ${outMaxSpeed} | ${inMaxSpeed}`,
 		icon: params.icon,
 		  "icon-color":params.color
     });
