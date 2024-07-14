@@ -182,9 +182,9 @@ function getNetworkInfo(retryTimes = 5, retryInterval = 1000) {
         $done({
             title: getSSID() ?? getCellularInfo(),
             content:
-                `Địa chỉ IP ➟ ${info.query}\n` +
-                `Nhà mạng   ➟ ${info.isp}\n` +
-                `Vị trí     ➟ ${getFlagEmoji(info.countryCode)} | ${info.country} - ${info.city}`,
+                `Địa chỉ IP: ${info.query}\n` +
+                `Nhà mạng: ${info.isp}\n` +
+                `Vị trí: ${getFlagEmoji(info.countryCode)} | ${info.country} - ${info.city}`,
             icon: getSSID() ? 'wifi' : 'simcard',
             'icon-color': getSSID() ? '#005CAF' : '#F9BF45',
         });
