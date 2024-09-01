@@ -106,7 +106,7 @@ if (typeof $response == "undefined") {
     'StarFocus':{ name: 'pro', id: 'com.gsdyx.StarFocus.nonConsumable.forever'},
     'Context_iOS':{ name: 'pro', id: 'ctx_3y_sspai_preorder_angel'},
     'Vision':{ name: 'promo_3.0', id: 'vis_lifetime_3.0_promo'},
-    'Structured':{ name: 'pro', id: 'today.structured.pro'},
+    'xStructured':{ name: 'pro', id: 'today.structured.pro'},
     'Cookie':{ name: 'allaccess', id: 'app.ft.Bookkeeping.lifetime'},
     'CountDuck':{ name: 'premium', id: 'Lifetime'},
     'HTTPBot':{ name: 'Pro', id: 'httpbot_1499_1y_1w0'},
