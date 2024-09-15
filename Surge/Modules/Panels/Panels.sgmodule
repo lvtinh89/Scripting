@@ -2,7 +2,7 @@
 #!desc= Bảng thông tin
 
 [Panel]
-#Surge Pro(Tiêu đề, có thể hiển thị thời gian khởi động, nhấp để làm mới để tải lại cấu hình)
+#Surge Pro(Tiêu đề, có thể hiển thị thời gian khởi động)
 SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile,update-interval=1
 #Thống kê lưu lượng
 TrafficStatistics = script-name=TrafficStatistics,update-interval=1
