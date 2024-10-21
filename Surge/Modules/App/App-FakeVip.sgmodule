@@ -6,7 +6,7 @@
 
 [Script]
 Lingokids = type=http-response,pattern=^https:\/\/api\.lingokids\.com\/v1\/renovate_session,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Lingokids.js
-B612 = type=http-response,pattern=^https:\/\/user-b612-api\.snow\.me\/v\d\/purchase\/subscription\/subscriber\/status$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/B612.js
+B612 = type=http-response,pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/B612.js
 Currency = type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js,script-update-interval=0
 Currency = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js,script-update-interval=0
 Monkey = type=http-response,pattern=^https:\/\/app\.monkeyuni\.net\/user\/api\/v\d\/account\/load-update,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Monkey.js
