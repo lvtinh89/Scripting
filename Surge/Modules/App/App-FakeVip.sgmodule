@@ -2,7 +2,7 @@
 #!desc= 📱 Unlock All App
 
 [MITM]
- hostname = %APPEND% api.lingokids.com, api.snow.me, user-b612-api.snow.me, api.revenuecat.com, app.monkeyuni.net,*account.wps.cn, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, premium*.truecaller.com, api.flexibits.com, oauth.reddit.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+ hostname = %APPEND% api.lingokids.com, api.snow.me, user-b612-api.snow.me, api.revenuecat.com, app.monkeyuni.net,*account.wps.cn, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, premium-noneu.truecaller.com, api.flexibits.com, oauth.reddit.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
 [Script]
 Lingokids = type=http-response,pattern=^https:\/\/api\.lingokids\.com\/v1\/renovate_session,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Lingokids.js
@@ -15,6 +15,6 @@ AdobeScanPdf = type=http-response,pattern=https://createpdf.acrobat.com/createpd
 Lightroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Lightroom.js,script-update-interval=0
 Camera360 = type=http-response,pattern=^https:\/\/bmall\.camera360\.com\/api\/iap\/check-receipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Camera360.js,script-update-interval=0
 Kinemaster = type=http-response,pattern=^https:\/\/api-account\.kinemasters\.com\/v\d\/user\/subscribe$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Kinemaster.js
-Truecaller = type=http-response,pattern=^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|products\/apple),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
+Truecaller = type=http-response,pattern=https://premium-noneu.truecaller.com/v3/subscriptions/status,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
 Fantastical = type=http-response,pattern=^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Fantastical.js
 Reddit = type=http-response,pattern=^https?:\/\/gql(-fed)?\.reddit\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Reddit.js
