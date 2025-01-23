@@ -1,4 +1,4 @@
-hostname = cs.kuso.xyz, *api.snow.me, user-b612-api.snow.me, api.revenuecat.com, app.monkeyuni.net, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, ap*.intsig.net, premium*.truecaller.com, api.flexibits.com, oauth.reddit.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+hostname = cs.kuso.xyz, *api.snow.me, user-b612-api.snow.me, api.revenuecat.com, app.monkeyuni.net, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, ap*.intsig.net, premium-noneu.truecaller.com, api.flexibits.com, oauth.reddit.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
 #iScreen
 ^http[s]?:\/\/cs.kuso.xyz\/configs url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/iScreen.js
@@ -32,7 +32,7 @@ https://createpdf.acrobat.com/createpdf/api/users/me/subscriptions url script-re
 https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/CamScanner.js
 
 # Truecaller
-^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|products\/apple) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
+^https://premium-noneu.truecaller.com/v3/subscriptions/status url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
 
 # Fantastical
 ^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Fantastical.js
