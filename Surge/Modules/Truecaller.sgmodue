@@ -1,5 +1,5 @@
-#!name=Locket Gold
-#!desc=By: Nobita (MOD CSA4G)
+#!name=Truecaller Gold
+#!desc=By: lvtinh89 (MOD CSA4G)
 
 [Script]
 revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://tnhan.dev/raw/Locket_Gold.js, requires-body=true, max-size=-1, timeout=60
