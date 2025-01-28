@@ -2,7 +2,7 @@
 #!desc= 📱 Unlock All App
 
 [MITM]
- hostname = %APPEND% api.lingokids.com, api.snow.me, user-b612-api.snow.me, api.revenuecat.com, app.monkeyuni.net,*account.wps.cn, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, premium-noneu.truecaller.com, api.flexibits.com, oauth.reddit.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+ hostname = %APPEND% api.lingokids.com, api.snow.me, user-b612-api.snow.me, api.revenuecat.com, app.monkeyuni.net,*account.wps.cn, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, premium-noneu.truecaller.com, api.flexibits.com, gql.reddit.com, gql-fed.reddit.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
 [Script]
 Lingokids = type=http-response,pattern=^https:\/\/api\.lingokids\.com\/v1\/renovate_session,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Lingokids.js
