@@ -1,4 +1,4 @@
-hostname = cs.kuso.xyz, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium-noneu.truecaller.com, api.revenuecat.com, app.monkeyuni.net, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+hostname = cs.kuso.xyz, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.revenuecat.com, app.monkeyuni.net, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
 #iScreen
 ^http[s]?:\/\/cs.kuso.xyz\/configs url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/iScreen.js
@@ -10,7 +10,7 @@ https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script
 ^https:\/\/user-b612-api\.snow\.me\/v1\/purchase\/subscription\/subscriber\/status url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/B612.js
 
 # Truecaller
-^https://premium-noneu.truecaller.com/v3/subscriptions/status url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
+^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|products\/apple) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
 
 # Currency
 ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js
