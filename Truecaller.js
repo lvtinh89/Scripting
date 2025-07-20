@@ -1,9 +1,73 @@
-/**************************************
-Matching URL:
-https://premium-noneu.truecaller.com/v3/subscriptions/status
+// Author: aleotoidayy
+// Date: 2025-06-01
+// Purpose: Truecaller Premium
 
-MitM Hostname:
-premium-noneu.truecaller.com
-************************************/
-
-{"status":40010,"message":"Missing authentication parameter.","expire":"2099-11-13T13:26:38Z","start":"2024-11-06T13:26:38Z","paymentProvider":"Apple","isExpired":false,"isGracePeriodExpired":false,"subscriptionStatus":"SUBSCRIBED","inAppPurchaseAllowed":true,"product":{"id":"apple_gold_yearly_v0","sku":"apple_gold_yearly_v0","contentType":"subscription","productType":"SubsYearly","isFreeTrial":true},"tier":{"id":"gold","feature":[{"id":"gold_feature","rank":-2147483648,"status":"Included","isFree":false},{"id":"spam_blocking","rank":-2147483648,"status":"Included","isFree":true},{"id":"caller_id","rank":-2147483648,"status":"Included","isFree":true},{"id":"no_ads","rank":1,"status":"Included","isFree":false},{"id":"extended_spam_blocking","rank":2,"status":"Included","isFree":false},{"id":"advanced_caller_id","rank":3,"status":"Included","isFree":false},{"id":"live_lookup","rank":4,"status":"Included","isFree":false},{"id":"verified_badge","rank":5,"status":"Included","isFree":false},{"id":"spam_stats","rank":6,"status":"Included","isFree":false},{"id":"auto_spam_block","rank":7,"status":"Included","isFree":false},{"id":"call_alert","rank":8,"status":"Included","isFree":false},{"id":"ct_call_recording","rank":10,"status":"Included","isFree":false},{"id":"call_assistant","rank":11,"status":"Included","isFree":false},{"id":"assistant_custom_greeting","rank":12,"status":"Included","isFree":false},{"id":"assistant_voicemail","rank":13,"status":"Included","isFree":false},{"id":"identifai","rank":14,"status":"Included","isFree":false},{"id":"siri_search","rank":15,"status":"Included","isFree":false},{"id":"who_viewed_my_profile","rank":16,"status":"Included","isFree":false},{"id":"incognito_mode","rank":19,"status":"Included","isFree":false},{"id":"premium_badge","rank":20,"status":"Included","isFree":false},{"id":"premium_app_icon","rank":21,"status":"Included","isFree":false},{"id":"live_chat_support","rank":23,"status":"Included","isFree":false},{"id":"gold_caller_id","rank":26,"status":"Included","isFree":false}]},"scope":"paid_gold"}
+function findUrl(_reg) {
+  if (_reg.test($request.url)) {
+    return $request.url;
+  }
+}
+const features = [
+  { id: "siri_search", rank: 1, status: "Included" },
+  { id: "no_ads", rank: 2, status: "Included" },
+  { id: "spam_blocking", rank: -2147483648, status: "Included" },
+  { id: "extended_spam_blocking", rank: 3, status: "Included" },
+  { id: "caller_id", rank: -2147483648, status: "Included" },
+  { id: "ct_call_recording", rank: 7, status: "Included" },
+  { id: "who_viewed_my_profile", rank: 9, status: "Included" },
+  { id: "incognito_mode", rank: 11, status: "Included" },
+  { id: "premium_badge", rank: 15, status: "Included" },
+  { id: "premium_support", rank: 16, status: "Included" },
+  { id: "live_chat_support", rank: 17, status: "Included" },
+  { id: "premium_app_icon", rank: 19, status: "Included" },
+  { id: "gold_caller_id", rank: 20, status: "Included" } 
+];
+var obj;
+switch ($request.url) {
+  case findUrl(/subscriptions\/status/):
+      obj = {
+        expire: "2099-01-01T01:01:01Z",
+        start: "2024-01-1T02:32:04Z",
+        paymentProvider: "Apple",
+        isExpired: false,
+        isGracePeriodExpired: false,
+        subscriptionStatus: "INITIAL_BUY",
+        inAppPurchaseAllowed: true,
+        product: {
+          id: "renewable.gold.annual",
+          sku: "renewable.gold.annual",
+          contentType: "subscription",
+          productType: "GoldYearly",
+          isFreeTrial: true
+        },
+        tier: { id: "gold", feature: features }
+      }
+    break;
+  case findUrl(/products\/apple/):
+      obj = {
+  "tier": [
+    {
+      "id": "gold",
+      "product": [
+        {
+          "productType": "GoldYearly",
+          "id": "renewable.gold.annual",
+          "sku": "renewable.gold.annual",
+          "contentType": "subscription",
+          "rank": 6,
+          "paymentProvider": "Apple",
+          "clientProductMetadata": {
+            "selectionRank": 5,
+            "displayOrder": 5,
+            "isEntitledPremiumScreenProduct": false
+          }
+        }
+      ],
+      "feature": features,
+      "rank": 5
+    }
+  ]
+}
+    break;
+}
+$done({body: JSON.stringify(obj)});
