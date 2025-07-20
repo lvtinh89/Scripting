@@ -1,4 +1,5 @@
 #!name=Buy Apple
+#!category=Activate VIP feature
 #!desc=Unlock buy.itunes.apple.com
 
 [MITM]
