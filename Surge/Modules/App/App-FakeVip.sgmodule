@@ -1,6 +1,6 @@
 #!name= App-FakeVip
 #!category=Activate VIP Apps
-#!desc= 📱 Unlock All App
+#!desc= 📱 Mở khóa tất cả ứng dụng
 
 [MITM]
  hostname = %APPEND% api.snow.me, user-b612-api.snow.me, premium-noneu.truecaller.com, api.revenuecat.com, app.monkeyuni.net,*account.wps.cn, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
