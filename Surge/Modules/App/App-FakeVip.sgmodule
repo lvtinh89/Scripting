@@ -3,11 +3,11 @@
 #!desc= 📱 Mở khóa tất cả ứng dụng
 
 [MITM]
- hostname = %APPEND% api.snow.me, user-b612-api.snow.me, premium-noneu.truecaller.com, api.revenuecat.com, app.monkeyuni.net,*account.wps.cn, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+ hostname = %APPEND% api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.revenuecat.com, app.monkeyuni.net,*account.wps.cn, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
 [Script]
 B612 = type=http-response,pattern=^https:\/\/user-b612-api\.snow\.me\/v1\/purchase\/subscription\/subscriber\/status,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/B612.js
-Truecaller = type=http-response,pattern=https://premium-noneu.truecaller.com/v3/subscriptions/status,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
+Truecaller = type=http-response,pattern=^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|products\/apple),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
 Currency = type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js,script-update-interval=0
 Currency = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js,script-update-interval=0
 Monkey = type=http-response,pattern=^https:\/\/app\.monkeyuni\.net\/user\/api\/v\d\/account\/load-update,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Monkey.js
