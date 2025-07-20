@@ -1,10 +1,16 @@
-hostname = cs.kuso.xyz, *api.snow.me, user-b612-api.snow.me, api.revenuecat.com, app.monkeyuni.net, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, ap*.intsig.net, premium-noneu.truecaller.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+hostname = cs.kuso.xyz, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium-noneu.truecaller.com, api.revenuecat.com, app.monkeyuni.net, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
-#iScreen(update)
+#iScreen
 ^http[s]?:\/\/cs.kuso.xyz\/configs url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/iScreen.js
+
+#Camscanner
+https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/CamScanner.js
 
 # B612
 ^https:\/\/user-b612-api\.snow\.me\/v1\/purchase\/subscription\/subscriber\/status url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/B612.js
+
+# Truecaller
+^https://premium-noneu.truecaller.com/v3/subscriptions/status url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
 
 # Currency
 ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js
@@ -27,9 +33,3 @@ https://createpdf.acrobat.com/createpdf/api/users/me/subscriptions url script-re
 
 # Kinemaster
 ^https:\/\/api-account\.kinemasters\.com\/v\d\/user\/subscribe$ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Kinemaster.js
-
-# Camscanner
-https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/CamScanner.js
-
-# Truecaller(update)
-^https://premium-noneu.truecaller.com/v3/subscriptions/status url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Truecaller.js
