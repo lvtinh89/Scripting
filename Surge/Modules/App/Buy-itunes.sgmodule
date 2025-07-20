@@ -1,6 +1,6 @@
 #!name=Buy Apple
 #!category=Activate VIP Apps
-#!desc=Unlock buy.itunes.apple.com
+#!desc= Mở khoá buy.itunes.apple.com
 
 [MITM]
 hostname = %APPEND% buy.itunes.apple.com
