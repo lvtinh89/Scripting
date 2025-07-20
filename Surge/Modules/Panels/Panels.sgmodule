@@ -1,6 +1,6 @@
 #!name=Panels
 #!category=Panels
-#!desc= Bảng thông tin
+#!desc= Bảng thông tin Surge
 
 [Panel]
 #Surge Pro(Tiêu đề, có thể hiển thị thời gian khởi động)
