@@ -1,6 +1,6 @@
 #!name= iScreen
-#!category=Premium iScreen
-#!desc=Unlock iScreen
+#!category=Vip iScreen
+#!desc=Mở khoá iScreen
 
 [MITM]
 hostname= %APPEND% cs.kuso.xyz
