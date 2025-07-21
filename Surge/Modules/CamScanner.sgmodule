@@ -1,5 +1,5 @@
 #!name=Unlock CamScanner Premium
-#!category=Premium CamScanner
+#!category=PremiumCamScanner
 #!desc=CamScanner Premium
 [MITM]
 hostname = %APPEND% *.camscanner.com, *.intsig.net
