@@ -1,91 +1,93 @@
 /*
- * Surge 網路詳情面板
- * @Nebulosa-Cat
- * 詳情請見 README
+ * Surge 网络详情
+ * 由@Nebulosa-Cat编写
+ * 由@Rabbit-Spec翻译
+ * 更新日期：2024.09.09
+ * 版本：3.4
  */
 
 /**
  * Các yêu cầu mạng được gói ngọn Promise
- * Usage: httpMethod.get(option).then(response => { console.log(data) }).catch(error => { console.log(error) })
- * Usage: httpMethod.post(option).then(response => { console.log(data) }).catch(error => { console.log(error) })
+ * Usage: httpMethod.get(option).then(response => { logger.log(data) }).catch(error => { logger.log(error) })
+ * Usage: httpMethod.post(option).then(response => { logger.log(data) }).catch(error => { logger.log(error) })
  * response: { status, headers, data }
  */
 class httpMethod {
-    /**
-     * Callback function
-     * @param {*} resolve 
-     * @param {*} reject 
-     * @param {*} error 
-     * @param {*} response 
-     * @param {*} data 
-     */
-    static _httpRequestCallback(resolve, reject, error, response, data) {
-        if (error) {
-            reject(error);
-        } else {
-            resolve(Object.assign(response, { data }));
-        }
+  /**
+   * 回调函数
+   * @param {*} resolve 
+   * @param {*} reject 
+   * @param {*} error 
+   * @param {*} response 
+   * @param {*} data 
+   */
+  static _httpRequestCallback(resolve, reject, error, response, data) {
+    if (error) {
+      reject(error);
+    } else {
+      resolve(Object.assign(response, { data }));
     }
+  }
 
-    /**
-     * HTTP GET
-     * @param {Object} option Tùy chọn
-     * @returns 
-     */
-    static get(option = {}) {
-        return new Promise((resolve, reject) => {
-            $httpClient.get(option, (error, response, data) => {
-                this._httpRequestCallback(resolve, reject, error, response, data);
-            });
-        });
-    }
+  /**
+   * HTTP GET
+   * @param {Object} option 选项
+   * @returns 
+   */
+  static get(option = {}) {
+    return new Promise((resolve, reject) => {
+      $httpClient.get(option, (error, response, data) => {
+        this._httpRequestCallback(resolve, reject, error, response, data);
+      });
+    });
+  }
 
-    /**
-     * HTTP POST
-     * @param {Object} option Tùy chọn
-     * @returns 
-     */
-    static post(option = {}) {
-        return new Promise((resolve, reject) => {
-            $httpClient.post(option, (error, response, data) => {
-                this._httpRequestCallback(resolve, reject, error, response, data);
-            });
-        });
-    }
+  /**
+   * HTTP POST
+   * @param {Object} option 选项
+   * @returns 
+   */
+  static post(option = {}) {
+    return new Promise((resolve, reject) => {
+      $httpClient.post(option, (error, response, data) => {
+        this._httpRequestCallback(resolve, reject, error, response, data);
+      });
+    });
+  }
 }
 
 class loggerUtil {
-    constructor() {
-        this.id = randomString();
-    }
+  constructor() {
+    this.id = randomString();
+  }
 
-    log(message) {
-        message = `[${this.id}] [ LOG ] ${message}`;
-        console.log(message);
-    }
+  log(message) {
+    message = `[${this.id}] [ LOG ] ${message}`;
+    console.log(message);
+  }
 
-    error(message) {
-        message = `[${this.id}] [ERROR] ${message}`;
-        console.log(message);
-    }
+  error(message) {
+    message = `[${this.id}] [ERROR] ${message}`;
+    console.log(message);
+  }
 }
 
 var logger = new loggerUtil();
 
 function randomString(e = 6) {
-    var t = "ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678",
-        a = t.length,
-        n = "";
-    for (i = 0; i < e; i++) n += t.charAt(Math.floor(Math.random() * a));
-    return n;
+  var t = "ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678",
+    a = t.length,
+    n = "";
+  for (i = 0; i < e; i++) n += t.charAt(Math.floor(Math.random() * a));
+  return n;
 }
 
 function getFlagEmoji(countryCode) {
-    const codePoints = countryCode
-        .toUpperCase()
-        .split('')
-        .map((char) => 127397 + char.charCodeAt());
-    return String.fromCodePoint(...codePoints);
+  const codePoints = countryCode
+    .toUpperCase()
+    .split('')
+    .map((char) => 127397 + char.charCodeAt());
+  return String.fromCodePoint(...codePoints);
 }
 
 function loadCarrierNames() {
@@ -186,7 +188,7 @@ function getNetworkInfo(retryTimes = 5, retryInterval = 1000) {
                 `Nhà mạng: ${info.isp}\n` +
                 `Vị trí: ${getFlagEmoji(info.countryCode)} | ${info.country} - ${info.city}`,
             icon: getSSID() ? 'wifi' : 'simcard',
-            'icon-color': getSSID() ? '#005CAF' : '#F9BF45',
+         'icon-color': getSSID() ? '#5A9AF9' : '#8AB8DD',
         });
     }).catch(error => {
         // Chuyển mạch mạng
