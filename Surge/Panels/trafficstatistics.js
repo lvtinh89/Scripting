@@ -105,7 +105,7 @@ async function http(opt = {}) {
     } catch (e) {
       if (count < RETRIES) {
         count++
-        $.log(`第 ${count} 次请求失败: ${e.message || e}, 等待 ${RETRY_DELAY}s 后重试`)
+        $.log(`Không ${count} Yêu cầu không thành công: ${e.message || e}, Đang chờ ${RETRY_DELAY}s 后重试`)
         await $.wait(RETRY_DELAY * 1000)
         return await fn()
       }
