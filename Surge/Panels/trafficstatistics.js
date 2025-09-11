@@ -13,7 +13,7 @@ let result = {}
 let title = ''
 let content = ''
 !(async () => {
-  const { interface } = await httpAPI('/v1/traffic', '[GET]')
+  const { interface } = await httpAPI('/v1/traffic', 'GET')
   $.log(JSON.stringify(interface, null, 2))
   const INTERFACES = {
     lo0: '[Vòng lặp mạng]',
