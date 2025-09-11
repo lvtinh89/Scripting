@@ -13,7 +13,7 @@ let result = {}
 let title = ''
 let content = ''
 !(async () => {
-  const { interface } = await httpAPI('/v1/traffic', 'GET')
+  const { interface } = await httpAPI('/v1/traffic', '[GET]')
   $.log(JSON.stringify(interface, null, 2))
   const INTERFACES = {
     lo0: '[Vòng lặp mạng]',
@@ -26,7 +26,7 @@ let content = ''
       const item = interface[key]
       let name = INTERFACES[key]
       if (!name && /^en\d*$/.test(key) && !keys.includes('en0')) {
-        name = INTERFACES['[en0]']
+        name = INTERFACES['en0']
       }
       name = name || key
       return $.lodash_get(arg, 'STYLE') === 'normal'
