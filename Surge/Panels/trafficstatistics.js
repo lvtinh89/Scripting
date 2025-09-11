@@ -30,17 +30,17 @@ let content = ''
       }
       name = name || key
       return $.lodash_get(arg, 'STYLE') === 'normal'
-        ? `${name}:\nLưu lượng truy cập tải lên: ${formatFlow(item.out, 2)}\nLưu lượng truy cập tải xuống: ${formatFlow(item.in, 2)}\nTốc độ tải lên: ${formatFlow(
+        ? `${name}:\n☛Lưu lượng truy cập tải lên: ${formatFlow(item.out, 2)}\n☛Lưu lượng truy cập tải xuống: ${formatFlow(item.in, 2)}\n☛Tốc độ tải lên: ${formatFlow(
             item.outCurrentSpeed,
             2
-          )}/s\n☞Tốc độ tải xuống: ${formatFlow(item.inCurrentSpeed, 2)}/s\n☞Tốc độ tải lên tối đa: ${formatFlow(
+          )}/s\n☛Tốc độ tải xuống: ${formatFlow(item.inCurrentSpeed, 2)}/s\n☛Tốc độ tải lên tối đa: ${formatFlow(
             item.outMaxSpeed,
             2
-          )}/s\n☞Tốc độ tải xuống tối đa: ${formatFlow(item.inMaxSpeed, 2)}/s`
-        : `${name}:\n☞Tổng lưu lượng: ↑ ${formatFlow(item.out, 2)} ↓ ${formatFlow(item.in, 2)}\n☞Tốc độ: ↑ ${formatFlow(
+          )}/s\n☛Tốc độ tải xuống tối đa: ${formatFlow(item.inMaxSpeed, 2)}/s`
+        : `${name}:\n☛Tổng lưu lượng: ↑ ${formatFlow(item.out, 2)} ↓ ${formatFlow(item.in, 2)}\n☛Tốc độ: ↑ ${formatFlow(
             item.outCurrentSpeed,
             2
-          )}/s ↓ ${formatFlow(item.inCurrentSpeed, 2)}/s\n☞Tốc độ tối đa: ↑ ${formatFlow(
+          )}/s ↓ ${formatFlow(item.inCurrentSpeed, 2)}/s\n☛Tốc độ tối đa: ↑ ${formatFlow(
             item.outMaxSpeed,
             2
           )}/s ↓ ${formatFlow(item.inMaxSpeed, 2)}/s`
