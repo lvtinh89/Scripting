@@ -167,12 +167,24 @@ function getCellularInfo() {
 function getSSID() {
     return $network.wifi?.ssid;
 }
-
-
+function getIP() {
+  const { v4, v6 } = $network;
+  let info = [];
+  if (!v4 && !v6) {
+    info = ['Mạng có thể bị sập', 'Vui lòng làm mới thủ công để lấy lại IP'];
+  } else {
+    if (v4?.primaryAddress) info.push(`Thiết bị IP：${v4?.primaryAddress}`);
+    if (v6?.primaryAddress) info.push(`IPv6Địa chỉ：Đã phân bổ`);
+    if (v4?.primaryRouter && getSSID()) info.push(`Bộ định tuyến IP：${v4?.primaryRouter}`);
+    if (v6?.primaryRouter && getSSID()) info.push(`IPv6Địa chỉ：Đã phân bổ`);
+  }
+  info = info.join("\n");
+  return info + "\n";
+}
 /**
- * Nhận thông tin IP
- * @param {*} retryTimes // Số lần thử lại
- * @param {*} retryInterval // Khoảng thời gian thử lại ms
+ * 获取 IP 信息
+ * @param {*} retryTimes // 重试次数
+ * @param {*} retryInterval // 重试间隔 ms
  */
 function getNetworkInfo(retryTimes = 5, retryInterval = 1000) {
     // send http request
@@ -184,9 +196,10 @@ function getNetworkInfo(retryTimes = 5, retryInterval = 1000) {
         $done({
             title: getSSID() ?? getCellularInfo(),
             content:
-                `Địa chỉ IP: ${info.query}\n` +
-                `Nhà mạng: ${info.isp}\n` +
-                `Vị trí: ${getFlagEmoji(info.countryCode)} | ${info.country} - ${info.city}`,
+              getIP() +
+                `Địa chỉ IP nhà mạng: ${info.query}\n` +
+                `Tên nhà mạng: ${info.isp}\n` +
+                `Vị trí nhà cung cấp mạng: ${getFlagEmoji(info.countryCode)} | ${info.country} - ${info.city}`,
             icon: getSSID() ? 'wifi' : 'simcard',
          'icon-color': getSSID() ? '#5A9AF9' : '#8AB8DD',
         });
