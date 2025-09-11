@@ -16,9 +16,9 @@ let content = ''
   const { interface } = await httpAPI('/v1/traffic', 'GET')
   $.log(JSON.stringify(interface, null, 2))
   const INTERFACES = {
-    lo0: 'Vòng lặp mạng',
-    en0: 'Wi-Fi/Ethernet',
-    pdp_ip0: 'Mạng di động',
+    lo0: '[Vòng lặp mạng]',
+    en0: '[Wi-Fi/Ethernet]',
+    pdp_ip0: '[Mạng di động]',
   }
   const keys = Object.keys(interface)
   content = keys
@@ -26,7 +26,7 @@ let content = ''
       const item = interface[key]
       let name = INTERFACES[key]
       if (!name && /^en\d*$/.test(key) && !keys.includes('en0')) {
-        name = INTERFACES['en0']
+        name = INTERFACES['[en0]']
       }
       name = name || key
       return $.lodash_get(arg, 'STYLE') === 'normal'
@@ -105,7 +105,7 @@ async function http(opt = {}) {
     } catch (e) {
       if (count < RETRIES) {
         count++
-        $.log(`Không ${count} Yêu cầu không thành công: ${e.message || e}, Đang chờ ${RETRY_DELAY}s 后重试`)
+        $.log(`Không ${count} Yêu cầu không thành công: ${e.message || e}, Đang chờ ${RETRY_DELAY}s Thử lại`)
         await $.wait(RETRY_DELAY * 1000)
         return await fn()
       }
