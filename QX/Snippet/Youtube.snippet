@@ -8,5 +8,7 @@
 
 
 # 响应体
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
+^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$ url script-response-body https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/Surge/YouTube(Music)Enhance/JS/YouTube.Response.Preview.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch) url script-request-header https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/Surge/YouTube(Music)Enhance/JS/YouTube.Request.Preview.js
+
 hostname = rr*.googlevideo.com, youtubei.googleapis.com
