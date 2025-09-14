@@ -5,8 +5,7 @@ hostname = app.autocad360.com, buy.itunes.apple.com, cs.kuso.xyz, ap*.intsig.net
 
 #iScreen
 ;^http[s]?:\/\/cs.kuso.xyz\/configs url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/iScreen.js
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body
-https://raw.githubusercontent.com/lvtinh89/Scripting/master/iScreen.js
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/iScreen.js
 
 #Camscanner
 https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/CamScanner.js
