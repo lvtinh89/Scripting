@@ -1,10 +1,12 @@
-hostname = app.autocad360.com, cs.kuso.xyz, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.revenuecat.com, app.monkeyuni.net, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+hostname = app.autocad360.com, buy.itunes.apple.com, cs.kuso.xyz, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.revenuecat.com, app.monkeyuni.net, lcs-mobile-cops.adobe.io, createpdf.acrobat.com, photos.adobe.io, bmall.camera360.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
 #autocad
 ^https:\/\/app\.autocad360\.com\/entitlements\/v2\/me\/status url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/AutoCAD.js
 
 #iScreen
 ^http[s]?:\/\/cs.kuso.xyz\/configs url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/iScreen.js
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body
+https://raw.githubusercontent.com/lvtinh89/Scripting/master/iScreen.js
 
 #Camscanner
 https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/CamScanner.js
