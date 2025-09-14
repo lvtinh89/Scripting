@@ -1,28 +1,64 @@
-/*******************************
-
-脚本功能：iScreen-小组件——解锁VIP
-下载地址：https://is.gd/ktU5t2
-软件版本：3.7.5
-脚本作者：彭于晏💞
-更新时间：2023-7-23
-问题反馈：QQ+89996462
-QQ会员群：779392027💞
-TG反馈群：https://t.me/plus8889
-TG频道群：https://t.me/py996
-使用声明：此脚本仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
-
-*******************************
+/*
 
 [rewrite_local]
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Reviewa/QuantumultX/main/script/IScreen.js
 
-^http[s]?:\/\/cs.kuso.xyz\/configs url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/iScreenk.js
+[mitm]
+hostname = buy.itunes.apple.com
 
-[mitm] 
+*/
+let obj = {
+  status: 0,
+  environment: "Production",
+  receipt: {
+    receipt_type: "Production",
+    app_item_id: 1534704608,
+    bundle_id: "com.zerone.hidesktop",
+    application_version: "6",
+    original_application_version: "4",
+    receipt_creation_date: "2999-09-09 09:09:09 Etc/GMT",
+    receipt_creation_date_ms: "32503626054000",
+    receipt_creation_date_pst: "2999-09-09 02:09:09 America/Los_Angeles",
+    request_date: "2999-09-09 09:09:09 Etc/GMT",
+    request_date_ms: "32503626054000",
+    request_date_pst: "2999-09-09 02:09:09 America/Los_Angeles",
+    original_purchase_date: "2023-04-10 01:33:52 Etc/GMT",
+    original_purchase_date_ms: "1681090432000",
+    original_purchase_date_pst: "2023-04-09 18:33:52 America/Los_Angeles",
+    in_app: [
+      {
+        quantity: "1",
+        product_id: "com.zerone.hidesktop.forever",
+        transaction_id: "1000000999999999",
+        original_transaction_id: "1000000999999999",
+        purchase_date: "2999-09-09 09:09:09 Etc/GMT",
+        purchase_date_ms: "32503626054000",
+        purchase_date_pst: "2999-09-09 02:09:09 America/Los_Angeles",
+        original_purchase_date: "2999-09-09 09:09:09 Etc/GMT",
+        original_purchase_date_ms: "32503626054000",
+        original_purchase_date_pst: "2999-09-09 02:09:09 America/Los_Angeles",
+        is_trial_period: "false",
+        in_app_ownership_type: "PURCHASED"
+      }
+    ]
+  },
+  latest_receipt_info: [
+    {
+      quantity: "1",
+      product_id: "com.zerone.hidesktop.forever",
+      transaction_id: "1000000999999999",
+      original_transaction_id: "1000000999999999",
+      purchase_date: "2999-09-09 09:09:09 Etc/GMT",
+      purchase_date_ms: "32503626054000",
+      purchase_date_pst: "2999-09-09 02:09:09 America/Los_Angeles",
+      original_purchase_date: "2999-09-09 09:09:09 Etc/GMT",
+      original_purchase_date_ms: "32503626054000",
+      original_purchase_date_pst: "2999-09-09 02:09:09 America/Los_Angeles",
+      is_trial_period: "false",
+      in_app_ownership_type: "PURCHASED"
+    }
+  ],
+  latest_receipt: "MIIFakeBase64ContentForIScreenApp=="
+}
 
-hostname = cs.kuso.xyz
-
-*******************************/
-
-var objc = JSON.parse($response.body);
-    objc = {"status":0,"data":{"launchAd":4,"lockscreen_noVip":"0,1","main_pop_ad_interval":3,"IsandBannerAd":1,"Hudong_Interval":900,"douyin":"https://v.douyin.com/FDTcBfg/","FeedAd":2,"activityUpdateTime":1687959242,"noAds":1,"pic_lock_count":50,"ThemeFeedAd":2,"vipPopupType":1,"xiaohongshu":"https://www.xiaohongshu.com/user/profile/5fa3bfe9000000000101faae","SplashInter":500,"showRing":1,"rewardAd":0,"showOurApp":1,"BannerAd":4,"FeedBanner":"3333","ai_painting_wp":1,"ai_painting_wp_data":{"banner_img":"https://cdnq.kuso.xyz/cs/ai/images/info/banner/E1.png"},"ai_painting":1,"lang":"zh","country":"cn"},"ab":1}
-$done({body : JSON.stringify(objc)});
+$done({ body: JSON.stringify(obj) })
