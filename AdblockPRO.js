@@ -34,7 +34,7 @@ if (enabled) {
   let now  = Date.now();
   let last = parseInt($persistentStore.read(TS) || "0",10) || 0;
   if (last===0 || now-last>CD) {
-    notify(APP_NAME,"💖Mở khoá trọn đời 🆚 ⓿❽-⓿❽-❷⓿❽❽💗");
+    notify(APP_NAME,"💖Mở khoá trọn đời->⓿❽-⓿❽-❷⓿❽❽💗");
     $persistentStore.write(String(now), TS);
   }
 }
