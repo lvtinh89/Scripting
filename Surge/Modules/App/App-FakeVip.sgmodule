@@ -3,9 +3,10 @@
 #!desc= 📱 Mở khóa tính năng Pro của ứng dụng
 
 [MITM]
- hostname = %APPEND% buy.itunes.apple.com, education.github.com, api.adblockpro.app, api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.revenuecat.com, api-account.kinemasters.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+ hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, buy.itunes.apple.com, education.github.com, api.adblockpro.app, api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.revenuecat.com, api-account.kinemasters.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
 [Script]
+Redditvip = type=http-response, pattern=^https:\/\/gql-fed\.reddit\.com\/, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/Redditvip.js, timeout=60
 OfflineMusicPlayer = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/OfflineMusicPlayer.js
 WorkingCopy = type=http-response,pattern=^https?:\/\/education\.github\.com\/api\/user$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mike-offers/Rewrite/refs/heads/master/QuantumultX/WorkingCopy.js
 AdblockPRO = type=http-response, pattern=^https:\/\/api\.adblockpro\.app\/verify, script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/AdblockPRO.js, requires-body=true, max-size=-1, timeout=60
@@ -14,4 +15,5 @@ Truecaller = type=http-response,pattern=^https://premium-(.+)\.truecaller\.com/v
 Currency = type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js,script-update-interval=0
 Currency = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js,script-update-interval=0
 Kinemaster = type=http-response,pattern=^https:\/\/api-account\.kinemasters\.com\/v\d\/user\/subscribe$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/Kinemaster.js
+
 
