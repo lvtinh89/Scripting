@@ -1,5 +1,5 @@
 /*
- * Reddit Premium 解锁&去广告全兼容脚本
+ * Reddit Premium 解锁&去广告全兼容脚本 17.12.2025
  * 作者：Mikephie
  
 [rewrite_local]
