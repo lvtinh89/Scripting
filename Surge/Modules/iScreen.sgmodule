@@ -1,9 +1,0 @@
-#!name=App iScreen
-#!category=Vip iScreen
-#!desc=Mở khoá iScreen
-
-[MITM]
-hostname= %APPEND% cs.kuso.xyz
-
-[Script]
-iScreen = type=http-response,pattern=^http[s]?:\/\/cs.kuso.xyz\/configs,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/iScreen.js,script-update-interval=0
