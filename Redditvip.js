@@ -31,7 +31,7 @@ if (enabled) {
   let now  = Date.now();
   let last = parseInt($persistentStore.read(TS) || "0",10) || 0;
   if (last===0 || now-last>CD) {
-    notify(APP_NAME,"💖永久解锁 🆚 ⓿❽-⓿❽-❷⓿❽❽💗");
+    notify(APP_NAME,"💖Mở khoá premium🆚 ⓿❽-⓿❽-❷⓿❽❽💗");
     $persistentStore.write(String(now), TS);
   }
 }
@@ -125,7 +125,7 @@ function processResponse() {
       .replace(/"isNsfwContentShown":false/g, '"isNsfwContentShown":true');
     return body;
   } catch (e) {
-    console.log(`Reddit解锁脚本处理错误: ${e.message}`);
+    console.log(`Reddit Mở khóa lỗi xử lý tập lệnh: ${e.message}`);
     return body;
   }
 }
