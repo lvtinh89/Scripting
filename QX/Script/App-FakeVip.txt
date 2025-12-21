@@ -1,5 +1,9 @@
 hostname = api.adblockpro.app, buy.itunes.apple.com, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.revenuecat.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
+#1Blocker
+https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/1Blocker.js
+https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts) url script-response-header https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/1Blocker.js
+
 #AdblockPRO
 ^https:\/\/api\.adblockpro\.app\/verify url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/AdblockPRO.js
 
