@@ -1,4 +1,4 @@
-#!name=App Youtube (Music) Enhance
+#!name=App Youtube (Music) (>=iOS15)
 #!desc=Premium Youtube & Youtube Music, 2025-08-01
 #!category=🎊 Youtube
 #!arguments=屏蔽上传按钮:true,屏蔽选段按钮:true,屏蔽Shorts按钮:false,字幕翻译语言:off,歌词翻译语言:off,启用调试模式:false
