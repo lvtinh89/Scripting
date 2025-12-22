@@ -1,5 +1,5 @@
 #!name=App CamScanner
-#!category=Vip CamScanner
+#!category=🎊 CamScanner
 #!desc=CamScanner Premium
 [MITM]
 hostname = %APPEND% *.camscanner.com, *.intsig.net
