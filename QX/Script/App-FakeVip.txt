@@ -1,7 +1,10 @@
-hostname = api.adblockpro.app, buy.itunes.apple.com, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.revenuecat.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+hostname = api.adblockpro.app, buy.itunes.apple.com, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.rc-backup.com, api.revenuecat.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
 #AdblockPRO
 ^https:\/\/api\.adblockpro\.app\/verify url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/AdblockPRO.js
+
+#iTunes-系列 hostname = buy.itunes.apple.com
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
 
 #Camscanner
 https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/CamScanner.js
@@ -15,6 +18,10 @@ https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script
 # Currency
 ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js
 ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js
+
+#Revenuecat-系列 hostname = api.revenuecat.com, api.rc-backup.com
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/Revenue%2BCat.js
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/lvtinh89/Scripting/master/Revenuecat.js
 
 # Kinemaster
 ^https:\/\/api-account\.kinemasters\.com\/v\d\/user\/subscribe$ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Kinemaster.js
