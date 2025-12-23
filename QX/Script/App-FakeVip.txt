@@ -1,4 +1,12 @@
-hostname = api.adblockpro.app, buy.itunes.apple.com, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.rc-backup.com, api.revenuecat.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+hostname = *.kuso.xyz, screen-lock.*.com, api.adblockpro.app, buy.itunes.apple.com, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.rc-backup.com, api.revenuecat.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+
+#iScreen小组件 hostname = *.kuso.xyz
+^https?:\/\/cs\.kuso\.xyz\/configs.+ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/iscreenfz.js
+#iScreen小组件-屏蔽付费提示
+^https?:\/\/pay\.kuso\.xyz\/pay\/pay-check url reject-200
+
+#布丁锁屏 hostname = screen-lock.*.com
+^https?:\/\/screen-lock\.(sm-check|51wnl-cq)\.com\/userApi\/saveUser.+ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/bdsp.js
 
 #AdblockPRO
 ^https:\/\/api\.adblockpro\.app\/verify url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/AdblockPRO.js
