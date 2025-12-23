@@ -4,7 +4,7 @@ hostname = api.adblockpro.app, buy.itunes.apple.com, ap*.intsig.net, *api.snow.m
 ^https:\/\/api\.adblockpro\.app\/verify url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/AdblockPRO.js
 
 #iTunes-系列 hostname = buy.itunes.apple.com
-^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/Surge/Modules/App/iTunes.js
 
 #Camscanner
 https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/CamScanner.js
