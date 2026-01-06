@@ -22,9 +22,9 @@ https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script
 ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js
 ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js
 
-#Revenuecat-系列 hostname = api.revenuecat.com, api.rc-backup.com
-^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/Revenue%2BCat.js
-^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/lvtinh89/Scripting/master/Revenuecat.js
+#Revenuecat-系列
+;^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/Revenue%2BCat.js
+;^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/lvtinh89/Scripting/master/Revenuecat.js
 ^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/RevenueCat_Reviewa.js
 ^https:\/\/api\.revenuecat\.com\/v\d\/receipts url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/RevenueCat_Reviewa.js
 
