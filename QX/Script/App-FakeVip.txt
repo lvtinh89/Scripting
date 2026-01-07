@@ -1,4 +1,13 @@
-hostname = buy.itunes.apple.com, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.rc-backup.com, api.revenuecat.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+hostname = gql.reddit.com, gql-fed.reddit.com, buy.itunes.apple.com, education.github.com, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.rc-backup.com, api.revenuecat.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+
+#Redditvip
+^https:\/\/gql-fed\.reddit\.com\/ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/Redditvip.js
+
+#OfflineMusicPlayer
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/OfflineMusicPlayer.js
+
+#WorkingCopy
+^https?:\/\/education\.github\.com\/api\/user$ url script-response-body https://raw.githubusercontent.com/Mike-offers/Rewrite/refs/heads/master/QuantumultX/WorkingCopy.js
 
 #iTunes
 ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/Surge/Modules/App/iTunes.js
@@ -17,8 +26,8 @@ https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\? url script
 ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/lvtinh89/Scripting/master/Currency.js
 
 #Revenuecat-系列
-^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/Revenue%2BCat.js
-^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/lvtinh89/Scripting/master/Revenuecat.js
+^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/RevenueCat_Reviewa.js
+^https:\/\/api\.revenuecat\.com\/v\d\/receipts url script-request-header https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/RevenueCat_Reviewa.js
 
 # Kinemaster
 ^https:\/\/api-account\.kinemasters\.com\/v\d\/user\/subscribe$ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/master/Kinemaster.js
