@@ -7,13 +7,13 @@
 # Quantumult X 必须在 [general] 部分加入以下代码: udp_drop_list=443
 
 # 功能: Mở khoá các ứng dụng của Revenuecat(1. Trial 2. open Setting > AppleID > Supscriptions > Cancer. 3 Restore Purchase) Unlock Vsco, Noto, pillow, Spark mail, 1Blocker, darkroom, Planny, Widgetsmith, Grow, Anybox, Scanner Pro, iPTV+, Happy: Days, Forza Football, Not Boring,..
-# NAME: Revenucat Universal
-# AUTHOR: Yarmukhamedov
-# DESCRIPTION = This Snippet hacks all apps which using Revenuecat
-# UPDATED: 2023-12-07 18:56:03
+# > Revenuecat 系列解锁合集-1
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Revenuecat/JS/JS-1/Reheji.js
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Revenuecat/JS/JS-1/Reheji.js
+# > Revenuecat 系列解锁合集-2
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/.+$) url script-response-body https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Revenuecat/JS/JS-4/crack.js
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/.+$) url script-request-header https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Revenuecat/JS/JS-4/crack.js
+# > Revenuecat 系列解锁合集-3
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Revenuecat/JS/JS-3/Revenuecat.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Revenuecat/JS/JS-3/Revenuecat.js
 
-# SCRIPT
-https:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/(?!.*\/(offerings|attributes|adservices_attribution)$).*) url script-response-body https://raw.githubusercontent.com/Yarmukhamedov/mitm/main/scripts/Revenuecat.js
-
-# MITM
-hostname = https:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/(?!.*\/(offerings|attributes|adservices_attribution)$).*)
