@@ -1,4 +1,7 @@
-hostname = gql.reddit.com, gql-fed.reddit.com, buy.itunes.apple.com, education.github.com, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+hostname = api.flightyapp.com, gql.reddit.com, gql-fed.reddit.com, buy.itunes.apple.com, education.github.com, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+
+#flightyapp
+^https:\/\/api\.flightyapp\.com\/v1\/sync\/full url script-response-body https://github.com/Asiru0/in_app_purchase/raw/refs/heads/main/flighty.js
 
 #Redditvip
 ^https:\/\/gql-fed\.reddit\.com\/ url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/Redditvip.js
