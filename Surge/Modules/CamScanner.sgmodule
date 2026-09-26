@@ -1,5 +1,5 @@
 #!name=App🎊CamScanner (>=iOS15)
-#!category=📁CamScanner
+#!category= 📂CamScanner
 #!desc=CamScanner Premium
 [MITM]
 hostname = %APPEND% *.camscanner.com, *.intsig.net
