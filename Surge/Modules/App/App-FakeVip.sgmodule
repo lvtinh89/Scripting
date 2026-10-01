@@ -3,7 +3,7 @@
 #!desc= 📱 Mở khóa tính năng Pro của ứng dụng
 
 [MITM]
- hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, buy.itunes.apple.com, education.github.com, api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api-account.kinemasters.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+ hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, buy.itunes.apple.com, education.github.com, api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.revenuecat.com, api-account.kinemasters.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
 [Script]
 Redditvip = type=http-response, pattern=^https:\/\/gql-fed\.reddit\.com\/, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/Redditvip.js, timeout=60
