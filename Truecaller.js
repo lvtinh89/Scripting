@@ -1,59 +1,52 @@
 /*
-#!name = Truecaller ✨
-#!desc = Premium - Unlock
-#!author = 🅚Ⓐ🅦Ⓞ🅐Ⓣ
-#!icon = https://raw.githubusercontent.com/KawOat9/icons/main/StepsApp.png
-#!category=🔐APP
-𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹𒊹
-[rewrite_local]
-# >Truecaller
-^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|products\/apple) url script-response-body https://raw.githubusercontent.com/KawOat9/Scripts/main/Truecaller.js
-
-[mitm] 
-hostname = premium*.truecaller.com
-*/
+ * @name: Truecaller Premium Unlock
+ * @author: Nguyễn Ngọc Anh Tú (z3rokaze)
+ * @homepage: https://github.com/ekaznyra/NguyenNgocAnhTu
+ * @date: 2026-04-21
+ */
 
 function findUrl(_reg) {
     if (_reg.test($request.url)) {
         return $request.url;
     }
 }
+
 const features = [
-    { id: "live_lookup", rank: 1, status: "Included", "isFree": false },
-    { id: "auto_spam_block", rank: 2, status: "Included", "isFree": false },
-    { id: "series_blocking", rank: 3, status: "Included", "isFree": false },
-    { id: "no_ads", rank: 4, status: "Included", "isFree": false },
-    { id: "extended_spam_blocking", rank: 5, status: "Included", "isFree": false },
-    { id: "advanced_caller_id", rank: 6, status: "Included", "isFree": false },
-    { id: "verified_badge", rank: 7, status: "Included", "isFree": false },
-    { id: "spam_stats", rank: 8, status: "Included", "isFree": false },
-    { id: "call_alert", rank: 9, status: "Included", "isFree": false },
-    { id: "premium_feature", rank: 12, status: "Included", "isFree": false },
-    { id: "identifai", rank: 15, status: "Included", "isFree": false },
-    { id: "siri_search", rank: 16, status: "Included", "isFree": false },
-    { id: "who_viewed_my_profile", rank: 17, status: "Included", "isFree": false },
-    { id: "who_searched_for_me", rank: 18, status: "Included", "isFree": false },
-    { id: "contact_request", rank: 19, status: "Included", "isFree": false },
-    { id: "incognito_mode", rank: 20, status: "Included", "isFree": false },
-    { id: "premium_badge", rank: 21, status: "Included", "isFree": false },
-    { id: "premium_app_icon", rank: 22, status: "Included", "isFree": false },
-    { id: "ghost_call", rank: 23, status: "Included", "isFree": false },
-    { id: "live_chat_support", rank: 24, status: "Included", "isFree": false },
-    { id: "call_recording", rank: 25, status: "Excluded", "isFree": false },
-    { id: "premium_support", rank: 25, status: "Excluded", "isFree": false },
-    { id: "family_sharing", rank: 26, status: "Included", "isFree": false },
-    { id: "gold_caller_id", rank: 27, status: "Included", "isFree": false },
-    { id: "announce_call", rank: 28, status: "Excluded", "isFree": false },
-    { id: "caller_id", rank: 29, status: "Included", "isFree": true },
-    { id: "spam_blocking", rank: 30, status: "Included", "isFree": true },
-    { id: "whatsapp_caller_id", rank: 31, status: "Excluded", "isFree": false } 
+    { id: "live_lookup", rank: 1, status: "Included", isFree: false },
+    { id: "auto_spam_block", rank: 2, status: "Included", isFree: false },
+    { id: "series_blocking", rank: 3, status: "Included", isFree: false },
+    { id: "no_ads", rank: 4, status: "Included", isFree: false },
+    { id: "extended_spam_blocking", rank: 5, status: "Included", isFree: false },
+    { id: "advanced_caller_id", rank: 6, status: "Included", isFree: false },
+    { id: "verified_badge", rank: 7, status: "Included", isFree: false },
+    { id: "spam_stats", rank: 8, status: "Included", isFree: false },
+    { id: "call_alert", rank: 9, status: "Included", isFree: false },
+    { id: "premium_feature", rank: 12, status: "Included", isFree: false },
+    { id: "identifai", rank: 15, status: "Included", isFree: false },
+    { id: "siri_search", rank: 16, status: "Included", isFree: false },
+    { id: "who_viewed_my_profile", rank: 17, status: "Included", isFree: false },
+    { id: "who_searched_for_me", rank: 18, status: "Included", isFree: false },
+    { id: "contact_request", rank: 19, status: "Included", isFree: false },
+    { id: "incognito_mode", rank: 20, status: "Included", isFree: false },
+    { id: "premium_badge", rank: 21, status: "Included", isFree: false },
+    { id: "premium_app_icon", rank: 22, status: "Included", isFree: false },
+    { id: "ghost_call", rank: 23, status: "Included", isFree: false },
+    { id: "live_chat_support", rank: 24, status: "Included", isFree: false },
+    { id: "call_recording", rank: 25, status: "Excluded", isFree: false },
+    { id: "premium_support", rank: 25, status: "Excluded", isFree: false },
+    { id: "family_sharing", rank: 26, status: "Included", isFree: false },
+    { id: "gold_caller_id", rank: 27, status: "Included", isFree: false },
+    { id: "announce_call", rank: 28, status: "Excluded", isFree: false },
+    { id: "caller_id", rank: 29, status: "Included", isFree: true },
+    { id: "spam_blocking", rank: 30, status: "Included", isFree: true },
+    { id: "whatsapp_caller_id", rank: 31, status: "Excluded", isFree: false }
 ];
 
 var obj;
 switch ($request.url) {
     case findUrl(/subscriptions\/status/):
         obj = {
-            expire: "9999-01-09T01:01:01Z",
+            expire: "2099-12-31T23:59:59.000Z",
             start: "2024-01-09T02:32:04Z",
             paymentProvider: "Apple",
             isExpired: false,
@@ -97,4 +90,9 @@ switch ($request.url) {
         }
     break;
 }
-$done({body: JSON.stringify(obj)});
+if (obj) {
+    $done({ body: JSON.stringify(obj) });
+} else {
+    // URL khớp MITM nhưng không khớp case nào -> để nguyên response (tránh trả "undefined")
+    $done({});
+}
