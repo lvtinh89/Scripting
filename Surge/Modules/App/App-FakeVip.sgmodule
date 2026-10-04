@@ -3,9 +3,10 @@
 #!desc= 📱 Mở khóa tính năng Pro của ứng dụng
 
 [MITM]
- hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com, buy.itunes.apple.com, education.github.com, api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.revenuecat.com, api-account.kinemasters.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
+ hostname = %APPEND%  www.xmind.cn, www.xmind.net, www.xmind.app, gql.reddit.com, gql-fed.reddit.com, buy.itunes.apple.com, education.github.com, api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.revenuecat.com, api-account.kinemasters.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
 [Script]
+xmind-res=type=http-response,pattern=^https?:\/\/www\.xmind\.(cn|net|app)\/_res\/devices,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/master/Module/js/xmind.js,requires-body=true,max-size=0,timeout=10
 Redditvip = type=http-response, pattern=^https:\/\/gql-fed\.reddit\.com\/, requires-body=true, max-size=0, script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/Redditvip.js, timeout=60
 WorkingCopy = type=http-response,pattern=^https?:\/\/education\.github\.com\/api\/user$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mike-offers/Rewrite/refs/heads/master/QuantumultX/WorkingCopy.js
 B612 = type=http-response,pattern=^https:\/\/user-b612-api\.snow\.me\/v1\/purchase\/subscription\/subscriber\/status,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/master/B612.js
