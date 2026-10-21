@@ -1,7 +1,7 @@
 hostname = www.focustodo.net, gql.reddit.com, gql-fed.reddit.com, buy.itunes.apple.com, education.github.com, ap*.intsig.net, *api.snow.me, user-b612-api.snow.me, premium*.truecaller.com, api.revenuecat.com, api-account.kinemasters.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com
 
 #iScreen
-IScreen = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, script-path=https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/iScreen.js, requires-body=true, max-size=-1, timeout=60
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/iScreen.js
 
 #PomodoroToDo
 ^https?:\/\/www\.focustodo\.net\/v\d+\/user\/(config|expired-d) url script-response-body https://raw.githubusercontent.com/lvtinh89/Scripting/refs/heads/master/PomodoroToDo.js
