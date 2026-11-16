@@ -1,0 +1,9 @@
+{
+  "name": "iFansClub - Youtube",
+  "description": "去广告、画中画与后台播放",
+  "updated": "2026-11-12",
+  "components": [
+    "apps/youtube"
+  ],
+  "output": "dist/youtube.module"
+}
